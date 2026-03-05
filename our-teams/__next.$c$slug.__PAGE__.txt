@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
 7:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"OutletBoundary"]
 8:"$Sreact.suspense"
-2:T146c8,
+2:T14851,
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -84,8 +84,8 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 /*# sourceURL=global-styles-inline-css */
 </style>
 
-<link rel="stylesheet" id="eb-block-style-3129-css" href="https://www.flaconi.de/karriere/wp-content/uploads/eb-style/eb-style-3129.min.css?ver=e8eebd991b" type="text/css" media="all">
-<link rel="stylesheet" id="eb-reusable-block-style-1452-css" href="https://www.flaconi.de/karriere/wp-content/uploads/eb-style/reusable-blocks/eb-reusable-1452.min.css?ver=e8eebd991b" type="text/css" media="all">
+<link rel="stylesheet" id="eb-block-style-3129-css" href="https://www.flaconi.de/karriere/wp-content/uploads/eb-style/eb-style-3129.min.css?ver=3a706b341d" type="text/css" media="all">
+<link rel="stylesheet" id="eb-reusable-block-style-1452-css" href="https://www.flaconi.de/karriere/wp-content/uploads/eb-style/reusable-blocks/eb-reusable-1452.min.css?ver=3a706b341d" type="text/css" media="all">
 <link rel="stylesheet" id="wpml-legacy-horizontal-list-0-css" href="https://www.flaconi.de/karriere/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1" type="text/css" media="all">
 <link rel="stylesheet" id="kadence-global-css" href="https://www.flaconi.de/karriere/wp-content/themes/kadence/assets/css/global.min.css?ver=1.4.5" type="text/css" media="all">
 <style id="kadence-global-inline-css" type="text/css">
@@ -133,9 +133,9 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 <link rel="shortlink" href="https://www.flaconi.de/karriere/en/?p=3129">
 
 <meta name="generator" content="WPML ver:4.9.1 stt:1,3;">
-<link rel="preload" id="kadence-header-preload" href="https://www.flaconi.de/karriere/wp-content/themes/kadence/assets/css/header.min.css?ver=1.4.5" as="style">
-<link rel="preload" id="kadence-content-preload" href="https://www.flaconi.de/karriere/wp-content/themes/kadence/assets/css/content.min.css?ver=1.4.5" as="style">
-<link rel="preload" id="kadence-footer-preload" href="https://www.flaconi.de/karriere/wp-content/themes/kadence/assets/css/footer.min.css?ver=1.4.5" as="style">
+<link rel="stylesheet" id="kadence-header-preload" href="https://www.flaconi.de/karriere/wp-content/themes/kadence/assets/css/header.min.css?ver=1.4.5" as="style">
+<link rel="stylesheet" id="kadence-content-preload" href="https://www.flaconi.de/karriere/wp-content/themes/kadence/assets/css/content.min.css?ver=1.4.5" as="style">
+<link rel="stylesheet" id="kadence-footer-preload" href="https://www.flaconi.de/karriere/wp-content/themes/kadence/assets/css/footer.min.css?ver=1.4.5" as="style">
 <link rel="stylesheet" id="kadence-fonts-gfonts-css" href="https://www.flaconi.de/karriere/wp-content/fonts/968e56c6b3b638c383d16fe7541ea190.css?ver=1.4.5" type="text/css" media="all">
 <link rel="icon" href="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/favicon-150x150.png" sizes="32x32">
 <link rel="icon" href="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/favicon-300x300.png" sizes="192x192">
@@ -148,7 +148,14 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 /*# sourceURL=core-block-supports-inline-css */
 </style>
 
-<link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/WebSdk.lib.91f0d3cd.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/GdprCmpController.12632d8a.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/UcGdprCmpView.286dcf12.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/sections.c79e0e02.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/secondLayer.65458740.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/getToastifyStyle.4f0a73d7.js" rel="preload" as="script">0:{"buildId":"g6YV55KvmEBs9t976olNf","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+<link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/WebSdk.lib.91f0d3cd.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/GdprCmpController.12632d8a.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/UcGdprCmpView.286dcf12.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/sections.c79e0e02.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/secondLayer.65458740.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/getToastifyStyle.4f0a73d7.js" rel="preload" as="script"><style>
+           @media screen and (min-width: 1024px) {
+             .site-header-inner-wrap { display: flex !important; visibility: visible !important; opacity: 1 !important; }
+             #masthead { display: block !important; }
+             #mobile-drawer { display: none !important; }
+             .mobile-navigation { display: none !important; }
+           }
+        </style>0:{"buildId":"jeav3saHHTzW2ZuKfmj1-","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
 6:T13f04,
 
 <div id="wrapper" class="site wp-site-blocks">
@@ -496,7 +503,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 						</style>
 						<div class="otgs-development-site-front-end"><span class="icon"></span>This site is registered on <a href="https://wpml.org">wpml.org</a> as a development site. Switch to a production site key to <a href="https://wpml.org/faq/how-to-remove-the-this-site-is-registered-on-wpml-org-as-a-development-site-notice/?utm_source=plugin&amp;utm_medium=gui&amp;utm_campaign=wpml-core&amp;utm_term=footer-notice">remove this banner</a>.</div><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
 
-<aside id="usercentrics-cmp-ui" data-nosnippet="1" keyboard-events="true"></aside>3:["$","body",null,{"className":"wp-singular page-template-default page page-id-3129 wp-custom-logo wp-embed-responsive wp-theme-kadence wp-child-theme-fl-karriere footer-on-bottom hide-focus-outline link-style-standard content-title-style-hide content-width-fullwidth content-style-unboxed content-vertical-padding-show non-transparent-header mobile-non-transparent-header","style":{"margin":0,"padding":0,"overflowX":"hidden"},"dangerouslySetInnerHTML":{"__html":"$6"}}]
+<aside id="usercentrics-cmp-ui" data-nosnippet="1" keyboard-events="true"></aside>3:["$","body",null,{"className":"wp-singular page-template-default page page-id-3129 wp-custom-logo wp-embed-responsive wp-theme-kadence wp-child-theme-fl-karriere footer-on-bottom hide-focus-outline link-style-standard content-title-style-hide content-width-fullwidth content-style-unboxed content-vertical-padding-show non-transparent-header h-desktop header-desktop desktop-navigation","style":{"margin":0,"padding":0,"overflowX":"hidden"},"dangerouslySetInnerHTML":{"__html":"$6"}}]
 4:["$","script","script-0",{"src":"/FlaconiCareers/_next/static/chunks/144dfb50e5aba7f2.js","async":true}]
 5:["$","$L7",null,{"children":["$","$8",null,{"name":"Next.MetadataOutlet","children":"$@9"}]}]
 9:null
