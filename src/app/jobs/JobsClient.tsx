@@ -6,26 +6,51 @@ import { CMS_CONFIG } from '@/CMS_CONFIG';
 export default function JobsClient({ initialData }: { initialData: any }) {
   // This component handles the 1:1 DOM rendering and the Live Sync from Google Sheets
   useEffect(() => {
+    // 1. Define the Global Filter Function
+    (window as any).filterJobTabelle = () => {
+      const locationVal = (document.getElementById('locations') as HTMLSelectElement)?.value || 'all';
+      const teamVal = (document.getElementById('teams') as HTMLSelectElement)?.value || 'all';
+      const worktypeVal = (document.getElementById('worktypes') as HTMLSelectElement)?.value || 'all';
+
+      console.log('Filtering:', { locationVal, teamVal, worktypeVal });
+
+      const jobs = document.querySelectorAll('.job-table .job');
+      jobs.forEach((job: any) => {
+        const matchesLocation = locationVal === 'all' || job.getAttribute('data-location').includes(locationVal);
+        const matchesTeam = teamVal === 'all' || job.getAttribute('data-team') === teamVal;
+        const matchesWorktype = worktypeVal === 'all' || job.getAttribute('data-worktype') === worktypeVal;
+
+        if (matchesLocation && matchesTeam && matchesWorktype) {
+          job.style.display = 'flex';
+        } else {
+          job.style.display = 'none';
+        }
+      });
+    };
+
     async function fetchLiveJobs() {
       try {
-        console.log('Fetching live jobs from Google Sheets...');
+        console.log('Fetching live jobs from Google Sheets:', CMS_CONFIG.GOOGLE_SHEET_CSV_URL);
         const response = await fetch(CMS_CONFIG.GOOGLE_SHEET_CSV_URL);
         const csvText = await response.text();
         
-        const parsed = Papa.parse(csvText, { header: true });
+        const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
         const liveJobs = parsed.data;
         
         const jobTable = document.querySelector('.job-table');
         if (jobTable && liveJobs.length > 0) {
-           // Clear existing jobs if we have live ones
            jobTable.innerHTML = '';
            
            liveJobs.forEach((job: any) => {
-             // Skip empty rows
              if (!job.Title && !job.URL) return;
 
              const jobEl = document.createElement('div');
              jobEl.className = 'job';
+             // Set data attributes for filtering
+             jobEl.setAttribute('data-location', job.Location || '');
+             jobEl.setAttribute('data-team', job.Team || '');
+             jobEl.setAttribute('data-worktype', job.WorkType || '');
+
              jobEl.innerHTML = `
                 <div class="main-column">
                     <div>
@@ -61,7 +86,9 @@ export default function JobsClient({ initialData }: { initialData: any }) {
              `;
              jobTable.appendChild(jobEl);
            });
-           console.log('Live jobs injected from Sheets:', liveJobs.length);
+           console.log('Live jobs injected:', liveJobs.length);
+           // Trigger initial filter logic if any dropdown is pre-selected
+           (window as any).filterJobTabelle();
         }
       } catch (e) {
         console.error('Failed to sync live jobs from Google Sheets:', e);
