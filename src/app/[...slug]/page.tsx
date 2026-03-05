@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import JobsPage from '../jobs/page'; // Reuse the jobs logic
+import JobsPage from '../jobs/page';
 
 export async function generateStaticParams() {
   return [

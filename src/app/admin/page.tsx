@@ -48,7 +48,7 @@ export default function AdminPage() {
         },
         body: JSON.stringify({
           message: 'chore: sync jobs from google sheets',
-          content: btoa(jsonData),
+          content: btoa(unescape(encodeURIComponent(jsonData))),
           sha: sha
         })
       });
