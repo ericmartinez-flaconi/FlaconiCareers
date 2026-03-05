@@ -163,8 +163,8 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
            #mobile-drawer { display: none !important; }
            .mobile-navigation { display: none !important; }
          }
-      </style>0:{"buildId":"nF6RGDG52X5RgSZ2NouXa","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],null,"$L4"]}],"loading":null,"isPartial":false}
-5:Td2f2,
+      </style>0:{"buildId":"ZlHQzU8wYl5jWJvwN4Pyk","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],null,"$L4"]}],"loading":null,"isPartial":false}
+5:Td2ef,
 
 <div id="wrapper" class="site wp-site-blocks">
 			<a class="skip-link screen-reader-text scroll-ignore" href="#main">Skip to content</a>
@@ -180,7 +180,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 			<div class="site-main-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-no-center">
 									<div class="site-header-main-section-left site-header-section site-header-section-left">
 						<div class="site-header-item site-header-focus-item" data-section="title_tagline">
-	<div class="site-branding branding-layout-standard site-brand-logo-only"><a class="brand has-logo-image" href="/FlaconiCareers/en/" rel="home"><img width="165" height="42" src="/FlaconiCareers/wp-content/uploads/2024/03/flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
+	<div class="site-branding branding-layout-standard site-brand-logo-only"><a class="brand has-logo-image" href="/FlaconiCareers/" rel="home"><img width="165" height="42" src="/FlaconiCareers/wp-content/uploads/2024/03/flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
 					</div>
 																	<div class="site-header-main-section-right site-header-section site-header-section-right">
 						<div class="site-header-item site-header-focus-item" data-section="kadence_customizer_header_social">
@@ -207,12 +207,12 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 						<div class="site-header-item site-header-focus-item site-header-item-main-navigation header-navigation-layout-stretch-false header-navigation-layout-fill-stretch-false" data-section="kadence_customizer_primary_navigation">
 		<nav id="site-navigation" class="main-navigation header-navigation hover-to-open nav--toggle-sub header-navigation-style-standard header-navigation-dropdown-animation-none" role="navigation" aria-label="Primary">
 			<div class="primary-menu-container header-menu-container">
-	<ul id="primary-menu" class="menu"><li id="menu-item-3274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3119 current_page_item menu-item-3274"><a href="/FlaconiCareers/en/" aria-current="page">About us</a></li>
+	<ul id="primary-menu" class="menu"><li id="menu-item-3274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3119 current_page_item menu-item-3274"><a href="/FlaconiCareers/" aria-current="page">About us</a></li>
 <li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278"><a href="/FlaconiCareers/our-teams/">Our Teams</a></li>
 <li id="menu-item-3277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3277"><a href="/FlaconiCareers/locations/">Locations</a></li>
 <li id="menu-item-3275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3275"><a href="/FlaconiCareers/culture/">Life at flaconi</a></li>
 <li id="menu-item-3276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="/FlaconiCareers/karriere/">How we hire</a></li>
-<li id="menu-item-4593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="/FlaconiCareers/jobs/">Jobs</a></li>
+<li id="menu-item-4593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="/FlaconiCareers/stellenangebote/">Jobs</a></li>
 </ul>		</div>
 	</nav><!-- #site-navigation -->
 	</div><!-- data-section="primary_navigation" -->
@@ -220,10 +220,10 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 	<div class="header-html inner-link-style-normal"><div class="header-html-inner"><p>
 </p><div role="navigation" aria-label="Language Switcher" class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-list-horizontal">
 	<ul><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-list-horizontal">
-				<a href="/FlaconiCareers/en/" hreflang="en" lang="en" class="wpml-ls-link" aria-current="page" aria-label="Switch to EN" title="Switch to EN">
+				<a href="/FlaconiCareers/" hreflang="en" lang="en" class="wpml-ls-link" aria-current="page" aria-label="Switch to EN" title="Switch to EN">
 					<span class="wpml-ls-native">EN</span></a>
 			</li><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-de wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
-				<a href="https://www.flaconi.de/karriere/" hreflang="de" lang="de" class="wpml-ls-link" aria-label="Switch to DE" title="Switch to DE">
+				<a href="/FlaconiCareers/" hreflang="de" lang="de" class="wpml-ls-link" aria-label="Switch to DE" title="Switch to DE">
 					<span class="wpml-ls-native">DE</span></a>
 			</li></ul>
 </div>
@@ -251,7 +251,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 			<div class="site-main-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-no-center">
 									<div class="site-header-main-section-left site-header-section site-header-section-left">
 						<div class="site-header-item site-header-focus-item" data-section="title_tagline">
-	<div class="site-branding mobile-site-branding branding-layout-standard branding-tablet-layout-inherit site-brand-logo-only branding-mobile-layout-inherit"><a class="brand has-logo-image" href="/FlaconiCareers/en/" rel="home"><img width="165" height="42" src="/FlaconiCareers/wp-content/uploads/2024/03/flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
+	<div class="site-branding mobile-site-branding branding-layout-standard branding-tablet-layout-inherit site-brand-logo-only branding-mobile-layout-inherit"><a class="brand has-logo-image" href="/FlaconiCareers/" rel="home"><img width="165" height="42" src="/FlaconiCareers/wp-content/uploads/2024/03/flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
 					</div>
 																	<div class="site-header-main-section-right site-header-section site-header-section-right">
 						<div class="site-header-item site-header-focus-item site-header-item-navgation-popup-toggle" data-section="kadence_customizer_mobile_trigger">
@@ -318,7 +318,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 <div class="wp-block-kadence-column kadence-column3119_fe6854-50"><div class="kt-inside-inner-col">
-<figure class="wp-block-image size-full"><a href="/FlaconiCareers/jobs/"><img fetchpriority="high" decoding="async" width="265" height="239" src="/FlaconiCareers/wp-content/uploads/2026/02/explore.png" alt="" class="wp-image-4797"></a></figure>
+<figure class="wp-block-image size-full"><a href="/FlaconiCareers/stellenangebote/"><img fetchpriority="high" decoding="async" width="265" height="239" src="/FlaconiCareers/wp-content/uploads/2026/02/explore.png" alt="" class="wp-image-4797"></a></figure>
 </div></div>
 
 </div></div></div></div>
@@ -334,7 +334,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 <div class="wp-block-kadence-column kadence-column3119_2584e4-00"><div class="kt-inside-inner-col">
-<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-fta2b "><div class="eb-flipbox-container eb-flipbox-fta2b eb-click-mode" data-id="eb-flipbox-fta2b" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content"><strong>Are you looking for the right next challenge that combines tech and beauty?</strong><br><br>Check out our current open roles below. We look forward to receiving your application!</p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="/FlaconiCareers/jobs/" target="_blank" rel="noopener"><div class="eb-flipbox-button-content"><span>Our listings</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
+<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-fta2b "><div class="eb-flipbox-container eb-flipbox-fta2b eb-click-mode" data-id="eb-flipbox-fta2b" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content"><strong>Are you looking for the right next challenge that combines tech and beauty?</strong><br><br>Check out our current open roles below. We look forward to receiving your application!</p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="/FlaconiCareers/stellenangebote/" target="_blank" rel="noopener"><div class="eb-flipbox-button-content"><span>Our listings</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
 </div></div>
 
 
@@ -648,7 +648,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<p><a href="https://www.flaconi.de/karriere/">Career</a></p>
+<p><a href="/FlaconiCareers/">Career</a></p>
 </div></div>
 
 
@@ -735,12 +735,12 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 <div class="site-header-item site-header-focus-item site-header-item-mobile-navigation mobile-navigation-layout-stretch-false" data-section="kadence_customizer_mobile_navigation">
 		<nav id="mobile-site-navigation" class="mobile-navigation drawer-navigation drawer-navigation-parent-toggle-false" role="navigation" aria-label="Primary Mobile">
 				<div class="mobile-menu-container drawer-menu-container">
-			<ul id="mobile-menu" class="menu has-collapse-sub-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3119 current_page_item menu-item-3274"><a href="/FlaconiCareers/en/" aria-current="page">About us</a></li>
+			<ul id="mobile-menu" class="menu has-collapse-sub-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3119 current_page_item menu-item-3274"><a href="/FlaconiCareers/" aria-current="page">About us</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278"><a href="/FlaconiCareers/our-teams/">Our Teams</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3277"><a href="/FlaconiCareers/locations/">Locations</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3275"><a href="/FlaconiCareers/culture/">Life at flaconi</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="/FlaconiCareers/karriere/">How we hire</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="/FlaconiCareers/jobs/">Jobs</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="/FlaconiCareers/stellenangebote/">Jobs</a></li>
 </ul>		</div>
 	</nav><!-- #site-navigation -->
 	</div><!-- data-section="mobile_navigation" -->
