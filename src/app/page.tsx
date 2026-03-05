@@ -8,12 +8,13 @@ export default function Home() {
   // Strip scripts
   html = html.replace(/<script\b[^>]*>([\s\S]*?)<\/script>/gm, '');
   
-  // Link mapping: Point Flaconi URLs to local app routes
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/culture\//g, 'href="/culture');
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/locations\//g, 'href="/locations');
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/our-teams\//g, 'href="/our-teams');
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/stellenangebote\//g, 'href="/jobs');
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\//g, 'href="/"');
+  // Link mapping for GitHub Pages (trailing slashes added)
+  const prefix = '/FlaconiCareers';
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/culture\//g, `href="${prefix}/culture/"`);
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/locations\//g, `href="${prefix}/locations/"`);
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/our-teams\//g, `href="${prefix}/our-teams/"`);
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/stellenangebote\//g, `href="${prefix}/jobs/"`);
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\//g, `href="${prefix}/"`);
   
   const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
   const headMatch = html.match(/<head[^>]*>([\s\S]*?)<\/head>/i);

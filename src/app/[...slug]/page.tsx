@@ -1,6 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 
+export async function generateStaticParams() {
+  return [
+    { slug: ['culture'] },
+    { slug: ['locations'] },
+    { slug: ['our-teams'] },
+    { slug: ['jobs'] },
+  ];
+}
+
 export default async function Page({ params }: { params: { slug: string[] } }) {
   const { slug } = await params;
   const pathPart = slug[0];
@@ -19,12 +28,13 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   let html = fs.readFileSync(filePath, 'utf8');
   html = html.replace(/<script\b[^>]*>([\s\S]*?)<\/script>/gm, '');
   
-  // Apply the same link mapping
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/culture\//g, 'href="/culture');
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/locations\//g, 'href="/locations');
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/our-teams\//g, 'href="/our-teams');
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/stellenangebote\//g, 'href="/jobs');
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\//g, 'href="/"');
+  // Link mapping for GitHub Pages (trailing slashes added)
+  const prefix = '/FlaconiCareers';
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/culture\//g, `href="${prefix}/culture/"`);
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/locations\//g, `href="${prefix}/locations/"`);
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/our-teams\//g, `href="${prefix}/our-teams/"`);
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/stellenangebote\//g, `href="${prefix}/jobs/"`);
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\//g, `href="${prefix}/"`);
 
   const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
   const headMatch = html.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
