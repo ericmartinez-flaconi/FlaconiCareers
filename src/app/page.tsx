@@ -14,8 +14,9 @@ export default function Home() {
     if (!content) return content;
     let rewritten = content;
 
-    // 1. Rewrite NAVIGATION links only (keep them within our prototype)
-    // We specifically target the page paths so we don't accidentally break assets
+    // We only need to rewrite NAVIGATION links now.
+    // Assets are already handled by crawl_v12 and point to /FlaconiCareers/assets/...
+    
     const base = 'https?://(www\\.)?flaconi\\.de/karriere/(en/)?';
     
     rewritten = rewritten.replace(new RegExp(`href="${base}culture/?`, 'g'), `href="${prefix}/culture/"`);
@@ -24,12 +25,7 @@ export default function Home() {
     rewritten = rewritten.replace(new RegExp(`href="${base}stellenangebote/?`, 'g'), `href="${prefix}/jobs/"`);
     
     // Root link (logo, home)
-    // Use a negative lookahead to make sure we don't match the assets paths later
     rewritten = rewritten.replace(new RegExp(`href="${base}(?!wp-content|wp-includes|wp-json)(?!"|#|\\s)`, 'g'), `href="${prefix}/"`);
-
-    // 2. IMPORTANT: Do NOT rewrite src/href for assets (wp-content, wp-includes).
-    // They should stay absolute to flaconi.de so the CSS/Images load.
-    // The crawl logic (v10) already made them absolute.
 
     return rewritten;
   };
