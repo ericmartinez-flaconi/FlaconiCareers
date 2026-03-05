@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import JobsPage from '../jobs/page'; // Reuse the jobs logic
 
 export async function generateStaticParams() {
   return [
@@ -14,11 +15,14 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   const { slug } = await params;
   const pathPart = slug[0];
   
+  if (pathPart === 'jobs') {
+    return <JobsPage />;
+  }
+
   let fileName = 'responsive_home.json';
   if (pathPart === 'culture') fileName = 'responsive_culture.json';
   if (pathPart === 'locations') fileName = 'responsive_locations.json';
   if (pathPart === 'our-teams') fileName = 'responsive_our-teams.json';
-  if (pathPart === 'jobs') fileName = 'responsive_jobs.json';
 
   const filePath = path.join(process.cwd(), 'captured_dom', fileName);
   if (!fs.existsSync(filePath)) {
