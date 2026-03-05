@@ -24,8 +24,9 @@ export default function JobsClient({ initialData }: { initialData: any }) {
         const fTeam = teamVal.toLowerCase();
         const fWork = worktypeVal.toLowerCase();
 
-        // Match if filter is empty OR if there's a partial match in either direction
-        const matchesLocation = !fLoc || jobLoc.includes(fLoc) || fLoc.includes(jobLoc);
+        // City-level matching for locations (e.g. "Halle" matches "Halle (Saale)")
+        const getCity = (s: string) => s.split(/[\(,\s]/)[0].toLowerCase();
+        const matchesLocation = !fLoc || getCity(jobLoc).includes(getCity(fLoc)) || getCity(fLoc).includes(getCity(jobLoc));
         
         // Teams can be tricky (e.g. "Data Analytics" vs "Data & Analytics")
         // We strip non-alphanumeric for a safer comparison
