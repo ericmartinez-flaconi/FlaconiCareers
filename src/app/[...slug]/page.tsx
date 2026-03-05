@@ -29,29 +29,35 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   let html = data.body;
   let head = data.head;
 
-  // Prefixing for GitHub Pages deployment
   const prefix = '/FlaconiCareers';
-  html = html.replace(/src="\//g, `src="${prefix}/`);
-  html = html.replace(/href="\//g, `href="${prefix}/`);
-  html = html.replace(/srcset="\//g, `srcset="${prefix}/`);
 
-  // Fix internal links to stay in our prototype
-  const baseFlaconi = /https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g;
-  html = html.replace(new RegExp(baseFlaconi.source + 'culture\\/?', 'g'), `${prefix}/culture/`);
-  html = html.replace(new RegExp(baseFlaconi.source + 'locations\\/?', 'g'), `${prefix}/locations/`);
-  html = html.replace(new RegExp(baseFlaconi.source + 'our-teams\\/?', 'g'), `${prefix}/our-teams/`);
-  html = html.replace(new RegExp(baseFlaconi.source + 'stellenangebote\\/?', 'g'), `${prefix}/jobs/`);
-  html = html.replace(new RegExp(baseFlaconi.source + '(?!"|#|\\s)', 'g'), `${prefix}/`);
+  const rewriteLinks = (content: string) => {
+    if (!content) return content;
+    let rewritten = content;
 
-  // Strip scripts to prevent hydration issues
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?culture\/?/g, `${prefix}/culture/`);
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?locations\/?/g, `${prefix}/locations/`);
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?our-teams\/?/g, `${prefix}/our-teams/`);
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?stellenangebote\/?/g, `${prefix}/jobs/`);
+    
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g, `${prefix}/`);
+
+    rewritten = rewritten.replace(/src="\//g, `src="${prefix}/`);
+    rewritten = rewritten.replace(/href="\//g, `href="${prefix}/`);
+    rewritten = rewritten.replace(/srcset="\//g, `srcset="${prefix}/`);
+
+    return rewritten;
+  };
+
+  html = rewriteLinks(html);
+  head = rewriteLinks(head);
+
   const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
   html = html.replace(scriptRegex, '');
   head = head.replace(scriptRegex, '');
   
-  // Strip base tag
   head = head.replace(/<base\b[^>]*\/?>/gmi, '');
 
-  // Ensure viewport meta is present and correct for mobile
   if (!head.includes('name="viewport"')) {
     head = `<meta name="viewport" content="width=device-width, initial-scale=1">${head}`;
   }

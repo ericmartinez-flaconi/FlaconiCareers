@@ -8,36 +8,34 @@ export default function Home() {
   let html = data.body;
   let head = data.head;
 
-  // Prefixing for GitHub Pages deployment
   const prefix = '/FlaconiCareers';
-  html = html.replace(/src="\//g, `src="${prefix}/`);
-  html = html.replace(/href="\//g, `href="${prefix}/`);
-  html = html.replace(/srcset="\//g, `srcset="${prefix}/`);
 
-  // Fix internal links to stay in our prototype
-  // Matches: http(s)://(www.)flaconi.de/karriere/(en/)?...
-  const flaconiRegex = /https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g;
-  
-  html = html.replace(flaconiRegex, (match: string) => {
-    // Determine the path after /karriere/(en/)?
-    const rest = html.substring(html.indexOf(match) + match.length);
-    if (rest.startsWith('culture')) return `${prefix}/culture/`;
-    if (rest.startsWith('locations')) return `${prefix}/locations/`;
-    if (rest.startsWith('our-teams')) return `${prefix}/our-teams/`;
-    if (rest.startsWith('stellenangebote')) return `${prefix}/jobs/`;
-    return `${prefix}/`;
-  });
+  const rewriteLinks = (content: string) => {
+    if (!content) return content;
+    let rewritten = content;
 
-  // Since regex replace with callback in standard string.replace(regex, cb) 
-  // might be tricky with many occurrences, let's use a simpler but more comprehensive set:
-  const baseFlaconi = /https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g;
-  html = html.replace(new RegExp(baseFlaconi.source + 'culture\\/?', 'g'), `${prefix}/culture/`);
-  html = html.replace(new RegExp(baseFlaconi.source + 'locations\\/?', 'g'), `${prefix}/locations/`);
-  html = html.replace(new RegExp(baseFlaconi.source + 'our-teams\\/?', 'g'), `${prefix}/our-teams/`);
-  html = html.replace(new RegExp(baseFlaconi.source + 'stellenangebote\\/?', 'g'), `${prefix}/jobs/`);
-  html = html.replace(new RegExp(baseFlaconi.source + '(?!"|#|\\s)', 'g'), `${prefix}/`);
+    // 1. Rewrite absolute links to our prototype paths
+    // We do the specific ones first
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?culture\/?/g, `${prefix}/culture/`);
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?locations\/?/g, `${prefix}/locations/`);
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?our-teams\/?/g, `${prefix}/our-teams/`);
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?stellenangebote\/?/g, `${prefix}/jobs/`);
+    
+    // 2. Rewrite any other flaconi karriere link to root
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g, `${prefix}/`);
 
-  // Strip scripts to prevent hydration issues
+    // 3. Handle relative links if any were missed
+    rewritten = rewritten.replace(/src="\//g, `src="${prefix}/`);
+    rewritten = rewritten.replace(/href="\//g, `href="${prefix}/`);
+    rewritten = rewritten.replace(/srcset="\//g, `srcset="${prefix}/`);
+
+    return rewritten;
+  };
+
+  html = rewriteLinks(html);
+  head = rewriteLinks(head);
+
+  // Strip scripts to prevent hydration issues and redirects
   const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
   html = html.replace(scriptRegex, '');
   head = head.replace(scriptRegex, '');

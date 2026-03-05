@@ -6,19 +6,28 @@ export default async function JobsPage() {
   const responsivePath = path.join(process.cwd(), 'captured_dom', 'responsive_jobs.json');
   const data = JSON.parse(fs.readFileSync(responsivePath, 'utf8'));
 
-  // Pre-process links for static build
   const prefix = '/FlaconiCareers';
-  data.body = data.body.replace(/src="\//g, `src="${prefix}/`);
-  data.body = data.body.replace(/href="\//g, `href="${prefix}/`);
-  data.body = data.body.replace(/srcset="\//g, `srcset="${prefix}/`);
 
-  // Fix internal links to stay in our prototype
-  const baseFlaconi = /https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g;
-  data.body = data.body.replace(new RegExp(baseFlaconi.source + 'culture\\/?', 'g'), `${prefix}/culture/`);
-  data.body = data.body.replace(new RegExp(baseFlaconi.source + 'locations\\/?', 'g'), `${prefix}/locations/`);
-  data.body = data.body.replace(new RegExp(baseFlaconi.source + 'our-teams\\/?', 'g'), `${prefix}/our-teams/`);
-  data.body = data.body.replace(new RegExp(baseFlaconi.source + 'stellenangebote\\/?', 'g'), `${prefix}/jobs/`);
-  data.body = data.body.replace(new RegExp(baseFlaconi.source + '(?!"|#|\\s)', 'g'), `${prefix}/`);
+  const rewriteLinks = (content: string) => {
+    if (!content) return content;
+    let rewritten = content;
+
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?culture\/?/g, `${prefix}/culture/`);
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?locations\/?/g, `${prefix}/locations/`);
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?our-teams\/?/g, `${prefix}/our-teams/`);
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?stellenangebote\/?/g, `${prefix}/jobs/`);
+    
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g, `${prefix}/`);
+
+    rewritten = rewritten.replace(/src="\//g, `src="${prefix}/`);
+    rewritten = rewritten.replace(/href="\//g, `href="${prefix}/`);
+    rewritten = rewritten.replace(/srcset="\//g, `srcset="${prefix}/`);
+
+    return rewritten;
+  };
+
+  data.body = rewriteLinks(data.body);
+  data.head = rewriteLinks(data.head);
 
   // Strip scripts
   const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
