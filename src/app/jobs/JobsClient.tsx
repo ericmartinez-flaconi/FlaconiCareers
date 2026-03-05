@@ -30,8 +30,10 @@ export default function JobsClient({ initialData }: { initialData: any }) {
 
     async function fetchLiveJobs() {
       try {
+        // Add cache buster to URL
+        const cacheBuster = `&cb=${new Date().getTime()}`;
         console.log('Fetching live jobs from Google Sheets:', CMS_CONFIG.GOOGLE_SHEET_CSV_URL);
-        const response = await fetch(CMS_CONFIG.GOOGLE_SHEET_CSV_URL);
+        const response = await fetch(CMS_CONFIG.GOOGLE_SHEET_CSV_URL + cacheBuster);
         const csvText = await response.text();
         
         const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
@@ -39,23 +41,32 @@ export default function JobsClient({ initialData }: { initialData: any }) {
         
         const jobTable = document.querySelector('.job-table');
         if (jobTable && liveJobs.length > 0) {
+           // Clear existing jobs
            jobTable.innerHTML = '';
            
            liveJobs.forEach((job: any) => {
-             if (!job.Title && !job.URL) return;
+             // Sanitize keys and values (remove extra quotes and trim)
+             const sanitize = (val: string) => (val || '').replace(/^"|"$/g, '').replace(/^"|"$/g, '').trim();
+             
+             const title = sanitize(job.Title);
+             const department = sanitize(job.Department || job.Team);
+             const location = sanitize(job.Location);
+             const url = sanitize(job.URL);
+
+             if (!title && !url) return;
 
              const jobEl = document.createElement('div');
              jobEl.className = 'job';
              // Set data attributes for filtering
-             jobEl.setAttribute('data-location', job.Location || '');
-             jobEl.setAttribute('data-team', job.Team || '');
-             jobEl.setAttribute('data-worktype', job.WorkType || '');
+             jobEl.setAttribute('data-location', location);
+             jobEl.setAttribute('data-team', department);
+             jobEl.setAttribute('data-worktype', ''); // Optional
 
              jobEl.innerHTML = `
                 <div class="main-column">
                     <div>
-                        <a href="${job.URL || '#'}" class="job-title">
-                            <strong>${job.Title || 'Job Opening'}</strong>
+                        <a href="${url || '#'}" class="job-title">
+                            <strong>${title || 'Job Opening'}</strong>
                         </a>
                     </div>
                     <div class="info-column">
@@ -63,7 +74,7 @@ export default function JobsClient({ initialData }: { initialData: any }) {
                             <div style="display: flex; flex-wrap: wrap; column-gap: 36px;">
                                 <p style="display:flex; margin-bottom: unset;">
                                     <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" style="width: 19px;">
-                                    &nbsp;<span>${job.Location || 'Remote / Berlin'}</span>
+                                    &nbsp;<span>${location || 'Remote / Berlin'}</span>
                                 </p>
                             </div>
                         </div>
@@ -72,7 +83,7 @@ export default function JobsClient({ initialData }: { initialData: any }) {
                 <div class="button-column" style="display: table; margin-left: auto;">
                     <div style="display: table-cell; vertical-align: middle;">
                         <div class="apply-link">
-                            <a href="${job.URL || '#'}" target="blank">
+                            <a href="${url || '#'}" target="blank">
                                 <span>more details</span>
                                 <span class="icon kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -87,7 +98,7 @@ export default function JobsClient({ initialData }: { initialData: any }) {
              jobTable.appendChild(jobEl);
            });
            console.log('Live jobs injected:', liveJobs.length);
-           // Trigger initial filter logic if any dropdown is pre-selected
+           // Trigger initial filter logic
            (window as any).filterJobTabelle();
         }
       } catch (e) {
