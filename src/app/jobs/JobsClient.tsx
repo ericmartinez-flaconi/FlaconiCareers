@@ -1,13 +1,19 @@
 'use client';
 import { useEffect, useState } from 'react';
+import Papa from 'papaparse';
+import { CMS_CONFIG } from '@/CMS_CONFIG';
 
 export default function JobsClient({ initialData }: { initialData: any }) {
-  // This component handles the 1:1 DOM rendering and the Live Sync script
+  // This component handles the 1:1 DOM rendering and the Live Sync from Google Sheets
   useEffect(() => {
     async function fetchLiveJobs() {
       try {
-        const response = await fetch('/FlaconiCareers/captured_dom/jobs_live.json');
-        const liveJobs = await response.json();
+        console.log('Fetching live jobs from Google Sheets...');
+        const response = await fetch(CMS_CONFIG.GOOGLE_SHEET_CSV_URL);
+        const csvText = await response.text();
+        
+        const parsed = Papa.parse(csvText, { header: true });
+        const liveJobs = parsed.data;
         
         const jobTable = document.querySelector('.job-table');
         if (jobTable && liveJobs.length > 0) {
@@ -15,6 +21,9 @@ export default function JobsClient({ initialData }: { initialData: any }) {
            jobTable.innerHTML = '';
            
            liveJobs.forEach((job: any) => {
+             // Skip empty rows
+             if (!job.Title && !job.URL) return;
+
              const jobEl = document.createElement('div');
              jobEl.className = 'job';
              jobEl.innerHTML = `
@@ -52,10 +61,10 @@ export default function JobsClient({ initialData }: { initialData: any }) {
              `;
              jobTable.appendChild(jobEl);
            });
-           console.log('Live jobs injected:', liveJobs.length);
+           console.log('Live jobs injected from Sheets:', liveJobs.length);
         }
       } catch (e) {
-        console.error('Failed to sync live jobs:', e);
+        console.error('Failed to sync live jobs from Google Sheets:', e);
       }
     }
 
