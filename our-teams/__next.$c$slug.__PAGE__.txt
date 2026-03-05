@@ -155,7 +155,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
              #mobile-drawer { display: none !important; }
              .mobile-navigation { display: none !important; }
            }
-        </style>0:{"buildId":"F8R9T3QXGueMgPJ1cKVRj","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+        </style>0:{"buildId":"jhpSn98-oHfMP0NZpzHr5","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
 6:T13e4b,
 
 <div id="wrapper" class="site wp-site-blocks">
