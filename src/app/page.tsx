@@ -15,13 +15,27 @@ export default function Home() {
   html = html.replace(/srcset="\//g, `srcset="${prefix}/`);
 
   // Fix internal links to stay in our prototype
-  // We use a more generic replacement for absolute flaconi karriere links
-  html = html.replace(/https:\/\/www\.flaconi\.de\/karriere\/(en\/)?culture\/?/g, `${prefix}/culture/`);
-  html = html.replace(/https:\/\/www\.flaconi\.de\/karriere\/(en\/)?locations\/?/g, `${prefix}/locations/`);
-  html = html.replace(/https:\/\/www\.flaconi\.de\/karriere\/(en\/)?our-teams\/?/g, `${prefix}/our-teams/`);
-  html = html.replace(/https:\/\/www\.flaconi\.de\/karriere\/(en\/)?stellenangebote\/?/g, `${prefix}/jobs/`);
-  // Any other flaconi karriere link goes to prototype root
-  html = html.replace(/https:\/\/www\.flaconi\.de\/karriere\/(en\/)?(?!"|#)/g, `${prefix}/`);
+  // Matches: http(s)://(www.)flaconi.de/karriere/(en/)?...
+  const flaconiRegex = /https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g;
+  
+  html = html.replace(flaconiRegex, (match, www, en) => {
+    // Determine the path after /karriere/(en/)?
+    const rest = html.substring(html.indexOf(match) + match.length);
+    if (rest.startsWith('culture')) return `${prefix}/culture/`;
+    if (rest.startsWith('locations')) return `${prefix}/locations/`;
+    if (rest.startsWith('our-teams')) return `${prefix}/our-teams/`;
+    if (rest.startsWith('stellenangebote')) return `${prefix}/jobs/`;
+    return `${prefix}/`;
+  });
+
+  // Since regex replace with callback in standard string.replace(regex, cb) 
+  // might be tricky with many occurrences, let's use a simpler but more comprehensive set:
+  const baseFlaconi = /https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g;
+  html = html.replace(new RegExp(baseFlaconi.source + 'culture\\/?', 'g'), `${prefix}/culture/`);
+  html = html.replace(new RegExp(baseFlaconi.source + 'locations\\/?', 'g'), `${prefix}/locations/`);
+  html = html.replace(new RegExp(baseFlaconi.source + 'our-teams\\/?', 'g'), `${prefix}/our-teams/`);
+  html = html.replace(new RegExp(baseFlaconi.source + 'stellenangebote\\/?', 'g'), `${prefix}/jobs/`);
+  html = html.replace(new RegExp(baseFlaconi.source + '(?!"|#|\\s)', 'g'), `${prefix}/`);
 
   // Strip scripts to prevent hydration issues
   const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;

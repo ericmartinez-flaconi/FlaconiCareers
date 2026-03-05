@@ -36,13 +36,12 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   html = html.replace(/srcset="\//g, `srcset="${prefix}/`);
 
   // Fix internal links to stay in our prototype
-  // We use a more generic replacement for absolute flaconi karriere links
-  html = html.replace(/https:\/\/www\.flaconi\.de\/karriere\/(en\/)?culture\/?/g, `${prefix}/culture/`);
-  html = html.replace(/https:\/\/www\.flaconi\.de\/karriere\/(en\/)?locations\/?/g, `${prefix}/locations/`);
-  html = html.replace(/https:\/\/www\.flaconi\.de\/karriere\/(en\/)?our-teams\/?/g, `${prefix}/our-teams/`);
-  html = html.replace(/https:\/\/www\.flaconi\.de\/karriere\/(en\/)?stellenangebote\/?/g, `${prefix}/jobs/`);
-  // Any other flaconi karriere link goes to prototype root
-  html = html.replace(/https:\/\/www\.flaconi\.de\/karriere\/(en\/)?(?!"|#)/g, `${prefix}/`);
+  const baseFlaconi = /https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g;
+  html = html.replace(new RegExp(baseFlaconi.source + 'culture\\/?', 'g'), `${prefix}/culture/`);
+  html = html.replace(new RegExp(baseFlaconi.source + 'locations\\/?', 'g'), `${prefix}/locations/`);
+  html = html.replace(new RegExp(baseFlaconi.source + 'our-teams\\/?', 'g'), `${prefix}/our-teams/`);
+  html = html.replace(new RegExp(baseFlaconi.source + 'stellenangebote\\/?', 'g'), `${prefix}/jobs/`);
+  html = html.replace(new RegExp(baseFlaconi.source + '(?!"|#|\\s)', 'g'), `${prefix}/`);
 
   // Strip scripts to prevent hydration issues
   const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
