@@ -7,53 +7,62 @@ export async function generateStaticParams() {
     { slug: ['culture'] },
     { slug: ['locations'] },
     { slug: ['our-teams'] },
-    { slug: ['jobs'] },
+    { slug: ['jobs'] }
   ];
 }
 
 export default async function Page({ params }: { params: { slug: string[] } }) {
   const { slug } = await params;
-  const pathPart = slug[0];
-  
-  if (pathPart === 'jobs') {
+  const pageName = slug[slug.length - 1];
+
+  if (pageName === 'jobs') {
     return <JobsPage />;
   }
 
-  let fileName = 'responsive_home.json';
-  if (pathPart === 'culture') fileName = 'responsive_culture.json';
-  if (pathPart === 'locations') fileName = 'responsive_locations.json';
-  if (pathPart === 'our-teams') fileName = 'responsive_our-teams.json';
-
-  const filePath = path.join(process.cwd(), 'captured_dom', fileName);
+  const filePath = path.join(process.cwd(), 'captured_dom', `responsive_${pageName}.json`);
   if (!fs.existsSync(filePath)) {
-    return <div>Page not found in prototype: {pathPart}</div>;
+    return <div>Page not found: {pageName}</div>;
   }
 
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
   let html = data.body;
   let head = data.head;
 
-  // Strip all scripts from head and body to prevent redirects or tracking
-  const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
-  html = html.replace(scriptRegex, '');
-  head = head.replace(scriptRegex, '');
-  
-  // Strip base tag as it points to the real domain
-  head = head.replace(/<base\b[^>]*\/?>/gmi, '');
-  
+  // Prefixing for GitHub Pages deployment
   const prefix = '/FlaconiCareers';
+  html = html.replace(/src="\//g, `src="${prefix}/`);
+  html = html.replace(/href="\//g, `href="${prefix}/`);
+  html = html.replace(/srcset="\//g, `srcset="${prefix}/`);
+
+  // Fix internal links to stay in our prototype
   html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?culture\//g, `href="${prefix}/culture/"`);
   html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?locations\//g, `href="${prefix}/locations/"`);
   html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?our-teams\//g, `href="${prefix}/our-teams/"`);
   html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?stellenangebote\//g, `href="${prefix}/jobs/"`);
   html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?(?!"|#)/g, `href="${prefix}/"`);
 
+  // Strip scripts to prevent hydration issues
+  const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
+  html = html.replace(scriptRegex, '');
+  head = head.replace(scriptRegex, '');
+  
+  // Strip base tag
+  head = head.replace(/<base\b[^>]*\/?>/gmi, '');
+
+  // Ensure viewport meta is present and correct for mobile
+  if (!head.includes('name="viewport"')) {
+    head = `<meta name="viewport" content="width=device-width, initial-scale=1">${head}`;
+  }
+
   return (
-    <div className={data.bodyClass} style={{ margin: 0, padding: 0 }}>
-      {/* We can't easily inject into head here without a special component, 
-          but for a prototype, this body content injection is often enough 
-          if the main styles are in globals.css */}
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    <html lang="en" className={data.htmlClass}>
+      <head dangerouslySetInnerHTML={{ __html: head }} />
+      <body 
+        className={data.bodyClass} 
+        style={{ margin: 0, padding: 0, overflowX: 'hidden' }}
+        dangerouslySetInnerHTML={{ __html: html }} 
+      />
+    </html>
   );
 }

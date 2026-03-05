@@ -1,25 +1,40 @@
-import Navbar from '@/components/Navbar';
-import { Hero, Teams, Locations, Footer } from '@/components/Sections';
+import fs from 'fs';
+import path from 'path';
 
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-white text-gray-900 selection:bg-pink-100 selection:text-pink-600 overflow-x-hidden">
-      <Navbar />
-      <Hero />
-      
-      {/* Quote Section */}
-      <section className="py-24 md:py-32 bg-zinc-50 px-6 md:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <blockquote className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-none text-black">
-            “Love of beauty is taste. <br className="hidden md:block"/>The creation of beauty is art”
-            <span className="block mt-6 md:mt-8 text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-pink-600">— Ralph Waldo Emerson</span>
-          </blockquote>
-        </div>
-      </section>
+  const filePath = path.join(process.cwd(), 'captured_dom', 'responsive_home.json');
+  const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-      <Teams />
-      <Locations />
-      <Footer />
-    </main>
+  let html = data.body;
+  let head = data.head;
+
+  // Prefixing for GitHub Pages deployment
+  const prefix = '/FlaconiCareers';
+  html = html.replace(/src="\//g, `src="${prefix}/`);
+  html = html.replace(/href="\//g, `href="${prefix}/`);
+  html = html.replace(/srcset="\//g, `srcset="${prefix}/`);
+
+  // Strip scripts to prevent hydration issues
+  const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
+  html = html.replace(scriptRegex, '');
+  head = head.replace(scriptRegex, '');
+  
+  // Strip base tag
+  head = head.replace(/<base\b[^>]*\/?>/gmi, '');
+
+  // Ensure viewport meta is present and correct for mobile
+  if (!head.includes('name="viewport"')) {
+    head = `<meta name="viewport" content="width=device-width, initial-scale=1">${head}`;
+  }
+
+  return (
+    <html lang="en" className={data.htmlClass}>
+      <head dangerouslySetInnerHTML={{ __html: head }} />
+      <body 
+        className={data.bodyClass} 
+        style={{ margin: 0, padding: 0, overflowX: 'hidden' }}
+        dangerouslySetInnerHTML={{ __html: html }} 
+      />
+    </html>
   );
 }
