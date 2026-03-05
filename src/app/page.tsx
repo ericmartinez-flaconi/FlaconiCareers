@@ -18,7 +18,7 @@ export default function Home() {
   // Matches: http(s)://(www.)flaconi.de/karriere/(en/)?...
   const flaconiRegex = /https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g;
   
-  html = html.replace(flaconiRegex, (match, www, en) => {
+  html = html.replace(flaconiRegex, (match: string) => {
     // Determine the path after /karriere/(en/)?
     const rest = html.substring(html.indexOf(match) + match.length);
     if (rest.startsWith('culture')) return `${prefix}/culture/`;
