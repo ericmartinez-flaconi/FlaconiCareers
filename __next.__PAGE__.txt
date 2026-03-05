@@ -215,7 +215,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
                                 color: white;
                                 background-color: #33879E;
                             }
-						</style>0:{"buildId":"RFmnIjyVeb8GUpp-za1Fb","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],null,"$L4"]}],"loading":null,"isPartial":false}
+						</style>0:{"buildId":"ICNN-GOpgZdu443YVZemR","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],null,"$L4"]}],"loading":null,"isPartial":false}
 5:Tcef0,
 
 <div id="wrapper" class="site wp-site-blocks">
