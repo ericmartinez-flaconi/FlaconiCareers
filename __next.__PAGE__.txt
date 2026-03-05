@@ -163,12 +163,12 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
            #mobile-drawer { display: none !important; }
            .mobile-navigation { display: none !important; }
          }
-      </style>0:{"buildId":"Gwzsn6zWZqmbrZ-vcItsp","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],null,"$L4"]}],"loading":null,"isPartial":false}
-5:Td7b1,
+      </style>0:{"buildId":"nF6RGDG52X5RgSZ2NouXa","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],null,"$L4"]}],"loading":null,"isPartial":false}
+5:Td2f2,
 
 <div id="wrapper" class="site wp-site-blocks">
 			<a class="skip-link screen-reader-text scroll-ignore" href="#main">Skip to content</a>
-		<link rel="stylesheet" id="kadence-header-css" href="https://www.flaconi.de/karriere/wp-content/themes/kadence/assets/css/header.min.css?ver=1.4.5" type="text/css" media="all">
+		<link rel="stylesheet" id="kadence-header-css" href="/FlaconiCareers/wp-content/themes/kadence/assets/css/header.min.css?ver=1.4.5" type="text/css" media="all">
 <header id="masthead" class="site-header" role="banner" itemtype="https://schema.org/WPHeader" itemscope="">
 	<div id="main-header" class="site-header-wrap">
 		<div class="site-header-inner-wrap">
@@ -180,11 +180,11 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 			<div class="site-main-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-no-center">
 									<div class="site-header-main-section-left site-header-section site-header-section-left">
 						<div class="site-header-item site-header-focus-item" data-section="title_tagline">
-	<div class="site-branding branding-layout-standard site-brand-logo-only"><a class="brand has-logo-image" href="https://www.flaconi.de/karriere/en/" rel="home"><img width="165" height="42" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
+	<div class="site-branding branding-layout-standard site-brand-logo-only"><a class="brand has-logo-image" href="/FlaconiCareers/en/" rel="home"><img width="165" height="42" src="/FlaconiCareers/wp-content/uploads/2024/03/flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
 					</div>
 																	<div class="site-header-main-section-right site-header-section site-header-section-right">
 						<div class="site-header-item site-header-focus-item" data-section="kadence_customizer_header_social">
-	<div class="header-social-wrap"><div class="header-social-inner-wrap element-social-inner-wrap social-show-label-false social-style-outline"><a href="https://www.facebook.com/flaconi.de/" aria-label="Facebook" target="_self" rel="noopener noreferrer" class="social-button header-social-item social-link-facebook has-custom-image"><img width="9" height="17" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/flaconi-facebook.jpg" class="social-icon-image" alt="" style="max-width:16px" decoding="async"></a><a href="https://www.instagram.com/flaconi.de/" aria-label="Instagram" target="_self" rel="noopener noreferrer" class="social-button header-social-item social-link-instagram has-custom-image"><img width="17" height="17" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/flaconi-instagram.jpg" class="social-icon-image" alt="" style="max-width:16px" decoding="async"></a><a href="https://www.linkedin.com/company/flaconi-gmbh/" aria-label="Linkedin" target="_self" rel="noopener noreferrer" class="social-button header-social-item social-link-linkedin has-custom-image"><img width="17" height="17" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/flaconi-linkedin.jpg" class="social-icon-image" alt="" style="max-width:16px" decoding="async"></a></div></div></div><!-- data-section="header_social" -->
+	<div class="header-social-wrap"><div class="header-social-inner-wrap element-social-inner-wrap social-show-label-false social-style-outline"><a href="https://www.facebook.com/flaconi.de/" aria-label="Facebook" target="_self" rel="noopener noreferrer" class="social-button header-social-item social-link-facebook has-custom-image"><img width="9" height="17" src="/FlaconiCareers/wp-content/uploads/2024/03/flaconi-facebook.jpg" class="social-icon-image" alt="" style="max-width:16px" decoding="async"></a><a href="https://www.instagram.com/flaconi.de/" aria-label="Instagram" target="_self" rel="noopener noreferrer" class="social-button header-social-item social-link-instagram has-custom-image"><img width="17" height="17" src="/FlaconiCareers/wp-content/uploads/2024/03/flaconi-instagram.jpg" class="social-icon-image" alt="" style="max-width:16px" decoding="async"></a><a href="https://www.linkedin.com/company/flaconi-gmbh/" aria-label="Linkedin" target="_self" rel="noopener noreferrer" class="social-button header-social-item social-link-linkedin has-custom-image"><img width="17" height="17" src="/FlaconiCareers/wp-content/uploads/2024/03/flaconi-linkedin.jpg" class="social-icon-image" alt="" style="max-width:16px" decoding="async"></a></div></div></div><!-- data-section="header_social" -->
 					</div>
 							</div>
 		</div>
@@ -198,7 +198,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 			<div class="site-bottom-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-center-column">
 									<div class="site-header-bottom-section-left site-header-section site-header-section-left">
 						<div class="site-header-item site-header-focus-item" data-section="kadence_customizer_header_html2">
-	<div class="header-html2 inner-link-style-normal"><div class="header-html-inner"><p><img id="nav-additional-logo" class="alignnone size-full wp-image-453" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/flaconi-logo.jpg" alt="" width="165" height="42"></p>
+	<div class="header-html2 inner-link-style-normal"><div class="header-html-inner"><p><img id="nav-additional-logo" class="alignnone size-full wp-image-453" src="/FlaconiCareers/wp-content/uploads/2024/03/flaconi-logo.jpg" alt="" width="165" height="42"></p>
 </div></div></div><!-- data-section="header_html2" -->
 							<div class="site-header-bottom-section-left-center site-header-section site-header-section-left-center">
 															</div>
@@ -207,12 +207,12 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 						<div class="site-header-item site-header-focus-item site-header-item-main-navigation header-navigation-layout-stretch-false header-navigation-layout-fill-stretch-false" data-section="kadence_customizer_primary_navigation">
 		<nav id="site-navigation" class="main-navigation header-navigation hover-to-open nav--toggle-sub header-navigation-style-standard header-navigation-dropdown-animation-none" role="navigation" aria-label="Primary">
 			<div class="primary-menu-container header-menu-container">
-	<ul id="primary-menu" class="menu"><li id="menu-item-3274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3119 current_page_item menu-item-3274"><a href="https://www.flaconi.de/karriere/en/" aria-current="page">About us</a></li>
-<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278"><a href="https://www.flaconi.de/karriere/en/our-teams/">Our Teams</a></li>
-<li id="menu-item-3277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3277"><a href="https://www.flaconi.de/karriere/en/locations/">Locations</a></li>
-<li id="menu-item-3275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3275"><a href="https://www.flaconi.de/karriere/en/culture/">Life at flaconi</a></li>
-<li id="menu-item-3276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="https://www.flaconi.de/karriere/en/karriere/">How we hire</a></li>
-<li id="menu-item-4593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="https://www.flaconi.de/karriere/en/stellenangebote/">Jobs</a></li>
+	<ul id="primary-menu" class="menu"><li id="menu-item-3274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3119 current_page_item menu-item-3274"><a href="/FlaconiCareers/en/" aria-current="page">About us</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278"><a href="/FlaconiCareers/our-teams/">Our Teams</a></li>
+<li id="menu-item-3277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3277"><a href="/FlaconiCareers/locations/">Locations</a></li>
+<li id="menu-item-3275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3275"><a href="/FlaconiCareers/culture/">Life at flaconi</a></li>
+<li id="menu-item-3276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="/FlaconiCareers/karriere/">How we hire</a></li>
+<li id="menu-item-4593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="/FlaconiCareers/jobs/">Jobs</a></li>
 </ul>		</div>
 	</nav><!-- #site-navigation -->
 	</div><!-- data-section="primary_navigation" -->
@@ -220,7 +220,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 	<div class="header-html inner-link-style-normal"><div class="header-html-inner"><p>
 </p><div role="navigation" aria-label="Language Switcher" class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-list-horizontal">
 	<ul><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-list-horizontal">
-				<a href="https://www.flaconi.de/karriere/en/" hreflang="en" lang="en" class="wpml-ls-link" aria-current="page" aria-label="Switch to EN" title="Switch to EN">
+				<a href="/FlaconiCareers/en/" hreflang="en" lang="en" class="wpml-ls-link" aria-current="page" aria-label="Switch to EN" title="Switch to EN">
 					<span class="wpml-ls-native">EN</span></a>
 			</li><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-de wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
 				<a href="https://www.flaconi.de/karriere/" hreflang="de" lang="de" class="wpml-ls-link" aria-label="Switch to DE" title="Switch to DE">
@@ -251,7 +251,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 			<div class="site-main-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-no-center">
 									<div class="site-header-main-section-left site-header-section site-header-section-left">
 						<div class="site-header-item site-header-focus-item" data-section="title_tagline">
-	<div class="site-branding mobile-site-branding branding-layout-standard branding-tablet-layout-inherit site-brand-logo-only branding-mobile-layout-inherit"><a class="brand has-logo-image" href="https://www.flaconi.de/karriere/en/" rel="home"><img width="165" height="42" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
+	<div class="site-branding mobile-site-branding branding-layout-standard branding-tablet-layout-inherit site-brand-logo-only branding-mobile-layout-inherit"><a class="brand has-logo-image" href="/FlaconiCareers/en/" rel="home"><img width="165" height="42" src="/FlaconiCareers/wp-content/uploads/2024/03/flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
 					</div>
 																	<div class="site-header-main-section-right site-header-section site-header-section-right">
 						<div class="site-header-item site-header-focus-item site-header-item-navgation-popup-toggle" data-section="kadence_customizer_mobile_trigger">
@@ -274,7 +274,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 </header><!-- #masthead -->
 
 	<main id="inner-wrap" class="wrap kt-clear" role="main">
-		<link rel="stylesheet" id="kadence-content-css" href="https://www.flaconi.de/karriere/wp-content/themes/kadence/assets/css/content.min.css?ver=1.4.5" type="text/css" media="all">
+		<link rel="stylesheet" id="kadence-content-css" href="/FlaconiCareers/wp-content/themes/kadence/assets/css/content.min.css?ver=1.4.5" type="text/css" media="all">
 <div id="primary" class="content-area">
 	<div class="content-container site-container">
 		<div id="main" class="site-main">
@@ -286,7 +286,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 	<div class="kb-row-layout-wrap kb-row-layout-id3119_7a706a-e5 alignnone wp-block-kadence-rowlayout"><div class="kt-row-column-wrap kt-has-1-columns kt-row-layout-equal kt-tab-layout-inherit kt-mobile-layout-row kt-row-valign-top kb-theme-content-width">
 
 <div class="wp-block-kadence-column kadence-column3119_53d082-f1"><div class="kt-inside-inner-col">
-<figure class="wp-block-video"><video height="1080" style="aspect-ratio: 1920 / 1080;" width="1920" autoplay="" loop="" muted="" src="https://www.flaconi.de/karriere/wp-content/uploads/2025/11/250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4"></video></figure>
+<figure class="wp-block-video"><video height="1080" style="aspect-ratio: 1920 / 1080;" width="1920" autoplay="" loop="" muted="" src="/FlaconiCareers/wp-content/uploads/2025/11/250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4"></video></figure>
 </div></div>
 
 </div></div>
@@ -318,7 +318,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 <div class="wp-block-kadence-column kadence-column3119_fe6854-50"><div class="kt-inside-inner-col">
-<figure class="wp-block-image size-full"><a href="https://www.flaconi.de/karriere/en/stellenangebote/"><img fetchpriority="high" decoding="async" width="265" height="239" src="https://www.flaconi.de/karriere/wp-content/uploads/2026/02/explore.png" alt="" class="wp-image-4797"></a></figure>
+<figure class="wp-block-image size-full"><a href="/FlaconiCareers/jobs/"><img fetchpriority="high" decoding="async" width="265" height="239" src="/FlaconiCareers/wp-content/uploads/2026/02/explore.png" alt="" class="wp-image-4797"></a></figure>
 </div></div>
 
 </div></div></div></div>
@@ -328,19 +328,19 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 <div class="wp-block-kadence-column kadence-column3119_bd65fa-59"><div class="kt-inside-inner-col"><div class="kb-row-layout-wrap kb-row-layout-id3119_ba8e3c-2d alignnone wp-block-kadence-rowlayout"><div class="kt-row-column-wrap kt-has-3-columns kt-row-layout-equal kt-tab-layout-two-grid kt-mobile-layout-row kt-row-valign-top">
 
 <div class="wp-block-kadence-column kadence-column3119_a4ecd7-7f"><div class="kt-inside-inner-col">
-<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-yw1ix "><div class="eb-flipbox-container eb-flipbox-yw1ix eb-click-mode" data-id="eb-flipbox-yw1ix" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content"><strong><strong>Meet the People Behind Beauty Tech.</strong><br><br></strong>We are 700 colleagues from over 60 nations, and this diversity is our strength. United by our vision and shared goals, we leverage our unique perspectives daily to revolutionize the beauty tech industry. We call this community #WeCommerce.<br><br>Ready to see where you fit in? Find out more about our teams below.<br><a href="https://www.flaconi.de/karriere/en/our-teams/"></a></p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="https://www.flaconi.de/karriere/en/our-teams/" target="_self" rel="noopener"><div class="eb-flipbox-button-content"><span>More about our teams</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
+<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-yw1ix "><div class="eb-flipbox-container eb-flipbox-yw1ix eb-click-mode" data-id="eb-flipbox-yw1ix" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content"><strong><strong>Meet the People Behind Beauty Tech.</strong><br><br></strong>We are 700 colleagues from over 60 nations, and this diversity is our strength. United by our vision and shared goals, we leverage our unique perspectives daily to revolutionize the beauty tech industry. We call this community #WeCommerce.<br><br>Ready to see where you fit in? Find out more about our teams below.<br><a href="/FlaconiCareers/our-teams/"></a></p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="/FlaconiCareers/our-teams/" target="_self" rel="noopener"><div class="eb-flipbox-button-content"><span>More about our teams</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
 </div></div>
 
 
 
 <div class="wp-block-kadence-column kadence-column3119_2584e4-00"><div class="kt-inside-inner-col">
-<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-fta2b "><div class="eb-flipbox-container eb-flipbox-fta2b eb-click-mode" data-id="eb-flipbox-fta2b" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content"><strong>Are you looking for the right next challenge that combines tech and beauty?</strong><br><br>Check out our current open roles below. We look forward to receiving your application!</p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="https://www.flaconi.de/karriere/stellenangebote/" target="_blank" rel="noopener"><div class="eb-flipbox-button-content"><span>Our listings</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
+<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-fta2b "><div class="eb-flipbox-container eb-flipbox-fta2b eb-click-mode" data-id="eb-flipbox-fta2b" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content"><strong>Are you looking for the right next challenge that combines tech and beauty?</strong><br><br>Check out our current open roles below. We look forward to receiving your application!</p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="/FlaconiCareers/jobs/" target="_blank" rel="noopener"><div class="eb-flipbox-button-content"><span>Our listings</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
 </div></div>
 
 
 
 <div class="wp-block-kadence-column kadence-column3119_867133-fc"><div class="kt-inside-inner-col">
-<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-ek8ov "><div class="eb-flipbox-container eb-flipbox-ek8ov eb-click-mode" data-id="eb-flipbox-ek8ov" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content">We’re proud of our success, but we’re even prouder of how we achieve it. Our corporate culture is built on a blend of ambition, fun, and innovation. We believe in pursuing our vision together.<br><br>Ready to join a culture that invests in you? Explore further insights into our working culture below.</p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="https://www.flaconi.de/karriere/en/culture/" target="_self" rel="noopener"><div class="eb-flipbox-button-content"><span>Further insights</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
+<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-ek8ov "><div class="eb-flipbox-container eb-flipbox-ek8ov eb-click-mode" data-id="eb-flipbox-ek8ov" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content">We’re proud of our success, but we’re even prouder of how we achieve it. Our corporate culture is built on a blend of ambition, fun, and innovation. We believe in pursuing our vision together.<br><br>Ready to join a culture that invests in you? Explore further insights into our working culture below.</p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="/FlaconiCareers/culture/" target="_self" rel="noopener"><div class="eb-flipbox-button-content"><span>Further insights</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
 </div></div>
 
 </div></div>
@@ -408,7 +408,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 <div class="kb-row-layout-wrap kb-row-layout-id3119_ba39af-52 alignnone wp-block-kadence-rowlayout"><div class="kt-row-column-wrap kt-has-3-columns kt-row-layout-equal kt-tab-layout-row kt-mobile-layout-row kt-row-valign-top kt-inner-column-height-full kb-theme-content-width">
 
 <div class="wp-block-kadence-column kadence-column3119_d2166c-e2"><div class="kt-inside-inner-col">
-<figure class="wp-block-kadence-image kb-image3119_3d1802-c8 kb-image-is-ratio-size"><div class="kb-is-ratio-image kb-image-ratio-land32"><img decoding="async" width="2560" height="1703" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-scaled.jpg" alt="" class="kb-img wp-image-2876" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-scaled.jpg 2560w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-300x200.jpg 300w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-1024x681.jpg 1024w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-768x511.jpg 768w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-1536x1022.jpg 1536w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-2048x1363.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px"></div></figure>
+<figure class="wp-block-kadence-image kb-image3119_3d1802-c8 kb-image-is-ratio-size"><div class="kb-is-ratio-image kb-image-ratio-land32"><img decoding="async" width="2560" height="1703" src="/FlaconiCareers/wp-content/uploads/2024/07/Headquarter-Background-Box-scaled.jpg" alt="" class="kb-img wp-image-2876" srcset="/FlaconiCareers/wp-content/uploads/2024/07/Headquarter-Background-Box-scaled.jpg 2560w, /FlaconiCareers/wp-content/uploads/2024/07/Headquarter-Background-Box-300x200.jpg 300w, /FlaconiCareers/wp-content/uploads/2024/07/Headquarter-Background-Box-1024x681.jpg 1024w, /FlaconiCareers/wp-content/uploads/2024/07/Headquarter-Background-Box-768x511.jpg 768w, /FlaconiCareers/wp-content/uploads/2024/07/Headquarter-Background-Box-1536x1022.jpg 1536w, /FlaconiCareers/wp-content/uploads/2024/07/Headquarter-Background-Box-2048x1363.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px"></div></figure>
 
 
 
@@ -433,14 +433,14 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_d5f5bf-45"><a class="kb-button kt-button button kb-btn3119_37851d-d6 kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="https://www.flaconi.de/karriere/en/locations/#berlin"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
+<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_d5f5bf-45"><a class="kb-button kt-button button kb-btn3119_37851d-d6 kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="/FlaconiCareers/locations/#berlin"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
 </div>
 </div></div>
 
 
 
 <div class="wp-block-kadence-column kadence-column3119_f4ba7a-ec"><div class="kt-inside-inner-col">
-<figure class="wp-block-kadence-image kb-image3119_42458a-e1 size-large kb-image-is-ratio-size"><div class="kb-is-ratio-image kb-image-ratio-land32"><img decoding="async" width="1024" height="683" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-1024x683.jpg" alt="" class="kb-img wp-image-2874" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-1024x683.jpg 1024w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-300x200.jpg 300w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-768x512.jpg 768w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-1536x1024.jpg 1536w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-2048x1365.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px"></div></figure>
+<figure class="wp-block-kadence-image kb-image3119_42458a-e1 size-large kb-image-is-ratio-size"><div class="kb-is-ratio-image kb-image-ratio-land32"><img decoding="async" width="1024" height="683" src="/FlaconiCareers/wp-content/uploads/2024/07/Fulfillment-Background-Box-1024x683.jpg" alt="" class="kb-img wp-image-2874" srcset="/FlaconiCareers/wp-content/uploads/2024/07/Fulfillment-Background-Box-1024x683.jpg 1024w, /FlaconiCareers/wp-content/uploads/2024/07/Fulfillment-Background-Box-300x200.jpg 300w, /FlaconiCareers/wp-content/uploads/2024/07/Fulfillment-Background-Box-768x512.jpg 768w, /FlaconiCareers/wp-content/uploads/2024/07/Fulfillment-Background-Box-1536x1024.jpg 1536w, /FlaconiCareers/wp-content/uploads/2024/07/Fulfillment-Background-Box-2048x1365.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px"></div></figure>
 
 
 
@@ -465,14 +465,14 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_be080c-5a"><a class="kb-button kt-button button kb-btn3119_71d793-45 kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="https://www.flaconi.de/karriere/en/locations/#halle"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
+<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_be080c-5a"><a class="kb-button kt-button button kb-btn3119_71d793-45 kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="/FlaconiCareers/locations/#halle"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
 </div>
 </div></div>
 
 
 
 <div class="wp-block-kadence-column kadence-column3119_875f0b-ce"><div class="kt-inside-inner-col">
-<figure class="wp-block-kadence-image kb-image3119_df574d-bb size-large kb-image-is-ratio-size"><div class="kb-is-ratio-image kb-image-ratio-land32"><img loading="lazy" decoding="async" width="1024" height="885" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-1024x885.jpg" alt="" class="kb-img wp-image-2872" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-1024x885.jpg 1024w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-300x259.jpg 300w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-768x664.jpg 768w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-1536x1328.jpg 1536w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-2048x1770.jpg 2048w" sizes="auto, (max-width: 1024px) 100vw, 1024px"></div></figure>
+<figure class="wp-block-kadence-image kb-image3119_df574d-bb size-large kb-image-is-ratio-size"><div class="kb-is-ratio-image kb-image-ratio-land32"><img loading="lazy" decoding="async" width="1024" height="885" src="/FlaconiCareers/wp-content/uploads/2024/07/CS-Background-Box-1024x885.jpg" alt="" class="kb-img wp-image-2872" srcset="/FlaconiCareers/wp-content/uploads/2024/07/CS-Background-Box-1024x885.jpg 1024w, /FlaconiCareers/wp-content/uploads/2024/07/CS-Background-Box-300x259.jpg 300w, /FlaconiCareers/wp-content/uploads/2024/07/CS-Background-Box-768x664.jpg 768w, /FlaconiCareers/wp-content/uploads/2024/07/CS-Background-Box-1536x1328.jpg 1536w, /FlaconiCareers/wp-content/uploads/2024/07/CS-Background-Box-2048x1770.jpg 2048w" sizes="auto, (max-width: 1024px) 100vw, 1024px"></div></figure>
 
 
 
@@ -493,7 +493,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_79bb9b-e9"><a class="kb-button kt-button button kb-btn3119_cc5134-ed kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="https://www.flaconi.de/karriere/en/locations/#offline-store"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
+<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_79bb9b-e9"><a class="kb-button kt-button button kb-btn3119_cc5134-ed kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="/FlaconiCareers/locations/#offline-store"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
 </div>
 </div></div>
 
@@ -518,14 +518,14 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_0ec72e-b1"><a class="kb-button kt-button button kb-btn3119_a90a84-21 kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="https://www.flaconi.de/karriere/culture/"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
+<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_0ec72e-b1"><a class="kb-button kt-button button kb-btn3119_a90a84-21 kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="/FlaconiCareers/culture/"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
 </div></div>
 
 
 
 <div class="wp-block-kadence-column kadence-column3119_e7ee60-ad"><div class="kt-inside-inner-col">
 <div class="wp-block-kadence-column kadence-column3119_9cf38f-62"><div class="kt-inside-inner-col">
-<figure class="wp-block-video"><video height="2160" style="aspect-ratio: 3840 / 2160;" width="3840" controls="" preload="auto" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/06/Cultural-Pillars-Value-Day-30-sec.mp4"></video></figure>
+<figure class="wp-block-video"><video height="2160" style="aspect-ratio: 3840 / 2160;" width="3840" controls="" preload="auto" src="/FlaconiCareers/wp-content/uploads/2024/06/Cultural-Pillars-Value-Day-30-sec.mp4"></video></figure>
 
 
 
@@ -585,7 +585,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 <a href="https://www.kununu.com/de/flaconi" target="_blank" rel="nofollow noopener">
-  <img decoding="async" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/kununu-icon.png" alt="Kununu Bewertungen für flaconi" style="height: 20px; width: auto; margin-bottom:-2px;">
+  <img decoding="async" src="/FlaconiCareers/wp-content/uploads/2024/07/kununu-icon.png" alt="Kununu Bewertungen für flaconi" style="height: 20px; width: auto; margin-bottom:-2px;">
 </a>
 </div></div>
 
@@ -616,7 +616,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1000" height="667" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1.jpg" alt="" class="wp-image-4665" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1.jpg 1000w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1-300x200.jpg 300w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1-768x512.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px"></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1000" height="667" src="/FlaconiCareers/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1.jpg" alt="" class="wp-image-4665" srcset="/FlaconiCareers/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1.jpg 1000w, /FlaconiCareers/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1-300x200.jpg 300w, /FlaconiCareers/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1-768x512.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px"></figure>
 
 
 
@@ -636,11 +636,11 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 			</div>
 </div><!-- #primary -->
 	</main><!-- #inner-wrap -->
-	<link rel="stylesheet" id="kadence-footer-css" href="https://www.flaconi.de/karriere/wp-content/themes/kadence/assets/css/footer.min.css?ver=1.4.5" type="text/css" media="all">
+	<link rel="stylesheet" id="kadence-footer-css" href="/FlaconiCareers/wp-content/themes/kadence/assets/css/footer.min.css?ver=1.4.5" type="text/css" media="all">
 <!-- [element-3249] --><div class="kb-row-layout-wrap kb-row-layout-id3249_51fcbe-f0 alignnone has-theme-palette7-background-color kt-row-has-bg wp-block-kadence-rowlayout"><div class="kt-row-column-wrap kt-has-4-columns kt-row-layout-equal kt-tab-layout-inherit kt-mobile-layout-row kt-row-valign-top kb-theme-content-width">
 
 <div class="wp-block-kadence-column kadence-column98eb3f-04"><div class="kt-inside-inner-col">
-<h2 class="kt-adv-heading2b2923-f2 wp-block-kadence-advancedheading" data-kb-block="kb-adv-heading2b2923-f2"><img loading="lazy" decoding="async" width="13" height="16" class="wp-image-786" style="margin-left:-24px; margin-top:3px;float:left;  " src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/image.png" alt=""><strong style="color: rgb(21, 19, 25); font-family: Inter, sans-serif; font-size: 16px; white-space-collapse: collapse;">Über flaconi</strong></h2>
+<h2 class="kt-adv-heading2b2923-f2 wp-block-kadence-advancedheading" data-kb-block="kb-adv-heading2b2923-f2"><img loading="lazy" decoding="async" width="13" height="16" class="wp-image-786" style="margin-left:-24px; margin-top:3px;float:left;  " src="/FlaconiCareers/wp-content/uploads/2024/03/image.png" alt=""><strong style="color: rgb(21, 19, 25); font-family: Inter, sans-serif; font-size: 16px; white-space-collapse: collapse;">Über flaconi</strong></h2>
 
 
 
@@ -654,7 +654,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 <div class="wp-block-kadence-column kadence-column8a1f04-3e"><div class="kt-inside-inner-col">
-<h2 class="kt-adv-heading250e33-36 wp-block-kadence-advancedheading" data-kb-block="kb-adv-heading250e33-36"><img decoding="async" class="wp-image-786" style="margin-left:-24px; margin-top:3px;float:left;  " src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/questions.png" alt=""><strong style="color: rgb(21, 19, 25); font-family: Inter, sans-serif; font-size: 16px; white-space-collapse: collapse;">Kundenservice</strong></h2>
+<h2 class="kt-adv-heading250e33-36 wp-block-kadence-advancedheading" data-kb-block="kb-adv-heading250e33-36"><img decoding="async" class="wp-image-786" style="margin-left:-24px; margin-top:3px;float:left;  " src="/FlaconiCareers/wp-content/uploads/2024/03/questions.png" alt=""><strong style="color: rgb(21, 19, 25); font-family: Inter, sans-serif; font-size: 16px; white-space-collapse: collapse;">Kundenservice</strong></h2>
 
 
 
@@ -668,7 +668,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 <div class="wp-block-kadence-column kadence-column1c0e6b-f0"><div class="kt-inside-inner-col">
-<h2 class="kt-adv-headinge9cda1-3b wp-block-kadence-advancedheading" data-kb-block="kb-adv-headinge9cda1-3b"><img decoding="async" class="wp-image-786" style="margin-left:-24px; margin-top:3px;float:left;  " src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/Gruppe-151.png" alt=""><strong style="color: rgb(21, 19, 25); font-family: Inter, sans-serif; font-size: 16px; white-space-collapse: collapse;">Now on trend</strong></h2>
+<h2 class="kt-adv-headinge9cda1-3b wp-block-kadence-advancedheading" data-kb-block="kb-adv-headinge9cda1-3b"><img decoding="async" class="wp-image-786" style="margin-left:-24px; margin-top:3px;float:left;  " src="/FlaconiCareers/wp-content/uploads/2024/03/Gruppe-151.png" alt=""><strong style="color: rgb(21, 19, 25); font-family: Inter, sans-serif; font-size: 16px; white-space-collapse: collapse;">Now on trend</strong></h2>
 
 
 
@@ -678,7 +678,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 <div class="wp-block-kadence-column kadence-column2d71cd-70"><div class="kt-inside-inner-col">
-<h2 class="kt-adv-heading4f79cb-80 wp-block-kadence-advancedheading" data-kb-block="kb-adv-heading4f79cb-80"><img loading="lazy" decoding="async" width="13" height="16" class="wp-image-786" style="margin-left:-24px; margin-top:3px;float:left;  " src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/image.png" alt=""><strong style="color: rgb(21, 19, 25); font-family: Inter, sans-serif; font-size: 16px; white-space-collapse: collapse;">Inspiration</strong></h2>
+<h2 class="kt-adv-heading4f79cb-80 wp-block-kadence-advancedheading" data-kb-block="kb-adv-heading4f79cb-80"><img loading="lazy" decoding="async" width="13" height="16" class="wp-image-786" style="margin-left:-24px; margin-top:3px;float:left;  " src="/FlaconiCareers/wp-content/uploads/2024/03/image.png" alt=""><strong style="color: rgb(21, 19, 25); font-family: Inter, sans-serif; font-size: 16px; white-space-collapse: collapse;">Inspiration</strong></h2>
 
 
 
@@ -694,11 +694,11 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<figure class="wp-block-image alignleft size-full is-resized"><img loading="lazy" decoding="async" width="120" height="40" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_ios.png" alt="" class="wp-image-131" style="width:auto;height:32px"></figure>
+<figure class="wp-block-image alignleft size-full is-resized"><img loading="lazy" decoding="async" width="120" height="40" src="/FlaconiCareers/wp-content/uploads/2024/03/store_ios.png" alt="" class="wp-image-131" style="width:auto;height:32px"></figure>
 
 
 
-<figure class="wp-block-image alignleft size-full is-resized"><img loading="lazy" decoding="async" width="563" height="168" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android.webp" alt="" class="wp-image-130" style="width:auto;height:32px" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android.webp 563w, https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android-300x90.webp 300w" sizes="auto, (max-width: 563px) 100vw, 563px"></figure>
+<figure class="wp-block-image alignleft size-full is-resized"><img loading="lazy" decoding="async" width="563" height="168" src="/FlaconiCareers/wp-content/uploads/2024/03/store_android.webp" alt="" class="wp-image-130" style="width:auto;height:32px" srcset="/FlaconiCareers/wp-content/uploads/2024/03/store_android.webp 563w, /FlaconiCareers/wp-content/uploads/2024/03/store_android-300x90.webp 300w" sizes="auto, (max-width: 563px) 100vw, 563px"></figure>
 </div></div>
 
 
@@ -730,17 +730,17 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 			</div>
 			<div class="drawer-content mobile-drawer-content content-align-left content-valign-top">
 								<div class="site-header-item site-header-focus-item" data-section="kadence_customizer_mobile_html">
-	<div class="mobile-html inner-link-style-normal"><div class="mobile-html-inner"><p><img class="alignnone wp-image-382" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/flaconi-logo.jpg" alt="" width="102" height="26"></p>
+	<div class="mobile-html inner-link-style-normal"><div class="mobile-html-inner"><p><img class="alignnone wp-image-382" src="/FlaconiCareers/wp-content/uploads/2024/03/flaconi-logo.jpg" alt="" width="102" height="26"></p>
 </div></div></div><!-- data-section="mobile_html" -->
 <div class="site-header-item site-header-focus-item site-header-item-mobile-navigation mobile-navigation-layout-stretch-false" data-section="kadence_customizer_mobile_navigation">
 		<nav id="mobile-site-navigation" class="mobile-navigation drawer-navigation drawer-navigation-parent-toggle-false" role="navigation" aria-label="Primary Mobile">
 				<div class="mobile-menu-container drawer-menu-container">
-			<ul id="mobile-menu" class="menu has-collapse-sub-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3119 current_page_item menu-item-3274"><a href="https://www.flaconi.de/karriere/en/" aria-current="page">About us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278"><a href="https://www.flaconi.de/karriere/en/our-teams/">Our Teams</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3277"><a href="https://www.flaconi.de/karriere/en/locations/">Locations</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3275"><a href="https://www.flaconi.de/karriere/en/culture/">Life at flaconi</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="https://www.flaconi.de/karriere/en/karriere/">How we hire</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="https://www.flaconi.de/karriere/en/stellenangebote/">Jobs</a></li>
+			<ul id="mobile-menu" class="menu has-collapse-sub-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3119 current_page_item menu-item-3274"><a href="/FlaconiCareers/en/" aria-current="page">About us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278"><a href="/FlaconiCareers/our-teams/">Our Teams</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3277"><a href="/FlaconiCareers/locations/">Locations</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3275"><a href="/FlaconiCareers/culture/">Life at flaconi</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="/FlaconiCareers/karriere/">How we hire</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="/FlaconiCareers/jobs/">Jobs</a></li>
 </ul>		</div>
 	</nav><!-- #site-navigation -->
 	</div><!-- data-section="mobile_navigation" -->
@@ -756,7 +756,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 						<style>
                             .otgs-development-site-front-end a { color: white; }
                             .otgs-development-site-front-end .icon {
-                                background: url(https://www.flaconi.de/karriere/wp-content/plugins/sitepress-multilingual-cms/vendor/otgs/installer//res/img/icon-wpml-info-white.svg) no-repeat;
+                                background: url(/FlaconiCareers/wp-content/plugins/sitepress-multilingual-cms/vendor/otgs/installer//res/img/icon-wpml-info-white.svg) no-repeat;
                                 width: 20px;
                                 height: 20px;
                                 display: inline-block;
