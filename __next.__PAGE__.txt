@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
 6:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-2:T24b2a,<base href="/FlaconiCareers/"en/">
+2:T24996,
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -99,8 +99,8 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 /*# sourceURL=global-styles-inline-css */
 </style>
 
-<link rel="stylesheet" id="eb-block-style-3119-css" href="https://www.flaconi.de/karriere/wp-content/uploads/eb-style/eb-style-3119.min.css?ver=1651d0c4ba" type="text/css" media="all">
-<link rel="stylesheet" id="eb-reusable-block-style-1452-css" href="https://www.flaconi.de/karriere/wp-content/uploads/eb-style/reusable-blocks/eb-reusable-1452.min.css?ver=1651d0c4ba" type="text/css" media="all">
+<link rel="stylesheet" id="eb-block-style-3119-css" href="https://www.flaconi.de/karriere/wp-content/uploads/eb-style/eb-style-3119.min.css?ver=a4a6c709a4" type="text/css" media="all">
+<link rel="stylesheet" id="eb-reusable-block-style-1452-css" href="https://www.flaconi.de/karriere/wp-content/uploads/eb-style/reusable-blocks/eb-reusable-1452.min.css?ver=a4a6c709a4" type="text/css" media="all">
 <link rel="stylesheet" id="wpml-legacy-horizontal-list-0-css" href="https://www.flaconi.de/karriere/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1" type="text/css" media="all">
 <link rel="stylesheet" id="kadence-global-css" href="https://www.flaconi.de/karriere/wp-content/themes/kadence/assets/css/global.min.css?ver=1.4.5" type="text/css" media="all">
 <style id="kadence-global-inline-css" type="text/css">
@@ -156,15 +156,8 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 /*# sourceURL=core-block-supports-inline-css */
 </style>
 
-<link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/WebSdk.lib.91f0d3cd.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/GdprCmpController.12632d8a.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/UcGdprCmpView.286dcf12.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/sections.c79e0e02.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/secondLayer.65458740.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/getToastifyStyle.4f0a73d7.js" rel="preload" as="script"><style>
-         @media screen and (min-width: 1024px) {
-           .site-header-inner-wrap { display: flex !important; visibility: visible !important; opacity: 1 !important; }
-           #masthead { display: block !important; }
-           #mobile-drawer { display: none !important; }
-           .mobile-navigation { display: none !important; }
-         }
-      </style>0:{"buildId":"wf2D3Wq8UgHgibLEXlKT1","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],null,"$L4"]}],"loading":null,"isPartial":false}
-5:Td5ea,
+<link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/WebSdk.lib.91f0d3cd.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/GdprCmpController.12632d8a.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/UcGdprCmpView.286dcf12.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/sections.c79e0e02.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/secondLayer.65458740.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/getToastifyStyle.4f0a73d7.js" rel="preload" as="script">0:{"buildId":"0m_RdoTxlVk-m6-4qSSGg","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],null,"$L4"]}],"loading":null,"isPartial":false}
+5:Td5fa,
 
 <div id="wrapper" class="site wp-site-blocks">
 			<a class="skip-link screen-reader-text scroll-ignore" href="#main">Skip to content</a>
@@ -408,7 +401,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 <div class="kb-row-layout-wrap kb-row-layout-id3119_ba39af-52 alignnone wp-block-kadence-rowlayout"><div class="kt-row-column-wrap kt-has-3-columns kt-row-layout-equal kt-tab-layout-row kt-mobile-layout-row kt-row-valign-top kt-inner-column-height-full kb-theme-content-width">
 
 <div class="wp-block-kadence-column kadence-column3119_d2166c-e2"><div class="kt-inside-inner-col">
-<figure class="wp-block-kadence-image kb-image3119_3d1802-c8 kb-image-is-ratio-size"><div class="kb-is-ratio-image kb-image-ratio-land32"><img decoding="async" width="2560" height="1703" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-scaled.jpg" alt="" class="kb-img wp-image-2876" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-scaled.jpg 2560w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-300x200.jpg 300w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-1024x681.jpg 1024w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-768x511.jpg 768w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-1536x1022.jpg 1536w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-2048x1363.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px"></div></figure>
+<figure class="wp-block-kadence-image kb-image3119_3d1802-c8 kb-image-is-ratio-size"><div class="kb-is-ratio-image kb-image-ratio-land32"><img decoding="async" width="2560" height="1703" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-scaled.jpg" alt="" class="kb-img wp-image-2876" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-scaled.jpg 2560w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-300x200.jpg 300w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-1024x681.jpg 1024w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-768x511.jpg 768w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-1536x1022.jpg 1536w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Headquarter-Background-Box-2048x1363.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px"></div></figure>
 
 
 
@@ -440,7 +433,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 <div class="wp-block-kadence-column kadence-column3119_f4ba7a-ec"><div class="kt-inside-inner-col">
-<figure class="wp-block-kadence-image kb-image3119_42458a-e1 size-large kb-image-is-ratio-size"><div class="kb-is-ratio-image kb-image-ratio-land32"><img decoding="async" width="1024" height="683" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-1024x683.jpg" alt="" class="kb-img wp-image-2874" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-1024x683.jpg 1024w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-300x200.jpg 300w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-768x512.jpg 768w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-1536x1024.jpg 1536w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-2048x1365.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px"></div></figure>
+<figure class="wp-block-kadence-image kb-image3119_42458a-e1 size-large kb-image-is-ratio-size"><div class="kb-is-ratio-image kb-image-ratio-land32"><img decoding="async" width="1024" height="683" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-1024x683.jpg" alt="" class="kb-img wp-image-2874" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-1024x683.jpg 1024w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-300x200.jpg 300w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-768x512.jpg 768w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-1536x1024.jpg 1536w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/Fulfillment-Background-Box-2048x1365.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px"></div></figure>
 
 
 
@@ -472,7 +465,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 <div class="wp-block-kadence-column kadence-column3119_875f0b-ce"><div class="kt-inside-inner-col">
-<figure class="wp-block-kadence-image kb-image3119_df574d-bb size-large kb-image-is-ratio-size"><div class="kb-is-ratio-image kb-image-ratio-land32"><img loading="lazy" decoding="async" width="1024" height="885" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-1024x885.jpg" alt="" class="kb-img wp-image-2872" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-1024x885.jpg 1024w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-300x259.jpg 300w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-768x664.jpg 768w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-1536x1328.jpg 1536w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-2048x1770.jpg 2048w" sizes="auto, (max-width: 1024px) 100vw, 1024px"></div></figure>
+<figure class="wp-block-kadence-image kb-image3119_df574d-bb size-large kb-image-is-ratio-size"><div class="kb-is-ratio-image kb-image-ratio-land32"><img loading="lazy" decoding="async" width="1024" height="885" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-1024x885.jpg" alt="" class="kb-img wp-image-2872" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-1024x885.jpg 1024w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-300x259.jpg 300w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-768x664.jpg 768w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-1536x1328.jpg 1536w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/CS-Background-Box-2048x1770.jpg 2048w" sizes="auto, (max-width: 1024px) 100vw, 1024px"></div></figure>
 
 
 
@@ -616,7 +609,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1000" height="667" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1.jpg" alt="" class="wp-image-4665" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1.jpg 1000w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1-300x200.jpg 300w, https://www.flaconi.de/karriere/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1-768x512.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px"></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1000" height="667" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1.jpg" alt="" class="wp-image-4665" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1.jpg 1000w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1-300x200.jpg 300w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/07/241120_VPT-211_Winter_Campaign_New_Season_0889-copy-2-2-1-768x512.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px"></figure>
 
 
 
@@ -698,7 +691,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<figure class="wp-block-image alignleft size-full is-resized"><img loading="lazy" decoding="async" width="563" height="168" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android.webp" alt="" class="wp-image-130" style="width:auto;height:32px" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android.webp 563w, https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android-300x90.webp 300w" sizes="auto, (max-width: 563px) 100vw, 563px"></figure>
+<figure class="wp-block-image alignleft size-full is-resized"><img loading="lazy" decoding="async" width="563" height="168" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android.webp" alt="" class="wp-image-130" style="width:auto;height:32px" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android.webp 563w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android-300x90.webp 300w" sizes="auto, (max-width: 563px) 100vw, 563px"></figure>
 </div></div>
 
 

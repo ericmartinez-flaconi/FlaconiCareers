@@ -6,9 +6,9 @@
 8:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"ViewportBoundary"]
 a:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataBoundary"]
 c:I[12548,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"default"]
-0:{"P":null,"b":"wf2D3Wq8UgHgibLEXlKT1","c":["","jobs",""],"q":"","i":false,"f":[[["",{"children":["jobs",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L4",[["$","script","script-0",{"src":"/FlaconiCareers/_next/static/chunks/caa55a70f95a4aef.js","async":true,"nonce":"$undefined"}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],{},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L8",null,{"children":"$L9"}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$6",null,{"name":"Next.Metadata","children":"$Lb"}]}]}],null]}],false]],"m":"$undefined","G":["$c",[]],"S":true}
+0:{"P":null,"b":"0m_RdoTxlVk-m6-4qSSGg","c":["","jobs",""],"q":"","i":false,"f":[[["",{"children":["jobs",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L4",[["$","script","script-0",{"src":"/FlaconiCareers/_next/static/chunks/caa55a70f95a4aef.js","async":true,"nonce":"$undefined"}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],{},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L8",null,{"children":"$L9"}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$6",null,{"name":"Next.Metadata","children":"$Lb"}]}]}],null]}],false]],"m":"$undefined","G":["$c",[]],"S":true}
 d:I[53290,["/FlaconiCareers/_next/static/chunks/caa55a70f95a4aef.js"],"default"]
-e:T11a8e,<base href="/FlaconiCareers/"en/">
+e:T118ec,
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -92,7 +92,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=global-styles-inline-css */
 </style>
 
-<link rel="stylesheet" id="eb-reusable-block-style-1452-css" href="https://www.flaconi.de/karriere/wp-content/uploads/eb-style/reusable-blocks/eb-reusable-1452.min.css?ver=9ce974d17c" type="text/css" media="all">
+<link rel="stylesheet" id="eb-reusable-block-style-1452-css" href="https://www.flaconi.de/karriere/wp-content/uploads/eb-style/reusable-blocks/eb-reusable-1452.min.css?ver=67d61cb831" type="text/css" media="all">
 <link rel="stylesheet" id="wpml-legacy-horizontal-list-0-css" href="https://www.flaconi.de/karriere/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1" type="text/css" media="all">
 <link rel="stylesheet" id="kadence-global-css" href="https://www.flaconi.de/karriere/wp-content/themes/kadence/assets/css/global.min.css?ver=1.4.5" type="text/css" media="all">
 <style id="kadence-global-inline-css" type="text/css">
@@ -144,14 +144,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=core-block-supports-inline-css */
 </style>
 
-<link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/WebSdk.lib.91f0d3cd.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/GdprCmpController.12632d8a.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/UcGdprCmpView.286dcf12.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/sections.c79e0e02.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/secondLayer.65458740.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/getToastifyStyle.4f0a73d7.js" rel="preload" as="script"><style>
-           @media screen and (min-width: 1024px) {
-             .site-header-inner-wrap { display: flex !important; visibility: visible !important; opacity: 1 !important; }
-             #masthead { display: block !important; }
-             #mobile-drawer { display: none !important; }
-             .mobile-navigation { display: none !important; }
-           }
-        </style>f:Te79c,
+<link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/WebSdk.lib.91f0d3cd.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/GdprCmpController.12632d8a.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/UcGdprCmpView.286dcf12.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/sections.c79e0e02.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/secondLayer.65458740.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/getToastifyStyle.4f0a73d7.js" rel="preload" as="script">f:Te793,
 
 <div id="wrapper" class="site wp-site-blocks">
 			<a class="skip-link screen-reader-text scroll-ignore" href="#main">Skip to content</a>
@@ -273,7 +266,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	<div class="kb-row-layout-wrap kb-row-layout-id3941_3850eb-84 alignnone wp-block-kadence-rowlayout"><div class="kt-row-column-wrap kt-has-1-columns kt-row-layout-equal kt-tab-layout-inherit kt-mobile-layout-row kt-row-valign-top kb-theme-content-width">
 
 <div class="wp-block-kadence-column kadence-column3941_97dbb0-c7"><div class="kt-inside-inner-col">
-<figure class="wp-block-image aligncenter size-full"><img fetchpriority="high" decoding="async" width="1000" height="435" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/05/stellenangebote-header.jpg" alt="" class="wp-image-1873" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/05/stellenangebote-header.jpg 1000w, https://www.flaconi.de/karriere/wp-content/uploads/2024/05/stellenangebote-header-300x131.jpg 300w, https://www.flaconi.de/karriere/wp-content/uploads/2024/05/stellenangebote-header-768x334.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px"></figure>
+<figure class="wp-block-image aligncenter size-full"><img fetchpriority="high" decoding="async" width="1000" height="435" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/05/stellenangebote-header.jpg" alt="" class="wp-image-1873" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/05/stellenangebote-header.jpg 1000w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/05/stellenangebote-header-300x131.jpg 300w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/05/stellenangebote-header-768x334.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px"></figure>
 
 
 
@@ -342,7 +335,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                                                                     <p style="display:flex; margin-bottom: unset;">
                                         <picture>
-                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp " type="image/webp">
+                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp" type="image/webp">
                                             <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" class="wp-image-971 sp-no-webp" alt="" loading="lazy" decoding="async" style="width: 19px;">
                                         </picture>
                                         &nbsp;<span>Berlin, Berlin, Germany</span>
@@ -382,7 +375,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                                                                     <p style="display:flex; margin-bottom: unset;">
                                         <picture>
-                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp " type="image/webp">
+                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp" type="image/webp">
                                             <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" class="wp-image-971 sp-no-webp" alt="" loading="lazy" decoding="async" style="width: 19px;">
                                         </picture>
                                         &nbsp;<span>Berlin, Berlin, Germany</span>
@@ -422,7 +415,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                                                                     <p style="display:flex; margin-bottom: unset;">
                                         <picture>
-                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp " type="image/webp">
+                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp" type="image/webp">
                                             <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" class="wp-image-971 sp-no-webp" alt="" loading="lazy" decoding="async" style="width: 19px;">
                                         </picture>
                                         &nbsp;<span>Halle, Saxony-Anhalt, Germany</span>
@@ -462,7 +455,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                                                                     <p style="display:flex; margin-bottom: unset;">
                                         <picture>
-                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp " type="image/webp">
+                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp" type="image/webp">
                                             <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" class="wp-image-971 sp-no-webp" alt="" loading="lazy" decoding="async" style="width: 19px;">
                                         </picture>
                                         &nbsp;<span>Halle, Saxony-Anhalt, Germany</span>
@@ -502,7 +495,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                                                                     <p style="display:flex; margin-bottom: unset;">
                                         <picture>
-                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp " type="image/webp">
+                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp" type="image/webp">
                                             <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" class="wp-image-971 sp-no-webp" alt="" loading="lazy" decoding="async" style="width: 19px;">
                                         </picture>
                                         &nbsp;<span>Berlin, Berlin, Germany</span>
@@ -542,7 +535,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                                                                     <p style="display:flex; margin-bottom: unset;">
                                         <picture>
-                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp " type="image/webp">
+                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp" type="image/webp">
                                             <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" class="wp-image-971 sp-no-webp" alt="" loading="lazy" decoding="async" style="width: 19px;">
                                         </picture>
                                         &nbsp;<span>Berlin, Berlin, Germany</span>
@@ -582,7 +575,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                                                                     <p style="display:flex; margin-bottom: unset;">
                                         <picture>
-                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp " type="image/webp">
+                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp" type="image/webp">
                                             <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" class="wp-image-971 sp-no-webp" alt="" loading="lazy" decoding="async" style="width: 19px;">
                                         </picture>
                                         &nbsp;<span>Berlin, Berlin, Germany</span>
@@ -622,7 +615,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                                                                     <p style="display:flex; margin-bottom: unset;">
                                         <picture>
-                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp " type="image/webp">
+                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp" type="image/webp">
                                             <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" class="wp-image-971 sp-no-webp" alt="" loading="lazy" decoding="async" style="width: 19px;">
                                         </picture>
                                         &nbsp;<span>Halle, Saxony-Anhalt, Germany</span>
@@ -662,7 +655,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                                                                     <p style="display:flex; margin-bottom: unset;">
                                         <picture>
-                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp " type="image/webp">
+                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp" type="image/webp">
                                             <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" class="wp-image-971 sp-no-webp" alt="" loading="lazy" decoding="async" style="width: 19px;">
                                         </picture>
                                         &nbsp;<span>Berlin, Berlin, Germany</span>
@@ -702,7 +695,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                                                                     <p style="display:flex; margin-bottom: unset;">
                                         <picture>
-                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp " type="image/webp">
+                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp" type="image/webp">
                                             <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" class="wp-image-971 sp-no-webp" alt="" loading="lazy" decoding="async" style="width: 19px;">
                                         </picture>
                                         &nbsp;<span>Berlin, Berlin, Germany</span>
@@ -742,7 +735,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                                                                     <p style="display:flex; margin-bottom: unset;">
                                         <picture>
-                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp " type="image/webp">
+                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp" type="image/webp">
                                             <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" class="wp-image-971 sp-no-webp" alt="" loading="lazy" decoding="async" style="width: 19px;">
                                         </picture>
                                         &nbsp;<span>Halle, Saxony-Anhalt, Germany</span>
@@ -782,7 +775,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                                                                     <p style="display:flex; margin-bottom: unset;">
                                         <picture>
-                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp " type="image/webp">
+                                            <source srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.webp" type="image/webp">
                                             <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" class="wp-image-971 sp-no-webp" alt="" loading="lazy" decoding="async" style="width: 19px;">
                                         </picture>
                                         &nbsp;<span>Halle, Saxony-Anhalt, Germany</span>
@@ -817,7 +810,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 
 <div class="wp-block-kadence-column kadence-column3941_b8d74b-4e kvs-lg-false kvs-md-false kvs-sm-false"><div class="kt-inside-inner-col">
-<div id="grnhse_app"><iframe id="grnhse_iframe" width="100%" frameborder="0" scrolling="no" allow="geolocation" onload="undefined" title="Greenhouse Job Board" src="https://job-boards.eu.greenhouse.io/embed/job_board?for=flaconi&amp;validityToken=KsNLRSbcfPwIXLvmd0KSINMi1p-aNzIcNEjAQc4z4OM8as7Op4HzodNjkJSwkmn4mpsSu12sxOqhaiqlKPLO5e76VuVZVG_yr69yPSwCbNPFCbLIdkJchZDbVhReCmK_PPyN8In52HXnAxHO0iBqKl_43ohA8U6O5nCQfH4PbMDvjbELYp57cTaqzmw1ADolFanxnVk8YIelcSaQ4w6tdebIZtvGj0LPhal9J6DK8BMOI0y0nOwePA-e3hTEC3ZOFUHZgdpadjGkEYIP0Jos19wxS7cVGDJNmehrnfwhKyL0IbkTY8Y51AlqJq6lPx9eirIOuJhuNrKR607C4q-rRw%3D%3D" height="2852"></iframe></div>
+<div id="grnhse_app"><iframe id="grnhse_iframe" width="100%" frameborder="0" scrolling="no" allow="geolocation" onload="undefined" title="Greenhouse Job Board" src="https://job-boards.eu.greenhouse.io/embed/job_board?for=flaconi&amp;validityToken=CDkDIBmMkNrsYyFRwC5-9F60JtEWW3VN0UcplumjOZZz95tNGmpop-HbKQbnAFTR04btYDR5cDbnNl1ZAqIl8UmiiQZfJhuAL0Tr_G4H_q3lck1VfxLDzN7h8USpx0INlBSMc0HqKJ80rQBnCwwNspUPL6CiTjybafaoOzlzOyKZN7iYRshaTPffdIc76OUfd5EWkVuYj2adVTCz9N0fgaU0W0adOuFLmK7T2azJFG3CX41VU8mDXrujoN4LS8xtLR_Lg-Fxfr0BZQn3b9OOndwjujD7LwfoTMwkvTqGMuwqwiMioY71vAF5wtFqJQsGy8artE1ZthtwP5dvsENNYg%3D%3D" height="2852"></iframe></div>
 
 </div></div>
 
@@ -892,7 +885,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 
 
-<figure class="wp-block-image alignleft size-full is-resized"><img loading="lazy" decoding="async" width="563" height="168" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android.webp" alt="" class="wp-image-130" style="width:auto;height:32px" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android.webp 563w, https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android-300x90.webp 300w" sizes="auto, (max-width: 563px) 100vw, 563px"></figure>
+<figure class="wp-block-image alignleft size-full is-resized"><img loading="lazy" decoding="async" width="563" height="168" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android.webp" alt="" class="wp-image-130" style="width:auto;height:32px" srcset="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android.webp 563w,  https://www.flaconi.de/karriere/wp-content/uploads/2024/03/store_android-300x90.webp 300w" sizes="auto, (max-width: 563px) 100vw, 563px"></figure>
 </div></div>
 
 
