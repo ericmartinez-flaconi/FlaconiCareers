@@ -8,17 +8,31 @@ export default function JobsClient({ initialData }: { initialData: any }) {
   useEffect(() => {
     // 1. Define the Global Filter Function
     (window as any).filterJobTabelle = () => {
-      const locationVal = (document.getElementById('locations') as HTMLSelectElement)?.value || 'all';
-      const teamVal = (document.getElementById('teams') as HTMLSelectElement)?.value || 'all';
-      const worktypeVal = (document.getElementById('worktypes') as HTMLSelectElement)?.value || 'all';
+      const locationVal = (document.getElementById('locations') as HTMLSelectElement)?.value || '';
+      const teamVal = (document.getElementById('teams') as HTMLSelectElement)?.value || '';
+      const worktypeVal = (document.getElementById('worktypes') as HTMLSelectElement)?.value || '';
 
-      console.log('Filtering:', { locationVal, teamVal, worktypeVal });
+      console.log('Filter triggering with:', { locationVal, teamVal, worktypeVal });
 
       const jobs = document.querySelectorAll('.job-table .job');
       jobs.forEach((job: any) => {
-        const matchesLocation = locationVal === 'all' || job.getAttribute('data-location').includes(locationVal);
-        const matchesTeam = teamVal === 'all' || job.getAttribute('data-team') === teamVal;
-        const matchesWorktype = worktypeVal === 'all' || job.getAttribute('data-worktype') === worktypeVal;
+        const jobLoc = (job.getAttribute('data-location') || '').toLowerCase();
+        const jobTeam = (job.getAttribute('data-team') || '').toLowerCase();
+        const jobWork = (job.getAttribute('data-worktype') || '').toLowerCase();
+
+        const fLoc = locationVal.toLowerCase();
+        const fTeam = teamVal.toLowerCase();
+        const fWork = worktypeVal.toLowerCase();
+
+        // Match if filter is empty OR if there's a partial match in either direction
+        const matchesLocation = !fLoc || jobLoc.includes(fLoc) || fLoc.includes(jobLoc);
+        
+        // Teams can be tricky (e.g. "Data Analytics" vs "Data & Analytics")
+        // We strip non-alphanumeric for a safer comparison
+        const normalize = (s: string) => s.replace(/[^a-z0-9]/g, '');
+        const matchesTeam = !fTeam || normalize(jobTeam).includes(normalize(fTeam)) || normalize(fTeam).includes(normalize(jobTeam));
+        
+        const matchesWorktype = !fWork || jobWork.includes(fWork) || fWork.includes(jobWork);
 
         if (matchesLocation && matchesTeam && matchesWorktype) {
           job.style.display = 'flex';
