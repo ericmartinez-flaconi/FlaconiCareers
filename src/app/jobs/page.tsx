@@ -15,7 +15,12 @@ export default async function JobsPage() {
   data.body = data.body.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?(?!"|#)/g, `href="${prefix}/"`);
 
   // Strip scripts
-  data.body = data.body.replace(/<script\b[^>]*>([\s\S]*?)<\/script>/gm, '');
+  const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
+  data.body = data.body.replace(scriptRegex, '');
+  data.head = data.head.replace(scriptRegex, '');
+  
+  // Strip base tag
+  data.head = data.head.replace(/<base\b[^>]*\/?>/gmi, '');
 
   return <JobsClient initialData={data} />;
 }

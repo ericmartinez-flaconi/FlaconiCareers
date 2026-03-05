@@ -9,8 +9,12 @@ export default function ExactPage() {
   html = html.replace(/href="\//g, 'href="https://www.flaconi.de/');
   html = html.replace(/srcset="\//g, 'srcset="https://www.flaconi.de/');
 
-  // Remove scripts that might cause issues (e.g., Cloudflare beacon, tracking)
-  html = html.replace(/<script\b[^>]*>([\s\S]*?)<\/script>/gm, '');
+  // Remove scripts that might cause issues (e.g., WPML redirect, tracking)
+  const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
+  html = html.replace(scriptRegex, '');
+  
+  // Strip base tag
+  html = html.replace(/<base\b[^>]*\/?>/gmi, '');
   
   // Basic cleaning of the head/body to avoid double nesting in Next.js
   const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);

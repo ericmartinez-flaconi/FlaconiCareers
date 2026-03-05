@@ -61,13 +61,9 @@ export default function JobsPage({ initialData }: { initialData: any }) {
   }, []);
 
   return (
-    <html lang="en" className={initialData.htmlClass}>
-      <head dangerouslySetInnerHTML={{ __html: initialData.head }} />
-      <body 
-        className={initialData.bodyClass} 
-        style={{ margin: 0, padding: 0 }}
-        dangerouslySetInnerHTML={{ __html: initialData.body }} 
-      />
-    </html>
+    <div className={initialData.bodyClass} style={{ margin: 0, padding: 0 }}>
+       {/* Use a simple container instead of html/body */}
+       <div dangerouslySetInnerHTML={{ __html: initialData.body }} />
+    </div>
   );
 }

@@ -33,7 +33,13 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   let html = data.body;
   let head = data.head;
 
-  html = html.replace(/<script\b[^>]*>([\s\S]*?)<\/script>/gm, '');
+  // Strip all scripts from head and body to prevent redirects or tracking
+  const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
+  html = html.replace(scriptRegex, '');
+  head = head.replace(scriptRegex, '');
+  
+  // Strip base tag as it points to the real domain
+  head = head.replace(/<base\b[^>]*\/?>/gmi, '');
   
   const prefix = '/FlaconiCareers';
   html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?culture\//g, `href="${prefix}/culture/"`);
@@ -43,13 +49,11 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?(?!"|#)/g, `href="${prefix}/"`);
 
   return (
-    <html lang="en" className={data.htmlClass}>
-      <head dangerouslySetInnerHTML={{ __html: head }} />
-      <body 
-        className={data.bodyClass} 
-        style={{ margin: 0, padding: 0 }}
-        dangerouslySetInnerHTML={{ __html: html }} 
-      />
-    </html>
+    <div className={data.bodyClass} style={{ margin: 0, padding: 0 }}>
+      {/* We can't easily inject into head here without a special component, 
+          but for a prototype, this body content injection is often enough 
+          if the main styles are in globals.css */}
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+    </div>
   );
 }
