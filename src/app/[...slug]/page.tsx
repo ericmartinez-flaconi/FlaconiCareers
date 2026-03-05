@@ -35,16 +35,20 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     if (!content) return content;
     let rewritten = content;
 
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?culture\/?/g, `${prefix}/culture/`);
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?locations\/?/g, `${prefix}/locations/`);
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?our-teams\/?/g, `${prefix}/our-teams/`);
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?stellenangebote\/?/g, `${prefix}/jobs/`);
-    
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g, `${prefix}/`);
+    // 1. Remove base tag
+    rewritten = rewritten.replace(/<base\b[^>]*\/?>/gmi, '');
 
-    rewritten = rewritten.replace(/src="\//g, `src="${prefix}/`);
-    rewritten = rewritten.replace(/href="\//g, `href="${prefix}/`);
-    rewritten = rewritten.replace(/srcset="\//g, `srcset="${prefix}/`);
+    // 2. Normalize flaconi links
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?culture\/?/g, '/culture/');
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?locations\/?/g, '/locations/');
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?our-teams\/?/g, '/our-teams/');
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?stellenangebote\/?/g, '/jobs/');
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g, '/');
+
+    // 3. Prefix with negative lookahead to prevent duplication
+    rewritten = rewritten.replace(/href="\/(?!FlaconiCareers)([^"]*)"/g, `href="${prefix}/$1"`);
+    rewritten = rewritten.replace(/src="\/(?!FlaconiCareers)([^"]*)"/g, `src="${prefix}/$1"`);
+    rewritten = rewritten.replace(/srcset="\/(?!FlaconiCareers)([^"]*)"/g, `srcset="${prefix}/$1"`);
 
     return rewritten;
   };
@@ -55,8 +59,6 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
   html = html.replace(scriptRegex, '');
   head = head.replace(scriptRegex, '');
-  
-  head = head.replace(/<base\b[^>]*\/?>/gmi, '');
 
   if (!head.includes('name="viewport"')) {
     head = `<meta name="viewport" content="width=device-width, initial-scale=1">${head}`;

@@ -14,20 +14,22 @@ export default function Home() {
     if (!content) return content;
     let rewritten = content;
 
-    // 1. Rewrite absolute links to our prototype paths
-    // We do the specific ones first
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?culture\/?/g, `${prefix}/culture/`);
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?locations\/?/g, `${prefix}/locations/`);
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?our-teams\/?/g, `${prefix}/our-teams/`);
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?stellenangebote\/?/g, `${prefix}/jobs/`);
-    
-    // 2. Rewrite any other flaconi karriere link to root
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g, `${prefix}/`);
+    // 1. Remove base tag immediately to avoid path confusion
+    rewritten = rewritten.replace(/<base\b[^>]*\/?>/gmi, '');
 
-    // 3. Handle relative links if any were missed
-    rewritten = rewritten.replace(/src="\//g, `src="${prefix}/`);
-    rewritten = rewritten.replace(/href="\//g, `href="${prefix}/`);
-    rewritten = rewritten.replace(/srcset="\//g, `srcset="${prefix}/`);
+    // 2. Normalize absolute flaconi links to root-relative paths (WITHOUT prefix yet)
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?culture\/?/g, '/culture/');
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?locations\/?/g, '/locations/');
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?our-teams\/?/g, '/our-teams/');
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?stellenangebote\/?/g, '/jobs/');
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g, '/');
+
+    // 3. Prefix all root-relative paths with our project prefix, 
+    // but ONLY if they haven't been prefixed already.
+    // Use negative lookahead (?!FlaconiCareers) to prevent duplication.
+    rewritten = rewritten.replace(/href="\/(?!FlaconiCareers)([^"]*)"/g, `href="${prefix}/$1"`);
+    rewritten = rewritten.replace(/src="\/(?!FlaconiCareers)([^"]*)"/g, `src="${prefix}/$1"`);
+    rewritten = rewritten.replace(/srcset="\/(?!FlaconiCareers)([^"]*)"/g, `srcset="${prefix}/$1"`);
 
     return rewritten;
   };
@@ -39,9 +41,6 @@ export default function Home() {
   const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
   html = html.replace(scriptRegex, '');
   head = head.replace(scriptRegex, '');
-  
-  // Strip base tag
-  head = head.replace(/<base\b[^>]*\/?>/gmi, '');
 
   // Ensure viewport meta is present and correct for mobile
   if (!head.includes('name="viewport"')) {
