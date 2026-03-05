@@ -14,22 +14,22 @@ export default function Home() {
     if (!content) return content;
     let rewritten = content;
 
-    // 1. Remove base tag immediately to avoid path confusion
-    rewritten = rewritten.replace(/<base\b[^>]*\/?>/gmi, '');
+    // 1. Rewrite NAVIGATION links only (keep them within our prototype)
+    // We specifically target the page paths so we don't accidentally break assets
+    const base = 'https?://(www\\.)?flaconi\\.de/karriere/(en/)?';
+    
+    rewritten = rewritten.replace(new RegExp(`href="${base}culture/?`, 'g'), `href="${prefix}/culture/"`);
+    rewritten = rewritten.replace(new RegExp(`href="${base}locations/?`, 'g'), `href="${prefix}/locations/"`);
+    rewritten = rewritten.replace(new RegExp(`href="${base}our-teams/?`, 'g'), `href="${prefix}/our-teams/"`);
+    rewritten = rewritten.replace(new RegExp(`href="${base}stellenangebote/?`, 'g'), `href="${prefix}/jobs/"`);
+    
+    // Root link (logo, home)
+    // Use a negative lookahead to make sure we don't match the assets paths later
+    rewritten = rewritten.replace(new RegExp(`href="${base}(?!wp-content|wp-includes|wp-json)(?!"|#|\\s)`, 'g'), `href="${prefix}/"`);
 
-    // 2. Normalize absolute flaconi links to root-relative paths (WITHOUT prefix yet)
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?culture\/?/g, '/culture/');
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?locations\/?/g, '/locations/');
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?our-teams\/?/g, '/our-teams/');
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?stellenangebote\/?/g, '/jobs/');
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(en\/)?/g, '/');
-
-    // 3. Prefix all root-relative paths with our project prefix, 
-    // but ONLY if they haven't been prefixed already.
-    // Use negative lookahead (?!FlaconiCareers) to prevent duplication.
-    rewritten = rewritten.replace(/href="\/(?!FlaconiCareers)([^"]*)"/g, `href="${prefix}/$1"`);
-    rewritten = rewritten.replace(/src="\/(?!FlaconiCareers)([^"]*)"/g, `src="${prefix}/$1"`);
-    rewritten = rewritten.replace(/srcset="\/(?!FlaconiCareers)([^"]*)"/g, `srcset="${prefix}/$1"`);
+    // 2. IMPORTANT: Do NOT rewrite src/href for assets (wp-content, wp-includes).
+    // They should stay absolute to flaconi.de so the CSS/Images load.
+    // The crawl logic (v10) already made them absolute.
 
     return rewritten;
   };
