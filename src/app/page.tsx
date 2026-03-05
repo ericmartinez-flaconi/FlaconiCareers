@@ -2,34 +2,29 @@ import fs from 'fs';
 import path from 'path';
 
 export default function Home() {
-  const filePath = path.join(process.cwd(), 'captured_dom', 'dom_home.html');
-  let html = fs.readFileSync(filePath, 'utf8');
+  const filePath = path.join(process.cwd(), 'captured_dom', 'responsive_home.json');
+  const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-  // Strip scripts
+  let html = data.body;
+  let head = data.head;
+
   html = html.replace(/<script\b[^>]*>([\s\S]*?)<\/script>/gm, '');
   
-  // Link mapping for GitHub Pages (trailing slashes added)
   const prefix = '/FlaconiCareers';
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/culture\//g, `href="${prefix}/culture/"`);
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/locations\//g, `href="${prefix}/locations/"`);
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/our-teams\//g, `href="${prefix}/our-teams/"`);
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\/stellenangebote\//g, `href="${prefix}/jobs/"`);
-  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/en\//g, `href="${prefix}/"`);
-  
-  const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-  const headMatch = html.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
-  
-  const bodyContent = bodyMatch ? bodyMatch[1] : html;
-  const headContent = headMatch ? headMatch[1] : '';
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?culture\//g, `href="${prefix}/culture/"`);
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?locations\//g, `href="${prefix}/locations/"`);
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?our-teams\//g, `href="${prefix}/our-teams/"`);
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?stellenangebote\//g, `href="${prefix}/jobs/"`);
+  html = html.replace(/href="https:\/\/www\.flaconi\.de\/karriere\/(en\/)?(?!"|#)/g, `href="${prefix}/"`);
 
   return (
-    <>
-      <style dangerouslySetInnerHTML={{ __html: `
-        body { margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; background-color: #ffffff; }
-        .dom-container { width: 100%; display: flex; flex-direction: column; align-items: center; }
-      ` }} />
-      <div dangerouslySetInnerHTML={{ __html: headContent }} />
-      <div className="dom-container" dangerouslySetInnerHTML={{ __html: bodyContent }} />
-    </>
+    <html lang="en" className={data.htmlClass}>
+      <head dangerouslySetInnerHTML={{ __html: head }} />
+      <body 
+        className={data.bodyClass} 
+        style={{ margin: 0, padding: 0 }}
+        dangerouslySetInnerHTML={{ __html: html }} 
+      />
+    </html>
   );
 }
