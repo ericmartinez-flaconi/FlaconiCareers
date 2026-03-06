@@ -1,0 +1,102 @@
+div.job-list-container{
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+div.job-filter {
+    display: flex;
+    column-gap: 16px;
+}
+
+div.job-filter div.filter-kind{
+    display: grid;
+}
+
+div.job-table div.job{
+    padding: 25px 0;
+    display: flex;
+}
+
+@media (max-width: 700px) {
+    div.job-table div.job {
+        display: block;
+    }
+}
+
+div.job-table div.job:not(:last-of-type){
+    border-bottom: solid 1px #b9b7bc;
+}
+
+div.job div.info-column {
+    display: flex;
+    margin-top: 6px;
+}
+
+div.job .job-title{
+   font-size: 20px;
+    text-decoration: none;
+}
+
+div.job .apply-link{
+    border-bottom: 2px solid var(--global-palette3, #1A202C);
+    transition: cubic-bezier(0, 0, .2, 1) .2s all, cubic-bezier(.4, 0, .2, 1) .15s all !important;
+    margin-left: auto;
+    padding-right: 18px;
+    color: var(--global-palette3, #1A202C);
+    background: var(--global-palette9, #ffffff);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+div.job .apply-link:hover{
+    --tw-shadow-color: black !important;
+    --tw-shadow: inset 0 -12px 0 0 #D9B8F3, inset 0 -12px 0 0 var(--tw-shadow-color) !important;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow) !important;
+    border-bottom: 0px !important;
+}
+
+div.job .apply-link a{
+    text-decoration: none;
+    gap: .5em;
+    display: inline-flex;
+}
+
+div.job .apply-link a:hover{
+    color: #000;
+}
+
+div.job .apply-link .icon{
+    color: var(--global-palette3, #1A202C);
+    font-size: 24px;
+}
+
+
+div.job .apply-link svg {
+    margin-right: -24px;
+}
+
+div.job div {
+    vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+    div.job div.info-column {
+        display: block;
+    }
+
+    div.job .apply-link {
+        margin-left: unset;
+    }
+}
+
+div.job-filter select {
+    border-radius: 4px;
+}
+
+#apply-now-button:hover{
+    --tw-shadow-color: unset !important;
+    --tw-shadow: unset !important;
+    box-shadow: unset !important;
+    border-bottom: unset !important;
+}
