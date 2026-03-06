@@ -30,10 +30,17 @@ export default function RootLayout({
       <Script id="hamburger-logic" strategy="afterInteractive">
         {`
           document.addEventListener('click', function(e) {
-            if (e.target.closest('.menu-toggle-open')) {
+            // Find if click was on or inside a toggle button
+            const openBtn = e.target.closest('.menu-toggle-open');
+            const closeBtn = e.target.closest('.menu-toggle-close');
+            const overlay = e.target.closest('.drawer-overlay');
+
+            if (openBtn) {
+              console.log('Hamburger Open clicked');
               document.body.classList.add('showing-popup-drawer-from-right');
             }
-            if (e.target.closest('.menu-toggle-close') || e.target.closest('.drawer-overlay')) {
+            if (closeBtn || overlay) {
+              console.log('Hamburger Close clicked');
               document.body.classList.remove('showing-popup-drawer-from-right');
             }
           });

@@ -35,19 +35,18 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     if (!content) return content;
     let rewritten = content;
 
-    // 1. Rewrite ABSOLUTE flaconi links to our prototype paths
-    const base = 'https?://(www\\.)?flaconi\\.de/karriere/(en/)?';
-    
-    rewritten = rewritten.replace(new RegExp(`href="${base}culture/?`, 'g'), `href="${prefix}/culture/"`);
-    rewritten = rewritten.replace(new RegExp(`href="${base}locations/?`, 'g'), `href="${prefix}/locations/"`);
-    rewritten = rewritten.replace(new RegExp(`href="${base}our-teams/?`, 'g'), `href="${prefix}/our-teams/"`);
-    rewritten = rewritten.replace(new RegExp(`href="${base}stellenangebote/?`, 'g'), `href="${prefix}/jobs/"`);
-    rewritten = rewritten.replace(new RegExp(`href="${base}(?!wp-content|wp-includes|wp-json)(?!"|#|\\s)`, 'g'), `href="${prefix}/"`);
+    rewritten = rewritten.replace(/<base\b[^>]*\/?>/gmi, '');
 
-    // 2. Rewrite ROOT-RELATIVE links (e.g. /assets/...) to include the prefix
-    rewritten = rewritten.replace(/href="\/(?!FlaconiCareers)([^"]*)"/g, `href="${prefix}/$1"`);
-    rewritten = rewritten.replace(/src="\/(?!FlaconiCareers)([^"]*)"/g, `src="${prefix}/$1"`);
-    rewritten = rewritten.replace(/srcset="\/(?!FlaconiCareers)([^"]*)"/g, `srcset="${prefix}/$1"`);
+    const base = 'https?://(www\\.)?flaconi\\.de/karriere/(en/)?';
+    rewritten = rewritten.replace(new RegExp(`href="${base}culture/?`, 'g'), 'href="/culture/"');
+    rewritten = rewritten.replace(new RegExp(`href="${base}locations/?`, 'g'), 'href="/locations/"');
+    rewritten = rewritten.replace(new RegExp(`href="${base}our-teams/?`, 'g'), 'href="/our-teams/"');
+    rewritten = rewritten.replace(new RegExp(`href="${base}stellenangebote/?`, 'g'), 'href="/jobs/"');
+    rewritten = rewritten.replace(new RegExp(`href="${base}(?!"|#|\\s|wp-content|wp-includes)`, 'g'), 'href="/"');
+
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(wp-content|wp-includes)\//g, '/assets/$2/');
+
+    rewritten = rewritten.replace(/(href|src|srcset)="\/(?!FlaconiCareers)([^"]*)"/g, `$1="${prefix}/$2"`);
 
     return rewritten;
   };
@@ -58,6 +57,21 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
   html = html.replace(scriptRegex, '');
   head = head.replace(scriptRegex, '');
+
+  head += `
+    <style>
+      @media screen and (min-width: 1024px) {
+        .site-header-inner-wrap { display: flex !important; }
+        #masthead { display: block !important; }
+        #mobile-drawer { display: none !important; }
+        .menu-toggle-open { display: none !important; }
+      }
+      @media screen and (max-width: 1023px) {
+        .menu-toggle-open { display: block !important; }
+        #site-navigation { display: none !important; }
+      }
+    </style>
+  `;
 
   if (!head.includes('name="viewport"')) {
     head = `<meta name="viewport" content="width=device-width, initial-scale=1">${head}`;

@@ -116,7 +116,7 @@ export default function JobsClient({ initialData }: { initialData: any }) {
                         <div class="info-items">
                             <div style="display: flex; flex-wrap: wrap; column-gap: 36px;">
                                 <p style="display:flex; margin-bottom: unset;">
-                                    <img src="/FlaconiCareers/assets/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" style="width: 19px;">
+                                    <img src="/FlaconiCareers/assets/wp-content/uploads/2024/03/standort.webp" height="24" width="19" style="width: 19px;">
                                     &nbsp;<span>${location || 'Remote / Berlin'}</span>
                                 </p>
                             </div>
