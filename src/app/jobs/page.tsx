@@ -12,20 +12,16 @@ export default async function JobsPage() {
     if (!content) return content;
     let rewritten = content;
 
-    // 1. Rewrite ABSOLUTE flaconi links to our prototype paths
     const base = 'https?://(www\\.)?flaconi\\.de/karriere/(en/)?';
-    
     rewritten = rewritten.replace(new RegExp(`href="${base}culture/?`, 'g'), `href="${prefix}/culture/"`);
     rewritten = rewritten.replace(new RegExp(`href="${base}locations/?`, 'g'), `href="${prefix}/locations/"`);
     rewritten = rewritten.replace(new RegExp(`href="${base}our-teams/?`, 'g'), `href="${prefix}/our-teams/"`);
     rewritten = rewritten.replace(new RegExp(`href="${base}stellenangebote/?`, 'g'), `href="${prefix}/jobs/"`);
-    
-    rewritten = rewritten.replace(new RegExp(`href="${base}(?!wp-content|wp-includes|wp-json)(?!"|#|\\s)`, 'g'), `href="${prefix}/"`);
+    rewritten = rewritten.replace(new RegExp(`href="${base}(?!"|#|\\s|wp-content|wp-includes|wp-json)`, 'g'), `href="${prefix}/"`);
 
-    // 2. Rewrite ROOT-RELATIVE links (e.g. /assets/...) to include the prefix
-    rewritten = rewritten.replace(/href="\/(?!FlaconiCareers)([^"]*)"/g, `href="${prefix}/$1"`);
-    rewritten = rewritten.replace(/src="\/(?!FlaconiCareers)([^"]*)"/g, `src="${prefix}/$1"`);
-    rewritten = rewritten.replace(/srcset="\/(?!FlaconiCareers)([^"]*)"/g, `srcset="${prefix}/$1"`);
+    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(wp-content|wp-includes|fonts|anya)\//g, `${prefix}/assets/$2/`);
+
+    rewritten = rewritten.replace(/(href|src|srcset)="\/(?!FlaconiCareers)([^"]*)"/g, `$1="${prefix}/$2"`);
 
     return rewritten;
   };
@@ -37,6 +33,21 @@ export default async function JobsPage() {
   const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
   data.body = data.body.replace(scriptRegex, '');
   data.head = data.head.replace(scriptRegex, '');
+  
+  data.head += `
+    <style>
+      @media screen and (min-width: 1024px) {
+        .site-header-inner-wrap { display: flex !important; }
+        #masthead { display: block !important; }
+        #mobile-drawer { display: none !important; }
+        .menu-toggle-open { display: none !important; }
+      }
+      @media screen and (max-width: 1023px) {
+        .menu-toggle-open { display: block !important; }
+        #site-navigation { display: none !important; }
+      }
+    </style>
+  `;
 
   return <JobsClient initialData={data} />;
 }

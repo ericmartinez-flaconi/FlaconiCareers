@@ -29,7 +29,6 @@ export default function JobsClient({ initialData }: { initialData: any }) {
         const matchesLocation = !fLoc || getCity(jobLoc).includes(getCity(fLoc)) || getCity(fLoc).includes(getCity(jobLoc));
         
         // Teams can be tricky (e.g. "Data Analytics" vs "Data & Analytics")
-        // We strip non-alphanumeric for a safer comparison
         const normalize = (s: string) => s.replace(/[^a-z0-9]/g, '');
         const matchesTeam = !fTeam || normalize(jobTeam).includes(normalize(fTeam)) || normalize(fTeam).includes(normalize(jobTeam));
         
@@ -42,6 +41,30 @@ export default function JobsClient({ initialData }: { initialData: any }) {
         }
       });
     };
+
+    // 2. Inject Responsive CSS for Filters
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .job-filter {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 16px !important;
+      }
+      .job-filter .filter-kind {
+        flex: 1 1 300px !important;
+        min-width: 200px !important;
+      }
+      @media (max-width: 1024px) {
+        .job-filter {
+          flex-direction: column !important;
+        }
+        .job-filter .filter-kind {
+          width: 100% !important;
+          flex: none !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
 
     async function fetchLiveJobs() {
       const jobTable = document.querySelector('.job-table');
@@ -59,9 +82,7 @@ export default function JobsClient({ initialData }: { initialData: any }) {
       }
 
       try {
-        // Add cache buster to URL
         const cacheBuster = `&cb=${new Date().getTime()}`;
-        console.log('Fetching live jobs from Google Sheets:', CMS_CONFIG.GOOGLE_SHEET_CSV_URL);
         const response = await fetch(CMS_CONFIG.GOOGLE_SHEET_CSV_URL + cacheBuster);
         const csvText = await response.text();
         
@@ -69,11 +90,9 @@ export default function JobsClient({ initialData }: { initialData: any }) {
         const liveJobs = parsed.data;
         
         if (jobTable && liveJobs.length > 0) {
-           // Clear loading indicator
            jobTable.innerHTML = '';
            
            liveJobs.forEach((job: any) => {
-             // Sanitize keys and values (remove extra quotes and trim)
              const sanitize = (val: string) => (val || '').replace(/^"|"$/g, '').replace(/^"|"$/g, '').trim();
              
              const title = sanitize(job.Title);
@@ -85,10 +104,9 @@ export default function JobsClient({ initialData }: { initialData: any }) {
 
              const jobEl = document.createElement('div');
              jobEl.className = 'job';
-             // Set data attributes for filtering
              jobEl.setAttribute('data-location', location);
              jobEl.setAttribute('data-team', department);
-             jobEl.setAttribute('data-worktype', ''); // Optional
+             jobEl.setAttribute('data-worktype', '');
 
              jobEl.innerHTML = `
                 <div class="main-column">
@@ -101,7 +119,7 @@ export default function JobsClient({ initialData }: { initialData: any }) {
                         <div class="info-items">
                             <div style="display: flex; flex-wrap: wrap; column-gap: 36px;">
                                 <p style="display:flex; margin-bottom: unset;">
-                                    <img src="https://www.flaconi.de/karriere/wp-content/uploads/2024/03/standort.jpg" height="24" width="19" style="width: 19px;">
+                                    <img src="/FlaconiCareers/assets/wp-content/uploads/2024/03/standort.webp" height="24" width="19" style="width: 19px;">
                                     &nbsp;<span>${location || 'Remote / Berlin'}</span>
                                 </p>
                             </div>
@@ -125,12 +143,10 @@ export default function JobsClient({ initialData }: { initialData: any }) {
              `;
              jobTable.appendChild(jobEl);
            });
-           console.log('Live jobs injected:', liveJobs.length);
-           // Trigger initial filter logic
            (window as any).filterJobTabelle();
         }
       } catch (e) {
-        console.error('Failed to sync live jobs from Google Sheets:', e);
+        console.error('Failed to sync live jobs:', e);
       }
     }
 
