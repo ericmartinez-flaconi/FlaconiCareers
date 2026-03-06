@@ -44,6 +44,20 @@ export default function JobsClient({ initialData }: { initialData: any }) {
     };
 
     async function fetchLiveJobs() {
+      const jobTable = document.querySelector('.job-table');
+      if (jobTable) {
+        // Clear existing jobs immediately and show a spinner
+        jobTable.innerHTML = `
+          <div id="jobs-loading-indicator" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 0; width: 100%; grid-column: 1 / -1;">
+            <div class="spinner" style="width: 40px; height: 40px; border: 4px solid rgba(0,0,0,0.1); border-top: 4px solid #db2777; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+            <p style="margin-top: 20px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; font-size: 12px; color: #db2777;">Syncing Live Jobs...</p>
+            <style>
+              @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+            </style>
+          </div>
+        `;
+      }
+
       try {
         // Add cache buster to URL
         const cacheBuster = `&cb=${new Date().getTime()}`;
@@ -54,9 +68,8 @@ export default function JobsClient({ initialData }: { initialData: any }) {
         const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
         const liveJobs = parsed.data;
         
-        const jobTable = document.querySelector('.job-table');
         if (jobTable && liveJobs.length > 0) {
-           // Clear existing jobs
+           // Clear loading indicator
            jobTable.innerHTML = '';
            
            liveJobs.forEach((job: any) => {
