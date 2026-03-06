@@ -19,33 +19,50 @@ const JSON_DIR = path.join(__dirname, 'captured_dom');
 
 if (!fs.existsSync(ASSETS_DIR)) fs.mkdirSync(ASSETS_DIR, { recursive: true });
 
-async function downloadFile(url, folder) {
+async function downloadFile(url) {
   try {
     const urlObj = new URL(url);
-    // Preserve path structure to avoid name collisions
-    const relativePath = urlObj.pathname.replace('/karriere/', '');
-    const savePath = path.join(ASSETS_DIR, relativePath);
+    // Remove leading slash and optional /karriere/ prefix
+    let relPath = urlObj.pathname;
+    if (relPath.startsWith('/karriere/')) {
+      relPath = relPath.replace('/karriere/', '');
+    }
+    if (relPath.startsWith('/')) {
+      relPath = relPath.substring(1);
+    }
+    
+    const savePath = path.join(ASSETS_DIR, relPath);
     const saveDir = path.dirname(savePath);
     
     if (!fs.existsSync(saveDir)) fs.mkdirSync(saveDir, { recursive: true });
     
-    if (fs.existsSync(savePath)) return `/FlaconiCareers/assets/${relativePath}`;
+    const displayPath = `/FlaconiCareers/assets/${relPath}`;
+    
+    if (fs.existsSync(savePath)) return displayPath;
 
+    console.log(`    Downloading: ${url} -> ${relPath}`);
     const response = await axios({
       method: 'get',
       url: url,
       responseType: 'stream',
-      timeout: 15000
+      timeout: 15000,
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      }
     });
 
     const writer = fs.createWriteStream(savePath);
     response.data.pipe(writer);
     
     return new Promise((resolve, reject) => {
-      writer.on('finish', () => resolve(`/FlaconiCareers/assets/${relativePath}`));
-      writer.on('error', reject);
+      writer.on('finish', () => resolve(displayPath));
+      writer.on('error', (err) => {
+        console.error(`    Write Error: ${url}`, err.message);
+        resolve(url);
+      });
     });
   } catch (e) {
+    console.error(`    Download Failed: ${url}`, e.message);
     return url;
   }
 }
@@ -57,7 +74,7 @@ async function downloadFile(url, folder) {
   for (const pageInfo of pages) {
     const context = await browser.newContext({ ...desktop, viewport: { width: 1440, height: 900 } });
     const page = await context.newPage();
-    console.log(`v12: Capturing ${pageInfo.slug}...`);
+    console.log(`v12: Processing ${pageInfo.slug}...`);
 
     try {
       const waitCondition = pageInfo.slug === 'home' ? 'domcontentloaded' : 'networkidle';
@@ -86,17 +103,20 @@ async function downloadFile(url, folder) {
         const imgs = Array.from(document.querySelectorAll('img')).map(i => i.src);
         const sources = Array.from(document.querySelectorAll('source')).map(s => s.srcset.split(' ')[0]);
         const links = Array.from(document.querySelectorAll('link[rel="stylesheet"]')).map(l => l.href);
-        return { images: [...new Set([...imgs, ...sources])].filter(s => s.startsWith('http')), styles: [...new Set(links)].filter(s => s.startsWith('http')) };
+        return { 
+          images: [...new Set([...imgs, ...sources])].filter(s => s.startsWith('http')), 
+          styles: [...new Set(links)].filter(s => s.startsWith('http')) 
+        };
       });
 
-      console.log(`  Downloading ${assets.images.length} images and ${assets.styles.length} styles...`);
+      console.log(`  Localizing ${assets.images.length} images and ${assets.styles.length} styles...`);
 
       const assetMap = {};
       for (const url of assets.images) {
-        assetMap[url] = await downloadFile(url, 'img');
+        assetMap[url] = await downloadFile(url);
       }
       for (const url of assets.styles) {
-        assetMap[url] = await downloadFile(url, 'css');
+        assetMap[url] = await downloadFile(url);
       }
 
       // 3. Final DOM Capture with mapping
@@ -106,8 +126,9 @@ async function downloadFile(url, folder) {
           if (assetMap[img.src]) img.src = assetMap[img.src];
           if (img.srcset) {
              const parts = img.srcset.split(',').map(part => {
-                const [url, size] = part.trim().split(' ');
-                return assetMap[url] ? `${assetMap[url]} ${size || ''}`.trim() : part;
+                const trimmed = part.trim();
+                const [url, size] = trimmed.split(' ');
+                return assetMap[url] ? `${assetMap[url]} ${size || ''}`.trim() : trimmed;
              });
              img.srcset = parts.join(', ');
           }
@@ -115,8 +136,9 @@ async function downloadFile(url, folder) {
         document.querySelectorAll('source').forEach(s => {
           if (s.srcset) {
              const parts = s.srcset.split(',').map(part => {
-                const [url, size] = part.trim().split(' ');
-                return assetMap[url] ? `${assetMap[url]} ${size || ''}`.trim() : part;
+                const trimmed = part.trim();
+                const [url, size] = trimmed.split(' ');
+                return assetMap[url] ? `${assetMap[url]} ${size || ''}`.trim() : trimmed;
              });
              s.srcset = parts.join(', ');
           }
@@ -131,7 +153,18 @@ async function downloadFile(url, folder) {
         document.body.classList.remove('mobile-non-transparent-header');
         document.body.classList.add('h-desktop', 'header-desktop', 'desktop-navigation');
 
-        // Clean up
+        // Force desktop CSS
+        const forceStyle = document.createElement('style');
+        forceStyle.innerHTML = `
+           @media screen and (min-width: 1024px) {
+             .site-header-inner-wrap { display: flex !important; visibility: visible !important; opacity: 1 !important; }
+             #masthead { display: block !important; }
+             #mobile-drawer { display: none !important; }
+             .mobile-navigation { display: none !important; }
+           }
+        `;
+        document.head.appendChild(forceStyle);
+
         document.querySelectorAll('script').forEach(s => s.remove());
         document.querySelectorAll('base').forEach(b => b.remove());
 
