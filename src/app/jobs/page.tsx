@@ -12,6 +12,7 @@ export default async function JobsPage() {
     if (!content) return content;
     let rewritten = content;
 
+    // 1. Rewrite ABSOLUTE flaconi links to our prototype paths
     const base = 'https?://(www\\.)?flaconi\\.de/karriere/(en/)?';
     
     rewritten = rewritten.replace(new RegExp(`href="${base}culture/?`, 'g'), `href="${prefix}/culture/"`);
@@ -20,6 +21,11 @@ export default async function JobsPage() {
     rewritten = rewritten.replace(new RegExp(`href="${base}stellenangebote/?`, 'g'), `href="${prefix}/jobs/"`);
     
     rewritten = rewritten.replace(new RegExp(`href="${base}(?!wp-content|wp-includes|wp-json)(?!"|#|\\s)`, 'g'), `href="${prefix}/"`);
+
+    // 2. Rewrite ROOT-RELATIVE links (e.g. /assets/...) to include the prefix
+    rewritten = rewritten.replace(/href="\/(?!FlaconiCareers)([^"]*)"/g, `href="${prefix}/$1"`);
+    rewritten = rewritten.replace(/src="\/(?!FlaconiCareers)([^"]*)"/g, `src="${prefix}/$1"`);
+    rewritten = rewritten.replace(/srcset="\/(?!FlaconiCareers)([^"]*)"/g, `srcset="${prefix}/$1"`);
 
     return rewritten;
   };
