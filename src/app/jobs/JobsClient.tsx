@@ -53,6 +53,21 @@ export default function JobsClient({ initialData }: { initialData: any }) {
             <p style="margin-top: 20px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; font-size: 12px; color: #db2777;">Syncing Live Jobs...</p>
             <style>
               @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+              
+              /* Responsive Filters */
+              .job-filter { 
+                display: flex !important; 
+                flex-wrap: wrap !important; 
+                gap: 16px !important; 
+              }
+              .job-filter .filter-kind {
+                flex: 1 1 300px !important;
+                min-width: 250px !important;
+              }
+              @media (max-width: 1024px) {
+                .job-filter { flex-direction: column !important; }
+                .job-filter .filter-kind { width: 100% !important; flex: none !important; }
+              }
             </style>
           </div>
         `;
