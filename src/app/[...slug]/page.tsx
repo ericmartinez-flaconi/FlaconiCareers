@@ -44,7 +44,11 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
 
     rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(wp-content|wp-includes|fonts|anya)\//g, `${prefix}/assets/$2/`);
 
-    rewritten = rewritten.replace(/(href|src|srcset)="\/(?!FlaconiCareers)([^"]*)"/g, `$1="${prefix}/$2"`);
+    rewritten = rewritten.replace(/(src|href|srcset)="\/karriere\//g, `$1="${prefix}/assets/`);
+    rewritten = rewritten.replace(/(src|href|srcset)="\/(wp-content|wp-includes|fonts|anya)/g, `$1="${prefix}/assets/$2`);
+
+    const doublePrefix = new RegExp(`${prefix}${prefix}`, 'g');
+    rewritten = rewritten.replace(doublePrefix, prefix);
 
     return rewritten;
   };
@@ -56,11 +60,11 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   html = html.replace(scriptRegex, '');
   head = head.replace(scriptRegex, '');
 
+  head = head.replace(/<base\b[^>]*\/?>/gmi, '');
+
   head += `
     <style>
       @media screen and (min-width: 1024px) {
-        .site-header-inner-wrap { display: flex !important; }
-        #masthead { display: block !important; }
         #mobile-drawer { display: none !important; }
         .menu-toggle-open { display: none !important; }
       }

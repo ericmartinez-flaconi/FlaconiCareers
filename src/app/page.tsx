@@ -23,13 +23,17 @@ export default function Home() {
     // Generic root link
     rewritten = rewritten.replace(new RegExp(`href="${base}(?!"|#|\\s|wp-content|wp-includes|wp-json)`, 'g'), `href="${prefix}/"`);
 
-    // 2. Map flaconi asset directories to our local assets folder
-    // This catches absolute URLs like https://www.flaconi.de/karriere/wp-content/...
+    // 2. Map flaconi asset directories to our local assets folder (Absolute URLs)
     rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(wp-content|wp-includes|fonts|anya)\//g, `${prefix}/assets/$2/`);
 
-    // 3. Map any remaining root-relative URLs to include our prefix, 
-    // ensuring we don't double-prefix already mapped ones.
-    rewritten = rewritten.replace(/(href|src|srcset)="\/(?!FlaconiCareers)([^"]*)"/g, `$1="${prefix}/$2"`);
+    // 3. Robustly handle relative URLs in src, href, and srcset
+    // This catches strings like src="/karriere/wp-content/..." and src="/wp-content/..."
+    rewritten = rewritten.replace(/(src|href|srcset)="\/karriere\//g, `$1="${prefix}/assets/`);
+    rewritten = rewritten.replace(/(src|href|srcset)="\/(wp-content|wp-includes|fonts|anya)/g, `$1="${prefix}/assets/$2`);
+
+    // 4. Cleanup any potential duplication caused by overlapping regex
+    const doublePrefix = new RegExp(`${prefix}${prefix}`, 'g');
+    rewritten = rewritten.replace(doublePrefix, prefix);
 
     return rewritten;
   };
@@ -42,12 +46,14 @@ export default function Home() {
   html = html.replace(scriptRegex, '');
   head = head.replace(scriptRegex, '');
 
-  // Add robust force styles
+  // Strip base tag
+  head = head.replace(/<base\b[^>]*\/?>/gmi, '');
+
+  // Fix Header Misalignment - remove aggressive force-display on large screens
+  // and only ensure mobile toggle is correct
   head += `
     <style>
       @media screen and (min-width: 1024px) {
-        .site-header-inner-wrap { display: flex !important; }
-        #masthead { display: block !important; }
         #mobile-drawer { display: none !important; }
         .menu-toggle-open { display: none !important; }
       }

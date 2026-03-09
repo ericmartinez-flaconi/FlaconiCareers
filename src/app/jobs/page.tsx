@@ -17,11 +17,16 @@ export default async function JobsPage() {
     rewritten = rewritten.replace(new RegExp(`href="${base}locations/?`, 'g'), `href="${prefix}/locations/"`);
     rewritten = rewritten.replace(new RegExp(`href="${base}our-teams/?`, 'g'), `href="${prefix}/our-teams/"`);
     rewritten = rewritten.replace(new RegExp(`href="${base}stellenangebote/?`, 'g'), `href="${prefix}/jobs/"`);
+    
     rewritten = rewritten.replace(new RegExp(`href="${base}(?!"|#|\\s|wp-content|wp-includes|wp-json)`, 'g'), `href="${prefix}/"`);
 
     rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(wp-content|wp-includes|fonts|anya)\//g, `${prefix}/assets/$2/`);
 
-    rewritten = rewritten.replace(/(href|src|srcset)="\/(?!FlaconiCareers)([^"]*)"/g, `$1="${prefix}/$2"`);
+    rewritten = rewritten.replace(/(src|href|srcset)="\/karriere\//g, `$1="${prefix}/assets/`);
+    rewritten = rewritten.replace(/(src|href|srcset)="\/(wp-content|wp-includes|fonts|anya)/g, `$1="${prefix}/assets/$2`);
+
+    const doublePrefix = new RegExp(`${prefix}${prefix}`, 'g');
+    rewritten = rewritten.replace(doublePrefix, prefix);
 
     return rewritten;
   };
@@ -34,11 +39,11 @@ export default async function JobsPage() {
   data.body = data.body.replace(scriptRegex, '');
   data.head = data.head.replace(scriptRegex, '');
   
+  data.head = data.head.replace(/<base\b[^>]*\/?>/gmi, '');
+
   data.head += `
     <style>
       @media screen and (min-width: 1024px) {
-        .site-header-inner-wrap { display: flex !important; }
-        #masthead { display: block !important; }
         #mobile-drawer { display: none !important; }
         .menu-toggle-open { display: none !important; }
       }
