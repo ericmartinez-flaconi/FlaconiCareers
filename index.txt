@@ -2,23 +2,23 @@
 2:I[63207,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"default"]
 3:I[46419,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"default"]
 8:I[12548,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"default"]
-4:T248c8,
+4:T24899,
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<link rel="alternate" hreflang="en" href="/FlaconiCareers/"en/">
+<link rel="alternate" hreflang="en" href="/FlaconiCareers/en/">
 <link rel="alternate" hreflang="de" href="https://www.flaconi.de/karriere/">
 <link rel="alternate" hreflang="x-default" href="https://www.flaconi.de/karriere/">
 
 	<!-- This site is optimized with the Yoast SEO plugin v27.0 - https://yoast.com/product/yoast-seo-wordpress/ -->
 	<title>flaconi Careers: Jobs in Beauty-Tech and E-commerce</title>
 	<meta name="description" content="Join 700+ colleagues from 60+ nations and shape the future of beauty tech. Explore jobs in Berlin &amp; Halle and build something beautiful.">
-	<link rel="canonical" href="/FlaconiCareers/"en/">
+	<link rel="canonical" href="/FlaconiCareers/en/">
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="flaconi Careers: Jobs in Beauty-Tech and E-commerce">
 	<meta property="og:description" content="Join 700+ colleagues from 60+ nations and shape the future of beauty tech. Explore jobs in Berlin &amp; Halle and build something beautiful.">
-	<meta property="og:url" content="https://www.flaconi.de/karriere/en/">
+	<meta property="og:url" content="/FlaconiCareers/en/">
 	<meta property="og:site_name" content="flaconi Careers - Jobs in Beauty-Tech &amp; E-commerce">
 	<meta property="article:modified_time" content="2026-02-16T15:51:11+00:00">
 	<meta property="og:image" content="/FlaconiCareers/assets/wp-content/uploads/2024/07/open-graph-1024x538.jpg">
@@ -27,11 +27,11 @@
 	<!-- / Yoast SEO plugin. -->
 
 
-<link rel="alternate" type="application/rss+xml" title="flaconi Careers - Jobs in Beauty-Tech &amp; E-commerce » Feed" href="/FlaconiCareers/"feed/">
-<link rel="alternate" type="application/rss+xml" title="flaconi Careers - Jobs in Beauty-Tech &amp; E-commerce » Comments Feed" href="/FlaconiCareers/"comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="flaconi Careers - Jobs in Beauty-Tech &amp; E-commerce » Feed" href="/FlaconiCareers/feed/">
+<link rel="alternate" type="application/rss+xml" title="flaconi Careers - Jobs in Beauty-Tech &amp; E-commerce » Comments Feed" href="/FlaconiCareers/comments/feed/">
 			
-			<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/FlaconiCareers/"en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.flaconi.de%2Fkarriere%2Fen%2F">
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/FlaconiCareers/"en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.flaconi.de%2Fkarriere%2Fen%2F&amp;format=xml">
+			<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/FlaconiCareers/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.flaconi.de%2Fkarriere%2Fen%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/FlaconiCareers/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.flaconi.de%2Fkarriere%2Fen%2F&amp;format=xml">
 <style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
@@ -139,14 +139,14 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 
 
-<link rel="https://api.w.org/" href="/FlaconiCareers/"en/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/FlaconiCareers/"en/wp-json/wp/v2/pages/3119"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/FlaconiCareers/"xmlrpc.php?rsd">
+<link rel="https://api.w.org/" href="/FlaconiCareers/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/FlaconiCareers/wp-json/wp/v2/pages/3119"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/FlaconiCareers/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 6.9.1">
-<link rel="shortlink" href="/FlaconiCareers/"en/">
+<link rel="shortlink" href="/FlaconiCareers/en/">
 
 <meta name="generator" content="WPML ver:4.9.1 stt:1,3;">
-<link rel="stylesheet" id="kadence-header-preload" href="/FlaconiCareers/assets/wp-content/themes/kadence/assets/css/header.min.css" as="style">
-<link rel="stylesheet" id="kadence-content-preload" href="/FlaconiCareers/assets/wp-content/themes/kadence/assets/css/content.min.css" as="style">
-<link rel="stylesheet" id="kadence-footer-preload" href="/FlaconiCareers/assets/wp-content/themes/kadence/assets/css/footer.min.css" as="style">
+<link rel="preload" id="kadence-header-preload" href="/FlaconiCareers/assets/wp-content/themes/kadence/assets/css/header.min.css" as="style">
+<link rel="preload" id="kadence-content-preload" href="/FlaconiCareers/assets/wp-content/themes/kadence/assets/css/content.min.css" as="style">
+<link rel="preload" id="kadence-footer-preload" href="/FlaconiCareers/assets/wp-content/themes/kadence/assets/css/footer.min.css" as="style">
 <link rel="stylesheet" id="kadence-fonts-gfonts-css" href="/FlaconiCareers/assets/wp-content/fonts/968e56c6b3b638c383d16fe7541ea190.css" type="text/css" media="all">
 <link rel="icon" href="/FlaconiCareers/assets/wp-content/uploads/2024/07/favicon-150x150.png" sizes="32x32">
 <link rel="icon" href="/FlaconiCareers/assets/wp-content/uploads/2024/07/favicon-300x300.png" sizes="192x192">
@@ -168,12 +168,12 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
         #site-navigation { display: none !important; }
       }
     </style>
-  0:{"P":null,"b":"mwKYkXgSOaQdG1vEEI6pI","c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$4"}}],"$L5"]}],null,"$L6"]}],{},null,false,false]},null,false,false],"$L7",false]],"m":"$undefined","G":["$8",[]],"S":true}
+  0:{"P":null,"b":"erzGTDznRd4XTIn7PH8wd","c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$4"}}],"$L5"]}],null,"$L6"]}],{},null,false,false]},null,false,false],"$L7",false]],"m":"$undefined","G":["$8",[]],"S":true}
 a:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"OutletBoundary"]
 b:"$Sreact.suspense"
 d:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"ViewportBoundary"]
 f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataBoundary"]
-9:Td42e,
+9:Td428,
 
 <div id="wrapper" class="site wp-site-blocks">
 			<a class="skip-link screen-reader-text scroll-ignore" href="#main">Skip to content</a>
@@ -189,7 +189,7 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 			<div class="site-main-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-no-center">
 									<div class="site-header-main-section-left site-header-section site-header-section-left">
 						<div class="site-header-item site-header-focus-item" data-section="title_tagline">
-	<div class="site-branding branding-layout-standard site-brand-logo-only"><a class="brand has-logo-image" href="/FlaconiCareers/"en/" rel="home"><img width="165" height="42" src="/FlaconiCareers/assets/wp-content/uploads/2024/03/flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
+	<div class="site-branding branding-layout-standard site-brand-logo-only"><a class="brand has-logo-image" href="/FlaconiCareers/en/" rel="home"><img width="165" height="42" src="/FlaconiCareers/assets/wp-content/uploads/2024/03/flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
 					</div>
 																	<div class="site-header-main-section-right site-header-section site-header-section-right">
 						<div class="site-header-item site-header-focus-item" data-section="kadence_customizer_header_social">
@@ -216,12 +216,12 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 						<div class="site-header-item site-header-focus-item site-header-item-main-navigation header-navigation-layout-stretch-false header-navigation-layout-fill-stretch-false" data-section="kadence_customizer_primary_navigation">
 		<nav id="site-navigation" class="main-navigation header-navigation hover-to-open nav--toggle-sub header-navigation-style-standard header-navigation-dropdown-animation-none" role="navigation" aria-label="Primary">
 			<div class="primary-menu-container header-menu-container">
-	<ul id="primary-menu" class="menu"><li id="menu-item-3274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3119 current_page_item menu-item-3274"><a href="/FlaconiCareers/"en/" aria-current="page">About us</a></li>
-<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278"><a href="/FlaconiCareers/our-teams/"">Our Teams</a></li>
-<li id="menu-item-3277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3277"><a href="/FlaconiCareers/locations/"">Locations</a></li>
-<li id="menu-item-3275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3275"><a href="/FlaconiCareers/culture/"">Life at flaconi</a></li>
-<li id="menu-item-3276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="/FlaconiCareers/"karriere/">How we hire</a></li>
-<li id="menu-item-4593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="/FlaconiCareers/jobs/"">Jobs</a></li>
+	<ul id="primary-menu" class="menu"><li id="menu-item-3274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3119 current_page_item menu-item-3274"><a href="/FlaconiCareers/en/" aria-current="page">About us</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278"><a href="/FlaconiCareers/our-teams/">Our Teams</a></li>
+<li id="menu-item-3277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3277"><a href="/FlaconiCareers/locations/">Locations</a></li>
+<li id="menu-item-3275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3275"><a href="/FlaconiCareers/culture/">Life at flaconi</a></li>
+<li id="menu-item-3276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="/FlaconiCareers/karriere/">How we hire</a></li>
+<li id="menu-item-4593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="/FlaconiCareers/jobs/">Jobs</a></li>
 </ul>		</div>
 	</nav><!-- #site-navigation -->
 	</div><!-- data-section="primary_navigation" -->
@@ -229,7 +229,7 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 	<div class="header-html inner-link-style-normal"><div class="header-html-inner"><p>
 </p><div role="navigation" aria-label="Language Switcher" class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-list-horizontal">
 	<ul><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-list-horizontal">
-				<a href="/FlaconiCareers/"en/" hreflang="en" lang="en" class="wpml-ls-link" aria-current="page" aria-label="Switch to EN" title="Switch to EN">
+				<a href="/FlaconiCareers/en/" hreflang="en" lang="en" class="wpml-ls-link" aria-current="page" aria-label="Switch to EN" title="Switch to EN">
 					<span class="wpml-ls-native">EN</span></a>
 			</li><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-de wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
 				<a href="https://www.flaconi.de/karriere/" hreflang="de" lang="de" class="wpml-ls-link" aria-label="Switch to DE" title="Switch to DE">
@@ -260,7 +260,7 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 			<div class="site-main-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-no-center">
 									<div class="site-header-main-section-left site-header-section site-header-section-left">
 						<div class="site-header-item site-header-focus-item" data-section="title_tagline">
-	<div class="site-branding mobile-site-branding branding-layout-standard branding-tablet-layout-inherit site-brand-logo-only branding-mobile-layout-inherit"><a class="brand has-logo-image" href="/FlaconiCareers/"en/" rel="home"><img width="165" height="42" src="/FlaconiCareers/assets/wp-content/uploads/2024/03/flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
+	<div class="site-branding mobile-site-branding branding-layout-standard branding-tablet-layout-inherit site-brand-logo-only branding-mobile-layout-inherit"><a class="brand has-logo-image" href="/FlaconiCareers/en/" rel="home"><img width="165" height="42" src="/FlaconiCareers/assets/wp-content/uploads/2024/03/flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
 					</div>
 																	<div class="site-header-main-section-right site-header-section site-header-section-right">
 						<div class="site-header-item site-header-focus-item site-header-item-navgation-popup-toggle" data-section="kadence_customizer_mobile_trigger">
@@ -295,7 +295,7 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 	<div class="kb-row-layout-wrap kb-row-layout-id3119_7a706a-e5 alignnone wp-block-kadence-rowlayout"><div class="kt-row-column-wrap kt-has-1-columns kt-row-layout-equal kt-tab-layout-inherit kt-mobile-layout-row kt-row-valign-top kb-theme-content-width">
 
 <div class="wp-block-kadence-column kadence-column3119_53d082-f1"><div class="kt-inside-inner-col">
-<figure class="wp-block-video"><video height="1080" style="aspect-ratio: 1920 / 1080;" width="1920" autoplay="" loop="" muted="" src="/FlaconiCareers/assets/wp-content/uploads/2025/11/250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4"></video></figure>
+<figure class="wp-block-video"><video height="1080" style="aspect-ratio: 1920 / 1080;" width="1920" autoplay="" loop="" muted="" src="https://www.flaconi.de/karriere/wp-content/uploads/2025/11/250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4"></video></figure>
 </div></div>
 
 </div></div>
@@ -327,7 +327,7 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 
 
 <div class="wp-block-kadence-column kadence-column3119_fe6854-50"><div class="kt-inside-inner-col">
-<figure class="wp-block-image size-full"><a href="/FlaconiCareers/jobs/""><img fetchpriority="high" decoding="async" width="265" height="239" src="/FlaconiCareers/assets/wp-content/uploads/2026/02/explore.png" alt="" class="wp-image-4797"></a></figure>
+<figure class="wp-block-image size-full"><a href="/FlaconiCareers/jobs/"><img fetchpriority="high" decoding="async" width="265" height="239" src="/FlaconiCareers/assets/wp-content/uploads/2026/02/explore.png" alt="" class="wp-image-4797"></a></figure>
 </div></div>
 
 </div></div></div></div>
@@ -337,19 +337,19 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 <div class="wp-block-kadence-column kadence-column3119_bd65fa-59"><div class="kt-inside-inner-col"><div class="kb-row-layout-wrap kb-row-layout-id3119_ba8e3c-2d alignnone wp-block-kadence-rowlayout"><div class="kt-row-column-wrap kt-has-3-columns kt-row-layout-equal kt-tab-layout-two-grid kt-mobile-layout-row kt-row-valign-top">
 
 <div class="wp-block-kadence-column kadence-column3119_a4ecd7-7f"><div class="kt-inside-inner-col">
-<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-yw1ix "><div class="eb-flipbox-container eb-flipbox-yw1ix eb-click-mode" data-id="eb-flipbox-yw1ix" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content"><strong><strong>Meet the People Behind Beauty Tech.</strong><br><br></strong>We are 700 colleagues from over 60 nations, and this diversity is our strength. United by our vision and shared goals, we leverage our unique perspectives daily to revolutionize the beauty tech industry. We call this community #WeCommerce.<br><br>Ready to see where you fit in? Find out more about our teams below.<br><a href="/FlaconiCareers/our-teams/""></a></p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="/FlaconiCareers/our-teams/"" target="_self" rel="noopener"><div class="eb-flipbox-button-content"><span>More about our teams</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
+<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-yw1ix "><div class="eb-flipbox-container eb-flipbox-yw1ix eb-click-mode" data-id="eb-flipbox-yw1ix" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content"><strong><strong>Meet the People Behind Beauty Tech.</strong><br><br></strong>We are 700 colleagues from over 60 nations, and this diversity is our strength. United by our vision and shared goals, we leverage our unique perspectives daily to revolutionize the beauty tech industry. We call this community #WeCommerce.<br><br>Ready to see where you fit in? Find out more about our teams below.<br><a href="/FlaconiCareers/our-teams/"></a></p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="/FlaconiCareers/our-teams/" target="_self" rel="noopener"><div class="eb-flipbox-button-content"><span>More about our teams</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
 </div></div>
 
 
 
 <div class="wp-block-kadence-column kadence-column3119_2584e4-00"><div class="kt-inside-inner-col">
-<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-fta2b "><div class="eb-flipbox-container eb-flipbox-fta2b eb-click-mode" data-id="eb-flipbox-fta2b" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content"><strong>Are you looking for the right next challenge that combines tech and beauty?</strong><br><br>Check out our current open roles below. We look forward to receiving your application!</p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="/FlaconiCareers/jobs/"" target="_blank" rel="noopener"><div class="eb-flipbox-button-content"><span>Our listings</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
+<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-fta2b "><div class="eb-flipbox-container eb-flipbox-fta2b eb-click-mode" data-id="eb-flipbox-fta2b" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content"><strong>Are you looking for the right next challenge that combines tech and beauty?</strong><br><br>Check out our current open roles below. We look forward to receiving your application!</p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="/FlaconiCareers/jobs/" target="_blank" rel="noopener"><div class="eb-flipbox-button-content"><span>Our listings</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
 </div></div>
 
 
 
 <div class="wp-block-kadence-column kadence-column3119_867133-fc"><div class="kt-inside-inner-col">
-<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-ek8ov "><div class="eb-flipbox-container eb-flipbox-ek8ov eb-click-mode" data-id="eb-flipbox-ek8ov" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content">We’re proud of our success, but we’re even prouder of how we achieve it. Our corporate culture is built on a blend of ambition, fun, and innovation. We believe in pursuing our vision together.<br><br>Ready to join a culture that invests in you? Explore further insights into our working culture below.</p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="/FlaconiCareers/culture/"" target="_self" rel="noopener"><div class="eb-flipbox-button-content"><span>Further insights</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
+<div class="wp-block-flipbox-flipbox-block"><div class="eb-parent-wrapper eb-parent-eb-flipbox-ek8ov "><div class="eb-flipbox-container eb-flipbox-ek8ov eb-click-mode" data-id="eb-flipbox-ek8ov" data-flip-type="flip-left" data-flip-mode="click" data-flip-mouseleave="true"><div class="eb-flipper"><div class="eb-flipbox-front"><div class="eb-flipbox-items-container"></div></div><div class="eb-flipbox-back"><div class="eb-flipbox-items-container"><div class="eb-flipbox-back-content-wrapper"><p class="eb-flipbox-back-content">We’re proud of our success, but we’re even prouder of how we achieve it. Our corporate culture is built on a blend of ambition, fun, and innovation. We believe in pursuing our vision together.<br><br>Ready to join a culture that invests in you? Explore further insights into our working culture below.</p></div><div class="eb-flipbox-button-container"><a class="eb-flipbox-button-link " href="/FlaconiCareers/culture/" target="_self" rel="noopener"><div class="eb-flipbox-button-content"><span>Further insights</span><span class="dashicon dashicons dashicons-arrow-right-alt2 eb-flipbox-button-icon"></span></div></a></div></div></div></div></div></div></div>
 </div></div>
 
 </div></div>
@@ -442,7 +442,7 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 
 
 
-<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_d5f5bf-45"><a class="kb-button kt-button button kb-btn3119_37851d-d6 kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="/FlaconiCareers/locations/"#berlin"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
+<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_d5f5bf-45"><a class="kb-button kt-button button kb-btn3119_37851d-d6 kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="/FlaconiCareers/locations/#berlin"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
 </div>
 </div></div>
 
@@ -474,7 +474,7 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 
 
 
-<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_be080c-5a"><a class="kb-button kt-button button kb-btn3119_71d793-45 kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="/FlaconiCareers/locations/"#halle"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
+<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_be080c-5a"><a class="kb-button kt-button button kb-btn3119_71d793-45 kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="/FlaconiCareers/locations/#halle"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
 </div>
 </div></div>
 
@@ -502,7 +502,7 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 
 
 
-<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_79bb9b-e9"><a class="kb-button kt-button button kb-btn3119_cc5134-ed kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="/FlaconiCareers/locations/"#offline-store"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
+<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_79bb9b-e9"><a class="kb-button kt-button button kb-btn3119_cc5134-ed kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="/FlaconiCareers/locations/#offline-store"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
 </div>
 </div></div>
 
@@ -527,14 +527,14 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 
 
 
-<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_0ec72e-b1"><a class="kb-button kt-button button kb-btn3119_a90a84-21 kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="/FlaconiCareers/culture/""><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
+<div class="wp-block-kadence-advancedbtn kb-buttons-wrap kb-btns3119_0ec72e-b1"><a class="kb-button kt-button button kb-btn3119_a90a84-21 kt-btn-size-standard kt-btn-width-type-auto kb-btn-global-fill  kt-btn-has-text-true kt-btn-has-svg-true  wp-block-kadence-singlebtn" href="/FlaconiCareers/culture/"><span class="kt-btn-inner-text">Discover more</span><span class="kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
 </div></div>
 
 
 
 <div class="wp-block-kadence-column kadence-column3119_e7ee60-ad"><div class="kt-inside-inner-col">
 <div class="wp-block-kadence-column kadence-column3119_9cf38f-62"><div class="kt-inside-inner-col">
-<figure class="wp-block-video"><video height="2160" style="aspect-ratio: 3840 / 2160;" width="3840" controls="" preload="auto" src="/FlaconiCareers/assets/wp-content/uploads/2024/06/Cultural-Pillars-Value-Day-30-sec.mp4"></video></figure>
+<figure class="wp-block-video"><video height="2160" style="aspect-ratio: 3840 / 2160;" width="3840" controls="" preload="auto" src="https://www.flaconi.de/karriere/wp-content/uploads/2025/11/Cultural-Pillars-Value-Day-30-sec.mp4"></video></figure>
 
 
 
@@ -744,12 +744,12 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 <div class="site-header-item site-header-focus-item site-header-item-mobile-navigation mobile-navigation-layout-stretch-false" data-section="kadence_customizer_mobile_navigation">
 		<nav id="mobile-site-navigation" class="mobile-navigation drawer-navigation drawer-navigation-parent-toggle-false" role="navigation" aria-label="Primary Mobile">
 				<div class="mobile-menu-container drawer-menu-container">
-			<ul id="mobile-menu" class="menu has-collapse-sub-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3119 current_page_item menu-item-3274"><a href="/FlaconiCareers/"en/" aria-current="page">About us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278"><a href="/FlaconiCareers/our-teams/"">Our Teams</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3277"><a href="/FlaconiCareers/locations/"">Locations</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3275"><a href="/FlaconiCareers/culture/"">Life at flaconi</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="/FlaconiCareers/"karriere/">How we hire</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="/FlaconiCareers/jobs/"">Jobs</a></li>
+			<ul id="mobile-menu" class="menu has-collapse-sub-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3119 current_page_item menu-item-3274"><a href="/FlaconiCareers/en/" aria-current="page">About us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278"><a href="/FlaconiCareers/our-teams/">Our Teams</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3277"><a href="/FlaconiCareers/locations/">Locations</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3275"><a href="/FlaconiCareers/culture/">Life at flaconi</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="/FlaconiCareers/karriere/">How we hire</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="/FlaconiCareers/jobs/">Jobs</a></li>
 </ul>		</div>
 	</nav><!-- #site-navigation -->
 	</div><!-- data-section="mobile_navigation" -->
