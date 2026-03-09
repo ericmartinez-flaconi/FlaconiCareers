@@ -1,18 +1,16 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Papa from 'papaparse';
 import { CMS_CONFIG } from '@/CMS_CONFIG';
+import ClientStyleManager from '@/components/ClientStyleManager';
 
 export default function JobsClient({ initialData }: { initialData: any }) {
-  // This component handles the 1:1 DOM rendering and the Live Sync from Google Sheets
   useEffect(() => {
     // 1. Define the Global Filter Function
     (window as any).filterJobTabelle = () => {
       const locationVal = (document.getElementById('locations') as HTMLSelectElement)?.value || '';
       const teamVal = (document.getElementById('teams') as HTMLSelectElement)?.value || '';
       const worktypeVal = (document.getElementById('worktypes') as HTMLSelectElement)?.value || '';
-
-      console.log('Filter triggering with:', { locationVal, teamVal, worktypeVal });
 
       const jobs = document.querySelectorAll('.job-table .job');
       jobs.forEach((job: any) => {
@@ -24,11 +22,9 @@ export default function JobsClient({ initialData }: { initialData: any }) {
         const fTeam = teamVal.toLowerCase();
         const fWork = worktypeVal.toLowerCase();
 
-        // City-level matching for locations (e.g. "Halle" matches "Halle (Saale)")
         const getCity = (s: string) => s.split(/[\(,\s]/)[0].toLowerCase();
         const matchesLocation = !fLoc || getCity(jobLoc).includes(getCity(fLoc)) || getCity(fLoc).includes(getCity(jobLoc));
         
-        // Teams can be tricky (e.g. "Data Analytics" vs "Data & Analytics")
         const normalize = (s: string) => s.replace(/[^a-z0-9]/g, '');
         const matchesTeam = !fTeam || normalize(jobTeam).includes(normalize(fTeam)) || normalize(fTeam).includes(normalize(jobTeam));
         
@@ -69,7 +65,6 @@ export default function JobsClient({ initialData }: { initialData: any }) {
     async function fetchLiveJobs() {
       const jobTable = document.querySelector('.job-table');
       if (jobTable) {
-        // Clear existing jobs immediately and show a spinner
         jobTable.innerHTML = `
           <div id="jobs-loading-indicator" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 0; width: 100%; grid-column: 1 / -1;">
             <div class="spinner" style="width: 40px; height: 40px; border: 4px solid rgba(0,0,0,0.1); border-top: 4px solid #db2777; border-radius: 50%; animation: spin 1s linear infinite;"></div>
@@ -119,7 +114,7 @@ export default function JobsClient({ initialData }: { initialData: any }) {
                         <div class="info-items">
                             <div style="display: flex; flex-wrap: wrap; column-gap: 36px;">
                                 <p style="display:flex; margin-bottom: unset;">
-                                    <img src="/FlaconiCareers/assets/wp-content/uploads/2024/03/standort.webp" height="24" width="19" style="width: 19px;">
+                                    <img src="/FlaconiCareers/assets/images/wp-content_uploads_2024_03_standort.webp" height="24" width="19" style="width: 19px;">
                                     &nbsp;<span>${location || 'Remote / Berlin'}</span>
                                 </p>
                             </div>
@@ -154,13 +149,13 @@ export default function JobsClient({ initialData }: { initialData: any }) {
   }, []);
 
   return (
-    <html lang="en" className={initialData.htmlClass}>
-      <head dangerouslySetInnerHTML={{ __html: initialData.head }} />
-      <body 
-        className={initialData.bodyClass} 
+    <>
+      <ClientStyleManager bodyClass={initialData.bodyClass} htmlClass={initialData.htmlClass} />
+      <div dangerouslySetInnerHTML={{ __html: initialData.head }} />
+      <div 
         style={{ margin: 0, padding: 0 }}
         dangerouslySetInnerHTML={{ __html: initialData.body }} 
       />
-    </html>
+    </>
   );
 }

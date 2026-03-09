@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import JobsPage from '../jobs/page';
 import ClientStyleManager from '@/components/ClientStyleManager';
 
 export async function generateStaticParams() {
@@ -8,8 +7,7 @@ export async function generateStaticParams() {
     { slug: ['en'] },
     { slug: ['culture'] },
     { slug: ['locations'] },
-    { slug: ['our-teams'] },
-    { slug: ['jobs'] }
+    { slug: ['our-teams'] }
   ];
 }
 
@@ -17,12 +15,9 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   const { slug } = await params;
   let pageName = slug[slug.length - 1];
 
+  // If the user lands on /en/, show the home page content
   if (pageName === 'en') {
     pageName = 'home';
-  }
-
-  if (pageName === 'jobs') {
-    return <JobsPage />;
   }
 
   const filePath = path.join(process.cwd(), 'captured_dom', `responsive_${pageName}.json`);
@@ -46,6 +41,8 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     rewritten = rewritten.replace(new RegExp(`href="${base}locations/?`, 'g'), `href="${prefix}/locations/"`);
     rewritten = rewritten.replace(new RegExp(`href="${base}our-teams/?`, 'g'), `href="${prefix}/our-teams/"`);
     rewritten = rewritten.replace(new RegExp(`href="${base}stellenangebote/?`, 'g'), `href="${prefix}/jobs/"`);
+    
+    // Generic root link - catch /en/ and point to /
     rewritten = rewritten.replace(new RegExp(`href="${base}(?!"|#|\\s|wp-content|wp-includes|wp-json|fonts|anya)`, 'g'), `href="${prefix}/"`);
 
     rewritten = rewritten.replace(new RegExp(`href="${prefix}/karriere/?`, 'g'), `href="${prefix}/"`);
