@@ -168,12 +168,12 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
         #site-navigation { display: none !important; }
       }
     </style>
-  0:{"P":null,"b":"erzGTDznRd4XTIn7PH8wd","c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$4"}}],"$L5"]}],null,"$L6"]}],{},null,false,false]},null,false,false],"$L7",false]],"m":"$undefined","G":["$8",[]],"S":true}
+  0:{"P":null,"b":"D5WsZr3DsMc8sNGTUME5p","c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$4"}}],"$L5"]}],null,"$L6"]}],{},null,false,false]},null,false,false],"$L7",false]],"m":"$undefined","G":["$8",[]],"S":true}
 a:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"OutletBoundary"]
 b:"$Sreact.suspense"
 d:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"ViewportBoundary"]
 f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataBoundary"]
-9:Td428,
+9:Td408,
 
 <div id="wrapper" class="site wp-site-blocks">
 			<a class="skip-link screen-reader-text scroll-ignore" href="#main">Skip to content</a>
@@ -295,7 +295,7 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 	<div class="kb-row-layout-wrap kb-row-layout-id3119_7a706a-e5 alignnone wp-block-kadence-rowlayout"><div class="kt-row-column-wrap kt-has-1-columns kt-row-layout-equal kt-tab-layout-inherit kt-mobile-layout-row kt-row-valign-top kb-theme-content-width">
 
 <div class="wp-block-kadence-column kadence-column3119_53d082-f1"><div class="kt-inside-inner-col">
-<figure class="wp-block-video"><video height="1080" style="aspect-ratio: 1920 / 1080;" width="1920" autoplay="" loop="" muted="" src="https://www.flaconi.de/karriere/wp-content/uploads/2025/11/250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4"></video></figure>
+<figure class="wp-block-video"><video height="1080" style="aspect-ratio: 1920 / 1080;" width="1920" autoplay="" loop="" muted="" src="/FlaconiCareers/wp-content/uploads/2025/11/250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4"></video></figure>
 </div></div>
 
 </div></div>
@@ -534,7 +534,7 @@ f:I[10627,["/FlaconiCareers/_next/static/chunks/6a3298a6202fa507.js"],"MetadataB
 
 <div class="wp-block-kadence-column kadence-column3119_e7ee60-ad"><div class="kt-inside-inner-col">
 <div class="wp-block-kadence-column kadence-column3119_9cf38f-62"><div class="kt-inside-inner-col">
-<figure class="wp-block-video"><video height="2160" style="aspect-ratio: 3840 / 2160;" width="3840" controls="" preload="auto" src="https://www.flaconi.de/karriere/wp-content/uploads/2025/11/Cultural-Pillars-Value-Day-30-sec.mp4"></video></figure>
+<figure class="wp-block-video"><video height="2160" style="aspect-ratio: 3840 / 2160;" width="3840" controls="" preload="auto" src="/FlaconiCareers/wp-content/uploads/2024/06/Cultural-Pillars-Value-Day-30-sec.mp4"></video></figure>
 
 
 
