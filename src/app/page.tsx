@@ -1,8 +1,12 @@
 import fs from 'fs';
 import path from 'path';
+import ClientStyleManager from '@/components/ClientStyleManager';
 
 export default function Home() {
   const filePath = path.join(process.cwd(), 'captured_dom', 'responsive_home.json');
+  if (!fs.existsSync(filePath)) {
+    return <div>Captured DOM for Home not found.</div>;
+  }
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
   let html = data.body;
@@ -23,18 +27,23 @@ export default function Home() {
     // Generic root link
     rewritten = rewritten.replace(new RegExp(`href="${base}(?!"|#|\\s|wp-content|wp-includes|wp-json|fonts|anya)`, 'g'), `href="${prefix}/"`);
 
-    // 2. Map ABSOLUTE flaconi asset directories to our local assets folder
-    rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(wp-content|wp-includes|fonts|anya)\//g, `${prefix}/assets/$2/`);
+    // 2. Exception for Large Videos (remains absolute)
+    const largeVideos = [
+      '250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4',
+      'Cultural-Pillars-Value-Day-30-sec.mp4'
+    ];
+    largeVideos.forEach(vid => {
+      const remotePath = vid.includes('Cultural') 
+        ? `https://www.flaconi.de/karriere/wp-content/uploads/2024/06/${vid}`
+        : `https://www.flaconi.de/karriere/wp-content/uploads/2025/11/${vid}`;
+      
+      const regex = new RegExp(`${prefix}/assets/videos/[^"]*${vid}`, 'g');
+      rewritten = rewritten.replace(regex, remotePath);
+    });
 
-    // 3. Map ROOT-RELATIVE paths to our local assets folder
-    // This catches src="/karriere/wp-content/..." and src="/wp-content/..."
-    // Note: We use negative lookahead to prevent double-prefixing.
-    rewritten = rewritten.replace(/(src|href|srcset)="\/(?!FlaconiCareers)karriere\//g, `$1="${prefix}/assets/`);
-    rewritten = rewritten.replace(/(src|href|srcset)="\/(?!FlaconiCareers)(wp-content|wp-includes|fonts|anya)/g, `$1="${prefix}/assets/$2`);
-
-    // 4. Final safety cleanup for any double prefixing that might occur
-    const doublePrefix = new RegExp(`${prefix}${prefix}`, 'g');
-    rewritten = rewritten.replace(doublePrefix, prefix);
+    // 3. Robustly handle all root-relative links (Navigation and Assets)
+    // Negative lookahead ensures we don't double-prefix
+    rewritten = rewritten.replace(/(href|src|srcset)="\/(?!FlaconiCareers)([^"]*)"/g, `$1="${prefix}/$2"`);
 
     return rewritten;
   };
@@ -50,7 +59,7 @@ export default function Home() {
   // Strip base tag
   head = head.replace(/<base\b[^>]*\/?>/gmi, '');
 
-  // Fix Header Misalignment
+  // Add robust force styles
   head += `
     <style>
       @media screen and (min-width: 1024px) {
@@ -69,13 +78,13 @@ export default function Home() {
   }
 
   return (
-    <html lang="en" className={data.htmlClass}>
-      <head dangerouslySetInnerHTML={{ __html: head }} />
-      <body 
-        className={data.bodyClass} 
+    <>
+      <ClientStyleManager bodyClass={data.bodyClass} htmlClass={data.htmlClass} />
+      <div dangerouslySetInnerHTML={{ __html: head }} />
+      <div 
         style={{ margin: 0, padding: 0, overflowX: 'hidden' }}
         dangerouslySetInnerHTML={{ __html: html }} 
       />
-    </html>
+    </>
   );
 }
