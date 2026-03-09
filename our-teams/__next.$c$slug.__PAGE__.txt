@@ -160,7 +160,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
         #site-navigation { display: none !important; }
       }
     </style>
-  0:{"buildId":"vrYzcEm1z0guvVPgGgwnn","rsc":["$","$1","c",{"children":[[["$","$L2",null,{"bodyClass":"wp-singular page-template-default page page-id-3129 wp-custom-logo wp-embed-responsive wp-theme-kadence wp-child-theme-fl-karriere footer-on-bottom hide-focus-outline link-style-standard content-title-style-hide content-width-fullwidth content-style-unboxed content-vertical-padding-show non-transparent-header h-desktop header-desktop desktop-navigation","htmlClass":""}],["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"],["$L5"],"$L6"]}],"loading":null,"isPartial":false}
+  0:{"buildId":"6AHSfMozqivpGsI1z2jrQ","rsc":["$","$1","c",{"children":[[["$","$L2",null,{"bodyClass":"wp-singular page-template-default page page-id-3129 wp-custom-logo wp-embed-responsive wp-theme-kadence wp-child-theme-fl-karriere footer-on-bottom hide-focus-outline link-style-standard content-title-style-hide content-width-fullwidth content-style-unboxed content-vertical-padding-show non-transparent-header h-desktop header-desktop desktop-navigation","htmlClass":""}],["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"],["$L5"],"$L6"]}],"loading":null,"isPartial":false}
 7:T13db2,
 
 <div id="wrapper" class="site wp-site-blocks">
