@@ -21,17 +21,18 @@ export default function Home() {
     rewritten = rewritten.replace(new RegExp(`href="${base}our-teams/?`, 'g'), `href="${prefix}/our-teams/"`);
     rewritten = rewritten.replace(new RegExp(`href="${base}stellenangebote/?`, 'g'), `href="${prefix}/jobs/"`);
     // Generic root link
-    rewritten = rewritten.replace(new RegExp(`href="${base}(?!"|#|\\s|wp-content|wp-includes|wp-json)`, 'g'), `href="${prefix}/"`);
+    rewritten = rewritten.replace(new RegExp(`href="${base}(?!"|#|\\s|wp-content|wp-includes|wp-json|fonts|anya)`, 'g'), `href="${prefix}/"`);
 
-    // 2. Map flaconi asset directories to our local assets folder (Absolute URLs)
+    // 2. Map ABSOLUTE flaconi asset directories to our local assets folder
     rewritten = rewritten.replace(/https?:\/\/(www\.)?flaconi\.de\/karriere\/(wp-content|wp-includes|fonts|anya)\//g, `${prefix}/assets/$2/`);
 
-    // 3. Robustly handle relative URLs in src, href, and srcset
-    // This catches strings like src="/karriere/wp-content/..." and src="/wp-content/..."
-    rewritten = rewritten.replace(/(src|href|srcset)="\/karriere\//g, `$1="${prefix}/assets/`);
-    rewritten = rewritten.replace(/(src|href|srcset)="\/(wp-content|wp-includes|fonts|anya)/g, `$1="${prefix}/assets/$2`);
+    // 3. Map ROOT-RELATIVE paths to our local assets folder
+    // This catches src="/karriere/wp-content/..." and src="/wp-content/..."
+    // Note: We use negative lookahead to prevent double-prefixing.
+    rewritten = rewritten.replace(/(src|href|srcset)="\/(?!FlaconiCareers)karriere\//g, `$1="${prefix}/assets/`);
+    rewritten = rewritten.replace(/(src|href|srcset)="\/(?!FlaconiCareers)(wp-content|wp-includes|fonts|anya)/g, `$1="${prefix}/assets/$2`);
 
-    // 4. Cleanup any potential duplication caused by overlapping regex
+    // 4. Final safety cleanup for any double prefixing that might occur
     const doublePrefix = new RegExp(`${prefix}${prefix}`, 'g');
     rewritten = rewritten.replace(doublePrefix, prefix);
 
@@ -49,8 +50,7 @@ export default function Home() {
   // Strip base tag
   head = head.replace(/<base\b[^>]*\/?>/gmi, '');
 
-  // Fix Header Misalignment - remove aggressive force-display on large screens
-  // and only ensure mobile toggle is correct
+  // Fix Header Misalignment
   head += `
     <style>
       @media screen and (min-width: 1024px) {
