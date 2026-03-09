@@ -159,7 +159,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
         #site-navigation { display: none !important; }
       }
     </style>
-  0:{"buildId":"4pKXPdEpG58rZfPB88drp","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+  0:{"buildId":"mwKYkXgSOaQdG1vEEI6pI","rsc":["$","$1","c",{"children":[["$","html",null,{"lang":"en","className":"","children":[["$","head",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3"]}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
 6:T13aa5,
 
 <div id="wrapper" class="site wp-site-blocks">
