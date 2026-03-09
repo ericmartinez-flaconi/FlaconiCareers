@@ -5,6 +5,7 @@ import ClientStyleManager from '@/components/ClientStyleManager';
 
 export async function generateStaticParams() {
   return [
+    { slug: ['en'] },
     { slug: ['culture'] },
     { slug: ['locations'] },
     { slug: ['our-teams'] },
@@ -14,7 +15,11 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: { slug: string[] } }) {
   const { slug } = await params;
-  const pageName = slug[slug.length - 1];
+  let pageName = slug[slug.length - 1];
+
+  if (pageName === 'en') {
+    pageName = 'home';
+  }
 
   if (pageName === 'jobs') {
     return <JobsPage />;
@@ -43,6 +48,9 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     rewritten = rewritten.replace(new RegExp(`href="${base}stellenangebote/?`, 'g'), `href="${prefix}/jobs/"`);
     rewritten = rewritten.replace(new RegExp(`href="${base}(?!"|#|\\s|wp-content|wp-includes|wp-json|fonts|anya)`, 'g'), `href="${prefix}/"`);
 
+    rewritten = rewritten.replace(new RegExp(`href="${prefix}/karriere/?`, 'g'), `href="${prefix}/"`);
+    rewritten = rewritten.replace(new RegExp(`href="${prefix}/en/?`, 'g'), `href="${prefix}/"`);
+
     const largeVideos = [
       '250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4',
       'Cultural-Pillars-Value-Day-30-sec.mp4'
@@ -52,11 +60,14 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
         ? `https://www.flaconi.de/karriere/wp-content/uploads/2024/06/${vid}`
         : `https://www.flaconi.de/karriere/wp-content/uploads/2025/11/${vid}`;
       
-      const regex = new RegExp(`${prefix}/assets/videos/[^"]*${vid}`, 'g');
-      rewritten = rewritten.replace(regex, remotePath);
+      rewritten = rewritten.replace(new RegExp(`${prefix}/assets/videos/[^"]*${vid}`, 'g'), remotePath);
+      rewritten = rewritten.replace(new RegExp(`${prefix}/wp-content/uploads/[^"]*${vid}`, 'g'), remotePath);
     });
 
     rewritten = rewritten.replace(/(href|src|srcset)="\/(?!FlaconiCareers)([^"]*)"/g, `$1="${prefix}/$2"`);
+
+    const doublePrefix = new RegExp(`${prefix}${prefix}`, 'g');
+    rewritten = rewritten.replace(doublePrefix, prefix);
 
     return rewritten;
   };

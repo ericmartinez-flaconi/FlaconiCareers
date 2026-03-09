@@ -17,7 +17,11 @@ export default async function JobsPage() {
     rewritten = rewritten.replace(new RegExp(`href="${base}locations/?`, 'g'), `href="${prefix}/locations/"`);
     rewritten = rewritten.replace(new RegExp(`href="${base}our-teams/?`, 'g'), `href="${prefix}/our-teams/"`);
     rewritten = rewritten.replace(new RegExp(`href="${base}stellenangebote/?`, 'g'), `href="${prefix}/jobs/"`);
+    
     rewritten = rewritten.replace(new RegExp(`href="${base}(?!"|#|\\s|wp-content|wp-includes|wp-json|fonts|anya)`, 'g'), `href="${prefix}/"`);
+
+    rewritten = rewritten.replace(new RegExp(`href="${prefix}/karriere/?`, 'g'), `href="${prefix}/"`);
+    rewritten = rewritten.replace(new RegExp(`href="${prefix}/en/?`, 'g'), `href="${prefix}/"`);
 
     const largeVideos = [
       '250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4',
@@ -28,11 +32,14 @@ export default async function JobsPage() {
         ? `https://www.flaconi.de/karriere/wp-content/uploads/2024/06/${vid}`
         : `https://www.flaconi.de/karriere/wp-content/uploads/2025/11/${vid}`;
       
-      const regex = new RegExp(`${prefix}/assets/videos/[^"]*${vid}`, 'g');
-      rewritten = rewritten.replace(regex, remotePath);
+      rewritten = rewritten.replace(new RegExp(`${prefix}/assets/videos/[^"]*${vid}`, 'g'), remotePath);
+      rewritten = rewritten.replace(new RegExp(`${prefix}/wp-content/uploads/[^"]*${vid}`, 'g'), remotePath);
     });
 
     rewritten = rewritten.replace(/(href|src|srcset)="\/(?!FlaconiCareers)([^"]*)"/g, `$1="${prefix}/$2"`);
+
+    const doublePrefix = new RegExp(`${prefix}${prefix}`, 'g');
+    rewritten = rewritten.replace(doublePrefix, prefix);
 
     return rewritten;
   };

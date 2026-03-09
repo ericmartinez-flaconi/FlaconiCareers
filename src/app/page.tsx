@@ -27,7 +27,11 @@ export default function Home() {
     // Generic root link
     rewritten = rewritten.replace(new RegExp(`href="${base}(?!"|#|\\s|wp-content|wp-includes|wp-json|fonts|anya)`, 'g'), `href="${prefix}/"`);
 
-    // 2. Exception for Large Videos (remains absolute)
+    // 2. Map incorrect internal links that might have been partially rewritten
+    rewritten = rewritten.replace(new RegExp(`href="${prefix}/karriere/?`, 'g'), `href="${prefix}/"`);
+    rewritten = rewritten.replace(new RegExp(`href="${prefix}/en/?`, 'g'), `href="${prefix}/"`);
+
+    // 3. Exception for Large Videos (remains absolute)
     const largeVideos = [
       '250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4',
       'Cultural-Pillars-Value-Day-30-sec.mp4'
@@ -37,13 +41,16 @@ export default function Home() {
         ? `https://www.flaconi.de/karriere/wp-content/uploads/2024/06/${vid}`
         : `https://www.flaconi.de/karriere/wp-content/uploads/2025/11/${vid}`;
       
-      const regex = new RegExp(`${prefix}/assets/videos/[^"]*${vid}`, 'g');
-      rewritten = rewritten.replace(regex, remotePath);
+      // Target multiple potential broken patterns
+      rewritten = rewritten.replace(new RegExp(`${prefix}/assets/videos/[^"]*${vid}`, 'g'), remotePath);
+      rewritten = rewritten.replace(new RegExp(`${prefix}/wp-content/uploads/[^"]*${vid}`, 'g'), remotePath);
     });
 
-    // 3. Robustly handle all root-relative links (Navigation and Assets)
-    // Negative lookahead ensures we don't double-prefix
+    // 4. Robustly handle all root-relative links
     rewritten = rewritten.replace(/(href|src|srcset)="\/(?!FlaconiCareers)([^"]*)"/g, `$1="${prefix}/$2"`);
+
+    const doublePrefix = new RegExp(`${prefix}${prefix}`, 'g');
+    rewritten = rewritten.replace(doublePrefix, prefix);
 
     return rewritten;
   };
@@ -51,15 +58,12 @@ export default function Home() {
   html = rewriteLinks(html);
   head = rewriteLinks(head);
 
-  // Strip scripts to prevent hydration issues and redirects
   const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>|<script\b[^>]*\/>/gmi;
   html = html.replace(scriptRegex, '');
   head = head.replace(scriptRegex, '');
 
-  // Strip base tag
   head = head.replace(/<base\b[^>]*\/?>/gmi, '');
 
-  // Add robust force styles
   head += `
     <style>
       @media screen and (min-width: 1024px) {
