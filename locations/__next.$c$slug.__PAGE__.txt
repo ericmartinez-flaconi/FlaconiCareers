@@ -157,8 +157,8 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
         #site-navigation { display: none !important; }
       }
     </style>
-  0:{"buildId":"0Y_MXtcN0a4-FVSFy16GX","rsc":["$","$1","c",{"children":[[["$","$L2",null,{"bodyClass":"wp-singular page-template-default page page-id-3172 wp-custom-logo wp-embed-responsive wp-theme-kadence wp-child-theme-fl-karriere footer-on-bottom hide-focus-outline link-style-standard content-title-style-hide content-width-fullwidth content-style-unboxed content-vertical-padding-show non-transparent-header h-desktop header-desktop desktop-navigation","htmlClass":""}],["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"],["$L5"],"$L6"]}],"loading":null,"isPartial":false}
-7:T8a6d,
+  0:{"buildId":"eIlPl-cTRUfbg-Q15Knkl","rsc":["$","$1","c",{"children":[[["$","$L2",null,{"bodyClass":"wp-singular page-template-default page page-id-3172 wp-custom-logo wp-embed-responsive wp-theme-kadence wp-child-theme-fl-karriere footer-on-bottom hide-focus-outline link-style-standard content-title-style-hide content-width-fullwidth content-style-unboxed content-vertical-padding-show non-transparent-header h-desktop header-desktop desktop-navigation","htmlClass":""}],["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"],["$L5"],"$L6"]}],"loading":null,"isPartial":false}
+7:T8a55,
 
 <div id="wrapper" class="site wp-site-blocks">
 			<a class="skip-link screen-reader-text scroll-ignore" href="#main">Skip to content</a>
@@ -174,7 +174,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 			<div class="site-main-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-no-center">
 									<div class="site-header-main-section-left site-header-section site-header-section-left">
 						<div class="site-header-item site-header-focus-item" data-section="title_tagline">
-	<div class="site-branding branding-layout-standard site-brand-logo-only"><a class="brand has-logo-image" href="/FlaconiCareers/en/" rel="home"><img width="165" height="42" src="/FlaconiCareers/assets/images/wp-content_uploads_2024_03_flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
+	<div class="site-branding branding-layout-standard site-brand-logo-only"><a class="brand has-logo-image" href="/FlaconiCareers/"" rel="home"><img width="165" height="42" src="/FlaconiCareers/assets/images/wp-content_uploads_2024_03_flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
 					</div>
 																	<div class="site-header-main-section-right site-header-section site-header-section-right">
 						<div class="site-header-item site-header-focus-item" data-section="kadence_customizer_header_social">
@@ -201,11 +201,11 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 						<div class="site-header-item site-header-focus-item site-header-item-main-navigation header-navigation-layout-stretch-false header-navigation-layout-fill-stretch-false" data-section="kadence_customizer_primary_navigation">
 		<nav id="site-navigation" class="main-navigation header-navigation hover-to-open nav--toggle-sub header-navigation-style-standard header-navigation-dropdown-animation-none" role="navigation" aria-label="Primary">
 			<div class="primary-menu-container header-menu-container">
-	<ul id="primary-menu" class="menu"><li id="menu-item-3274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3274"><a href="/FlaconiCareers/en/">About us</a></li>
+	<ul id="primary-menu" class="menu"><li id="menu-item-3274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3274"><a href="/FlaconiCareers/"">About us</a></li>
 <li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278"><a href="/FlaconiCareers/our-teams/">Our Teams</a></li>
 <li id="menu-item-3277" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3172 current_page_item menu-item-3277"><a href="/FlaconiCareers/locations/" aria-current="page">Locations</a></li>
 <li id="menu-item-3275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3275"><a href="/FlaconiCareers/culture/">Life at flaconi</a></li>
-<li id="menu-item-3276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="/FlaconiCareers/karriere/">How we hire</a></li>
+<li id="menu-item-3276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="/FlaconiCareers/"">How we hire</a></li>
 <li id="menu-item-4593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="/FlaconiCareers/jobs/">Jobs</a></li>
 </ul>		</div>
 	</nav><!-- #site-navigation -->
@@ -245,7 +245,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 			<div class="site-main-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-no-center">
 									<div class="site-header-main-section-left site-header-section site-header-section-left">
 						<div class="site-header-item site-header-focus-item" data-section="title_tagline">
-	<div class="site-branding mobile-site-branding branding-layout-standard branding-tablet-layout-inherit site-brand-logo-only branding-mobile-layout-inherit"><a class="brand has-logo-image" href="/FlaconiCareers/en/" rel="home"><img width="165" height="42" src="/FlaconiCareers/assets/images/wp-content_uploads_2024_03_flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
+	<div class="site-branding mobile-site-branding branding-layout-standard branding-tablet-layout-inherit site-brand-logo-only branding-mobile-layout-inherit"><a class="brand has-logo-image" href="/FlaconiCareers/"" rel="home"><img width="165" height="42" src="/FlaconiCareers/assets/images/wp-content_uploads_2024_03_flaconi-logo.jpg" class="custom-logo" alt="flaconi Careers – Jobs in Beauty-Tech &amp; E-commerce" decoding="async"></a></div></div><!-- data-section="title_tagline" -->
 					</div>
 																	<div class="site-header-main-section-right site-header-section site-header-section-right">
 						<div class="site-header-item site-header-focus-item site-header-item-navgation-popup-toggle" data-section="kadence_customizer_mobile_trigger">
@@ -555,11 +555,11 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 <div class="site-header-item site-header-focus-item site-header-item-mobile-navigation mobile-navigation-layout-stretch-false" data-section="kadence_customizer_mobile_navigation">
 		<nav id="mobile-site-navigation" class="mobile-navigation drawer-navigation drawer-navigation-parent-toggle-false" role="navigation" aria-label="Primary Mobile">
 				<div class="mobile-menu-container drawer-menu-container">
-			<ul id="mobile-menu" class="menu has-collapse-sub-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3274"><a href="/FlaconiCareers/en/">About us</a></li>
+			<ul id="mobile-menu" class="menu has-collapse-sub-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3274"><a href="/FlaconiCareers/"">About us</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278"><a href="/FlaconiCareers/our-teams/">Our Teams</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3172 current_page_item menu-item-3277"><a href="/FlaconiCareers/locations/" aria-current="page">Locations</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3275"><a href="/FlaconiCareers/culture/">Life at flaconi</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="/FlaconiCareers/karriere/">How we hire</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="/FlaconiCareers/"">How we hire</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4593"><a href="/FlaconiCareers/jobs/">Jobs</a></li>
 </ul>		</div>
 	</nav><!-- #site-navigation -->
