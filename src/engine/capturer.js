@@ -38,30 +38,38 @@ class Capturer {
   }
 
   async discoverSitemap() {
-    this.onProgress({ status: 'Fetching sitemap...' });
-    const sitemapUrl = new URL('sitemap.xml', this.baseUrl).href;
+    const sitemapPaths = ['sitemap.xml', 'sitemap_index.xml', 'en/sitemap.xml', 'karriere/sitemap.xml', 'karriere/en/sitemap.xml'];
     const context = await this.browser.newContext();
     const page = await context.newPage();
     
-    try {
-      const response = await page.goto(sitemapUrl);
-      if (response && response.status() === 200) {
-        const content = await page.content();
-        const urls = [];
-        const regex = /<loc>(https?:\/\/[^<]+)<\/loc>/gi;
-        let match;
-        while ((match = regex.exec(content)) !== null) {
-          urls.push(match[1]);
+    for (const sPath of sitemapPaths) {
+      this.onProgress({ status: `Checking ${sPath}...` });
+      try {
+        const sitemapUrl = new URL(sPath, this.baseUrl).href;
+        const response = await page.goto(sitemapUrl, { timeout: 10000 });
+        if (response && response.status() === 200) {
+          const content = await page.content();
+          const urls = [];
+          // Simple loc extraction
+          const regex = /<loc>(https?:\/\/[^<]+)<\/loc>/gi;
+          let match;
+          while ((match = regex.exec(content)) !== null) {
+            if (!match[1].endsWith('.xml')) { // Avoid nested sitemaps for now
+               urls.push(match[1]);
+            }
+          }
+          if (urls.length > 0) {
+            this.stats.discoveredUrls = [...new Set(urls)];
+            this.onProgress({ discoveredCount: this.stats.discoveredUrls.length, status: `Sitemap found: ${sPath}` });
+            await context.close();
+            return this.stats.discoveredUrls;
+          }
         }
-        this.stats.discoveredUrls = [...new Set(urls)];
-        this.onProgress({ discoveredCount: this.stats.discoveredUrls.length, status: 'Sitemap parsed' });
-        return this.stats.discoveredUrls;
-      }
-    } catch (e) {
-      this.onProgress({ status: 'Sitemap not found' });
-    } finally {
-      await context.close();
+      } catch (e) {}
     }
+
+    this.onProgress({ status: 'No sitemap discovered' });
+    await context.close();
     return [];
   }
 
@@ -90,7 +98,7 @@ class Capturer {
       const htmlContent = await page.content();
       const assetUrls = this.extractAssetUrls(htmlContent, url);
       
-      this.onProgress({ currentTask: `Localizing ${assetUrls.length} assets for ${slug}...` });
+      this.onProgress({ currentTask: `Localizing assets for ${slug}...` });
       const assetMap = await this.localizeAssets(page, assetUrls);
 
       let head = await page.evaluate(() => document.head.innerHTML);
@@ -99,7 +107,6 @@ class Capturer {
       const htmlClass = await page.evaluate(() => document.documentElement.className);
       const lang = await page.evaluate(() => document.documentElement.lang || 'en');
 
-      // Update languages stats
       this.stats.languages[lang] = (this.stats.languages[lang] || 0) + 1;
       this.onProgress({ languages: this.stats.languages });
 
@@ -202,7 +209,6 @@ class Capturer {
           assetMap[url] = displayPath;
           this.stats.assets++;
           
-          // Update breakdown
           const catKey = categories[ext] || 'others';
           this.stats.assetBreakdown[catKey]++;
           this.onProgress({ assets: this.stats.assetBreakdown });
