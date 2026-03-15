@@ -1,0 +1,25 @@
+{
+  "name": "flaconi-capture-tool",
+  "version": "1.1.0",
+  "description": "Universal CLI tool suite to capture website DOM and assets into baked JSON templates",
+  "main": "src/index.js",
+  "bin": {
+    "flaconi-capture": "./bin/capture.js"
+  },
+  "scripts": {
+    "capture": "node bin/capture.js run",
+    "inspect": "node bin/capture.js inspect",
+    "stats": "node bin/capture.js stats",
+    "clean": "node bin/capture.js clean"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-progress": "^3.12.0",
+    "commander": "^11.1.0",
+    "fs-extra": "^11.2.0",
+    "ora": "^5.4.1",
+    "playwright": "^1.41.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
