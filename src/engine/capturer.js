@@ -50,11 +50,10 @@ class Capturer {
         if (response && response.status() === 200) {
           const content = await page.content();
           const urls = [];
-          // Simple loc extraction
           const regex = /<loc>(https?:\/\/[^<]+)<\/loc>/gi;
           let match;
           while ((match = regex.exec(content)) !== null) {
-            if (!match[1].endsWith('.xml')) { // Avoid nested sitemaps for now
+            if (!match[1].endsWith('.xml')) {
                urls.push(match[1]);
             }
           }
@@ -68,7 +67,41 @@ class Capturer {
       } catch (e) {}
     }
 
-    this.onProgress({ status: 'No sitemap discovered' });
+    // Fallback: Structural Spidering
+    this.onProgress({ status: 'Sitemap failed. Starting structural crawl...' });
+    try {
+      await page.goto(this.baseUrl, { waitUntil: 'domcontentloaded' });
+      const links = await page.evaluate((base) => {
+        const found = new Set();
+        // Target structural elements first
+        const containers = document.querySelectorAll('nav, header, footer');
+        containers.forEach(c => {
+          c.querySelectorAll('a').forEach(a => {
+            if (a.href && a.href.startsWith(base) && !a.href.includes('#')) {
+              found.add(a.href);
+            }
+          });
+        });
+        // If too few, look at everything
+        if (found.size < 3) {
+          document.querySelectorAll('a').forEach(a => {
+            if (a.href && a.href.startsWith(base) && !a.href.includes('#')) {
+              found.add(a.href);
+            }
+          });
+        }
+        return Array.from(found);
+      }, this.baseUrl);
+
+      if (links.length > 0) {
+        this.stats.discoveredUrls = links;
+        this.onProgress({ discoveredCount: links.length, status: 'Crawl discovery complete' });
+        await context.close();
+        return links;
+      }
+    } catch (e) {}
+
+    this.onProgress({ status: 'No sitemap or links discovered' });
     await context.close();
     return [];
   }
@@ -136,7 +169,10 @@ class Capturer {
 
       await fs.writeJson(path.join(this.jsonDir, `${slug}.json`), result, { spaces: 2 });
       this.stats.pages++;
-      this.onProgress({ capturedCount: this.stats.pages });
+      this.onProgress({ 
+        capturedCount: this.stats.pages,
+        currentTask: `✅ Saved ${slug}.json`
+      });
       
       return result;
     } catch (e) {

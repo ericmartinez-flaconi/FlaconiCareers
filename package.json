@@ -13,6 +13,8 @@
     "clean": "node bin/capture.js clean"
   },
   "dependencies": {
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0",
     "chalk": "^4.1.2",
     "cli-progress": "^3.12.0",
     "commander": "^11.1.0",

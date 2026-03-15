@@ -1,125 +1,159 @@
+const blessed = require('blessed');
+const contrib = require('blessed-contrib');
 const chalk = require('chalk');
-const logUpdate = require('log-update');
 
 class Dashboard {
   constructor() {
-    this.startTime = Date.now();
-    this.logs = [];
+    this.screen = blessed.screen({
+      smartCSR: true,
+      title: 'Flaconi Snapshot Engine'
+    });
+
+    this.grid = new contrib.grid({ rows: 12, cols: 12, screen: this.screen });
+
+    // 1. Overall Progress Gauge
+    this.gauge = this.grid.set(0, 0, 3, 3, contrib.gauge, {
+      label: ' Progress ',
+      stroke: 'cyan',
+      fill: 'white'
+    });
+
+    // 2. Discovery Stats
+    this.statsBox = this.grid.set(3, 0, 3, 3, blessed.box, {
+      label: ' Site Map ',
+      content: 'Discovered: 0\nStatus: IDLE',
+      border: { type: 'line' },
+      style: { border: { fg: 'yellow' } }
+    });
+
+    // 3. Asset Bar Chart
+    this.assetBar = this.grid.set(0, 3, 6, 6, contrib.bar, {
+      label: ' Assets Localized ',
+      barWidth: 6,
+      barSpacing: 10,
+      xOffset: 2,
+      maxHeight: 15,
+      barColor: 'blue'
+    });
+
+    // 4. Language Donut
+    this.langDonut = this.grid.set(0, 9, 6, 3, contrib.donut, {
+      label: ' Languages ',
+      radius: 8,
+      arcWidth: 3,
+      spacing: 2,
+      yPadding: 0,
+    });
+
+    // 5. Asset Discovery Timeline (Line Chart)
+    this.line = this.grid.set(6, 0, 6, 6, contrib.line, {
+      label: ' Asset Discovery Timeline ',
+      showLegend: true,
+      style: { line: "yellow", text: "white", baseline: "black" }
+    });
+
+    // 6. Activity Log
+    this.log = this.grid.set(6, 6, 6, 6, contrib.log, {
+      label: ' Activity Stream ',
+      fg: "green",
+      border: { type: 'line', fg: 'cyan' }
+    });
+
     this.state = {
-      status: 'INITIALIZING',
-      discoveredCount: 0,
       capturedCount: 0,
       totalToCapture: 0,
+      assets: { img: 0, css: 0, font: 0, vid: 0 },
       languages: {},
-      assets: {
-        images: 0,
-        css: 0,
-        fonts: 0,
-        videos: 0,
-        others: 0
-      },
-      currentTask: 'Waiting for engine...',
+      timeline: {
+        x: [],
+        y: []
+      }
     };
+
+    this.screen.key(['escape', 'q', 'C-c'], () => {
+      this.screen.destroy();
+      process.exit(0);
+    });
+
+    this.screen.render();
   }
 
-  update(newState) {
-    if (newState.currentTask && newState.currentTask !== this.state.currentTask) {
-      this.addLog(newState.currentTask);
+  update(data) {
+    if (data.status) {
+      this.state.status = data.status;
     }
-    this.state = { ...this.state, ...newState };
-    this.render();
-  }
-
-  addLog(msg) {
-    this.logs.push(` ${chalk.dim('>')} ${msg}`);
-    if (this.logs.length > 3) this.logs.shift();
-  }
-
-  render() {
-    const now = Date.now();
-    const elapsed = ((now - this.startTime) / 1000).toFixed(1);
-    const progress = this.state.totalToCapture > 0 
-      ? (this.state.capturedCount / this.state.totalToCapture) * 100 
-      : 0;
-
-    const width = 70;
-
-    let output = `
- ${chalk.bold.bgBlue.white(' FLACONI ')} ${chalk.bold.blue('SNAPSHOT ENGINE')} ${chalk.dim(`v1.2.0 | ${elapsed}s`)}
-
- ┌${'─'.repeat(width - 2)}┐
-   ${chalk.bold('STATUS:')} ${this.getStatusColor(this.state.status)}
-   ${this.drawProgressBar(progress, width - 6)}
- └${'─'.repeat(width - 2)}┘
-
- ${chalk.bold.yellow(' 🗺️  DISCOVERY')}
-   Discovered: ${chalk.white.bold(this.state.discoveredCount)} URLs 
-   Sitemap:    ${chalk.dim(this.state.status === 'Complete' ? 'Analyzed' : 'Scanning...')}
-
- ${chalk.bold.magenta(' 📊 CAPTURE STATS')}
-   ${chalk.cyan('Pages')}   ${chalk.dim('│')} ${this.state.capturedCount} / ${this.state.totalToCapture}
-${this.renderTwoColumnStats(width)}
-
- ${chalk.bold.green(' 📝 RECENT ACTIVITY')}
-${this.logs.length ? this.logs.join('\n') : chalk.dim('  Waiting for activity...')}
-
- ${chalk.dim('Press Ctrl+C to stop')}
-`;
-    logUpdate(output);
-  }
-
-  getStatusColor(status) {
-    if (status === 'Complete') return chalk.green.bold(status);
-    if (status.includes('Failed')) return chalk.red.bold(status);
-    return chalk.cyan.bold(status);
-  }
-
-  drawProgressBar(percent, width) {
-    const completed = Math.round((width * percent) / 100);
-    const bar = chalk.green('█').repeat(completed) + chalk.dim.gray('░').repeat(width - completed);
-    return bar;
-  }
-
-  renderTwoColumnStats(totalWidth) {
-    const categories = Object.entries(this.state.assets);
-    const maxAssets = Math.max(...categories.map(([, count]) => count), 1);
-    const langs = Object.entries(this.state.languages);
     
-    let lines = [];
-    const maxLines = Math.max(categories.length, 1);
-
-    for (let i = 0; i < maxLines; i++) {
-      let line = '   ';
-      
-      // Column 1: Assets (Width 35)
-      if (categories[i]) {
-        const [name, count] = categories[i];
-        const barLen = Math.min(Math.round((count / maxAssets) * 12), 12);
-        const bar = chalk.blue('■').repeat(barLen);
-        const label = chalk.dim(name.padEnd(7));
-        const countStr = chalk.bold(count.toString().padStart(3));
-        line += `${label} ${bar.padEnd(12 + (barLen > 0 ? 9 : 0))} ${countStr}  `;
-      } else {
-        line += ' '.repeat(35);
-      }
-
-      line = line.padEnd(40);
-      line += chalk.dim('│ ');
-
-      // Column 2: Languages
-      if (langs[i]) {
-        const [lang, count] = langs[i];
-        line += `${chalk.yellow(lang.padEnd(6))} ${chalk.bold(count)} pages`;
-      }
-
-      lines.push(line);
+    if (data.discoveredCount !== undefined) {
+      this.state.discoveredCount = data.discoveredCount;
     }
 
-    return lines.join('\n');
+    this.statsBox.setContent(`Discovered: ${this.state.discoveredCount || 0}\nSaved JSON: ${this.state.capturedCount || 0}\nStatus: ${this.state.status || 'IDLE'}`);
+
+    if (data.currentTask) {
+      this.log.log(data.currentTask);
+    }
+
+    if (data.capturedCount !== undefined) {
+      this.state.capturedCount = data.capturedCount;
+      if (this.state.totalToCapture > 0) {
+        this.gauge.setData(Math.round((this.state.capturedCount / this.state.totalToCapture) * 100));
+      }
+    }
+    
+    if (data.totalToCapture !== undefined) {
+      this.state.totalToCapture = data.totalToCapture;
+    }
+
+    if (data.assets) {
+      // Shorten keys for better display
+      const mapping = { images: 'img', css: 'css', fonts: 'font', videos: 'vid', others: 'etc' };
+      const shortAssets = {};
+      for (const [k, v] of Object.entries(data.assets)) {
+        shortAssets[mapping[k] || k] = v;
+      }
+      
+      this.state.assets = { ...this.state.assets, ...shortAssets };
+      this.assetBar.setData({
+        titles: Object.keys(this.state.assets),
+        data: Object.values(this.state.assets)
+      });
+
+      // Update Timeline
+      const now = new Date().toLocaleTimeString().split(' ')[0];
+      this.state.timeline.x.push(now);
+      this.state.timeline.y.push(Object.values(this.state.assets).reduce((a, b) => a + b, 0));
+      if (this.state.timeline.x.length > 20) {
+        this.state.timeline.x.shift();
+        this.state.timeline.y.shift();
+      }
+      this.line.setData([{
+        title: 'Total Assets',
+        x: this.state.timeline.x,
+        y: this.state.timeline.y
+      }]);
+    }
+
+    if (data.languages) {
+      this.state.languages = data.languages;
+      const donutData = Object.entries(this.state.languages).map(([lang, count]) => ({
+        label: lang,
+        percent: Math.round((count / Math.max(this.state.capturedCount, 1)) * 100),
+        color: this.getRandomColor()
+      }));
+      this.langDonut.setData(donutData);
+    }
+
+    this.screen.render();
+  }
+
+  getRandomColor() {
+    const colors = ['red', 'green', 'blue', 'yellow', 'magenta', 'cyan'];
+    return colors[Math.floor(Math.random() * colors.length)];
   }
 
   stop() {
-    logUpdate.done();
+    this.log.log(chalk.bold.green('All tasks completed. Press Q to exit.'));
+    this.screen.render();
   }
 }
 
