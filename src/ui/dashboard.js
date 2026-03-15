@@ -3,6 +3,7 @@ const logUpdate = require('log-update');
 
 class Dashboard {
   constructor() {
+    this.startTime = Date.now();
     this.state = {
       status: 'Initializing',
       discoveredCount: 0,
@@ -17,7 +18,7 @@ class Dashboard {
         others: 0
       },
       currentTask: '',
-      startTime: Date.now()
+      startTime: this.startTime
     };
   }
 
