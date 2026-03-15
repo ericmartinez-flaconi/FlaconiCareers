@@ -13,11 +13,21 @@ class Capturer {
     this.basePath = options.basePath || '/';
     this.assetsDir = path.join(this.outputDir, 'assets');
     this.jsonDir = path.join(this.outputDir, 'templates');
+    this.onProgress = options.onProgress || (() => {});
+    
     this.stats = {
       pages: 0,
       assets: 0,
       errors: 0,
-      discoveredUrls: []
+      discoveredUrls: [],
+      languages: {},
+      assetBreakdown: {
+        images: 0,
+        css: 0,
+        fonts: 0,
+        videos: 0,
+        others: 0
+      }
     };
   }
 
@@ -28,6 +38,7 @@ class Capturer {
   }
 
   async discoverSitemap() {
+    this.onProgress({ status: 'Fetching sitemap...' });
     const sitemapUrl = new URL('sitemap.xml', this.baseUrl).href;
     const context = await this.browser.newContext();
     const page = await context.newPage();
@@ -43,10 +54,11 @@ class Capturer {
           urls.push(match[1]);
         }
         this.stats.discoveredUrls = [...new Set(urls)];
+        this.onProgress({ discoveredCount: this.stats.discoveredUrls.length, status: 'Sitemap parsed' });
         return this.stats.discoveredUrls;
       }
     } catch (e) {
-      console.error(chalk.yellow(`Could not discover sitemap at ${sitemapUrl}`));
+      this.onProgress({ status: 'Sitemap not found' });
     } finally {
       await context.close();
     }
@@ -60,22 +72,25 @@ class Capturer {
     });
     const page = await context.newPage();
     
+    this.onProgress({ currentTask: `Navigating to ${slug}...` });
+
     try {
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-      await page.waitForTimeout(5000); 
+      await page.waitForTimeout(3000); 
       
+      this.onProgress({ currentTask: `Scrolling ${slug}...` });
       await page.evaluate(async () => {
-        for (let i = 0; i < 10; i++) {
-          window.scrollBy(0, 800);
+        for (let i = 0; i < 5; i++) {
+          window.scrollBy(0, 1000);
           await new Promise(r => setTimeout(r, 100));
         }
         window.scrollTo(0, 0);
       });
-      await page.waitForTimeout(2000);
 
       const htmlContent = await page.content();
       const assetUrls = this.extractAssetUrls(htmlContent, url);
       
+      this.onProgress({ currentTask: `Localizing ${assetUrls.length} assets for ${slug}...` });
       const assetMap = await this.localizeAssets(page, assetUrls);
 
       let head = await page.evaluate(() => document.head.innerHTML);
@@ -83,6 +98,10 @@ class Capturer {
       const bodyClass = await page.evaluate(() => document.body.className);
       const htmlClass = await page.evaluate(() => document.documentElement.className);
       const lang = await page.evaluate(() => document.documentElement.lang || 'en');
+
+      // Update languages stats
+      this.stats.languages[lang] = (this.stats.languages[lang] || 0) + 1;
+      this.onProgress({ languages: this.stats.languages });
 
       for (const [original, local] of Object.entries(assetMap)) {
         const escaped = original.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -110,6 +129,7 @@ class Capturer {
 
       await fs.writeJson(path.join(this.jsonDir, `${slug}.json`), result, { spaces: 2 });
       this.stats.pages++;
+      this.onProgress({ capturedCount: this.stats.pages });
       
       return result;
     } catch (e) {
@@ -181,6 +201,11 @@ class Capturer {
           await fs.outputFile(savePath, Buffer.from(data, 'base64'));
           assetMap[url] = displayPath;
           this.stats.assets++;
+          
+          // Update breakdown
+          const catKey = categories[ext] || 'others';
+          this.stats.assetBreakdown[catKey]++;
+          this.onProgress({ assets: this.stats.assetBreakdown });
         } else {
           assetMap[url] = url;
         }

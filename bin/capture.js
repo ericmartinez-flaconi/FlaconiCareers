@@ -4,7 +4,7 @@ const { Command } = require('commander');
 const chalk = require('chalk');
 const path = require('path');
 const fs = require('fs-extra');
-const ora = require('ora');
+const Dashboard = require('../src/ui/dashboard');
 const Capturer = require('../src/engine/capturer');
 
 const program = new Command();
@@ -12,21 +12,33 @@ const program = new Command();
 program
   .name('flaconi-capture')
   .description('Universal website capture toolsuite')
-  .version('1.1.0');
+  .version('1.2.0');
 
 // --- COMMAND: RUN (Capture) ---
 program
   .command('run')
-  .description('Capture pages and localize assets')
+  .description('Capture pages and localize assets with live dashboard')
   .argument('<url>', 'Base URL to capture')
   .option('-o, --output <dir>', 'Output directory', 'output')
   .option('-b, --base-path <path>', 'Base path for assets', '/')
   .option('-s, --slugs <slugs>', 'Comma-separated list of slugs', 'home')
   .option('-d, --discover', 'Discover via sitemap', false)
   .action(async (baseUrl, options) => {
-    console.log(chalk.bold.blue('\n🚀 Starting Capture Run...\n'));
-    const capturer = new Capturer({ baseUrl, outputDir: options.output, basePath: options.basePath });
+    const dashboard = new Dashboard();
+    
+    const capturer = new Capturer({ 
+      baseUrl, 
+      outputDir: options.output, 
+      basePath: options.basePath,
+      onProgress: (state) => dashboard.update(newState => ({ ...newState, ...state }))
+    });
+
+    // We need to override the dashboard update slightly because capturer doesn't know about totalToCapture yet
+    capturer.onProgress = (state) => dashboard.update(state);
+
+    dashboard.update({ status: 'Initializing browser...' });
     await capturer.init();
+    dashboard.update({ status: 'Browser Ready' });
 
     let pages = options.slugs.split(',').map(s => ({ 
       slug: s.trim(), 
@@ -34,6 +46,7 @@ program
     }));
 
     if (options.discover) {
+      dashboard.update({ status: 'Scanning sitemap...' });
       const discovered = await capturer.discoverSitemap();
       if (discovered.length > 0) {
         pages = discovered.map(url => ({
@@ -43,40 +56,57 @@ program
       }
     }
 
+    dashboard.update({ totalToCapture: pages.length, status: 'Capture in progress' });
+
     for (const page of pages) {
-      const spinner = ora(`Capturing ${chalk.cyan(page.slug)}...`).start();
       try {
-        const res = await capturer.capturePage(page.url, page.slug);
-        spinner.succeed(`Captured ${chalk.green(page.slug)} [${res.lang}]`);
-      } catch (e) { spinner.fail(`Failed ${page.slug}: ${e.message}`); }
+        await capturer.capturePage(page.url, page.slug);
+      } catch (e) {
+        // Errors are tracked in capturer stats and shown in dashboard via onProgress if we added more detail
+      }
     }
+
     await capturer.close();
-    console.log(chalk.bold.green('\n✅ Done! Check the output folder.'));
+    dashboard.update({ status: 'Complete', currentTask: 'All tasks finished.' });
+    dashboard.stop();
+    
+    console.log(chalk.bold.green(`\n✅ Capture Complete! Output: ${path.resolve(options.output)}\n`));
   });
 
-// --- COMMAND: INSPECT (Analyze before capture) ---
+// --- COMMAND: INSPECT ---
 program
   .command('inspect')
-  .description('Inspect a website without capturing')
+  .description('Inspect a website with live feedback')
   .argument('<url>', 'URL to inspect')
   .action(async (url) => {
-    console.log(chalk.bold.magenta('\n🔍 Inspecting Target...\n'));
-    const capturer = new Capturer({ baseUrl: url });
+    const dashboard = new Dashboard();
+    const capturer = new Capturer({ 
+      baseUrl: url,
+      onProgress: (state) => dashboard.update(state)
+    });
+
+    dashboard.update({ status: 'Initializing...' });
     await capturer.init();
     
-    const spinner = ora('Checking sitemap...').start();
+    dashboard.update({ status: 'Searching for sitemap...' });
     const discovered = await capturer.discoverSitemap();
+    
     if (discovered.length > 0) {
-      spinner.succeed(`Found sitemap with ${chalk.bold(discovered.length)} URLs`);
-      console.log(chalk.dim(discovered.slice(0, 5).join('\n') + (discovered.length > 5 ? '\n...' : '')));
+      dashboard.update({ status: `Found ${discovered.length} URLs` });
     } else {
-      spinner.warn('No sitemap.xml found at root.');
+      dashboard.update({ status: 'No sitemap found' });
     }
 
     await capturer.close();
+    dashboard.stop();
+    
+    if (discovered.length > 0) {
+       console.log(chalk.bold('\nSample discovered URLs:'));
+       console.log(discovered.slice(0, 10).join('\n'));
+    }
   });
 
-// --- COMMAND: STATS (Analyze local output) ---
+// --- COMMAND: STATS ---
 program
   .command('stats')
   .description('Show statistics of captured data')
@@ -90,9 +120,12 @@ program
 
     console.log(chalk.bold.cyan('\n📊 Local Workspace Stats\n'));
     
-    const templates = fs.readdirSync(path.join(outputDir, 'templates')).filter(f => f.endsWith('.json'));
-    console.log(`${chalk.bold('Templates:')} ${templates.length}`);
-    templates.forEach(t => console.log(`  - ${t}`));
+    const templatesDir = path.join(outputDir, 'templates');
+    if (fs.existsSync(templatesDir)) {
+      const templates = fs.readdirSync(templatesDir).filter(f => f.endsWith('.json'));
+      console.log(`${chalk.bold('Templates:')} ${templates.length}`);
+      templates.forEach(t => console.log(`  - ${t}`));
+    }
 
     const assets = ['images', 'css', 'fonts', 'videos'];
     console.log(`\n${chalk.bold('Assets:')}`);
@@ -110,9 +143,9 @@ program
   .description('Wipe the output directory')
   .option('-o, --output <dir>', 'Output directory', 'output')
   .action(async (options) => {
-    const spinner = ora(`Cleaning ${options.output}...`).start();
+    console.log(chalk.yellow(`Cleaning ${options.output}...`));
     await fs.remove(options.output);
-    spinner.succeed('Workspace cleaned.');
+    console.log(chalk.green('Workspace cleaned.'));
   });
 
 program.parse();
