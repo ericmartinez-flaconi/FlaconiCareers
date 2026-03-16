@@ -211,7 +211,12 @@ class Capturer {
         const ext = path.extname(urlObj.pathname).toLowerCase() || '.others';
         const category = categories[ext] || 'others';
         
-        const cleanName = path.basename(urlObj.pathname).replace(/[^a-z0-9.]/gi, '_');
+        // Flatten the full path to match master's style (e.g., wp-content_themes_...)
+        let pathName = urlObj.pathname;
+        if (pathName.startsWith('/')) pathName = pathName.substring(1);
+        const flattened = pathName.replace(/\//g, '_').replace(/[^a-z0-9._-]/gi, '_');
+        const cleanName = `${category}_${flattened}`;
+        
         const relPath = `${category}/${cleanName}`;
         const savePath = path.join(this.assetsDir, relPath);
         
