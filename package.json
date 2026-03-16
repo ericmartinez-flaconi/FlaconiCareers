@@ -1,6 +1,6 @@
 {
   "name": "flaconi-capture-tool",
-  "version": "2.1.0",
+  "version": "5.1.0",
   "description": "Universal CLI tool suite to capture website DOM and assets into baked JSON templates",
   "main": "src/index.js",
   "bin": {
