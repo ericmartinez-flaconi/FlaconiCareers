@@ -1,4 +1,4 @@
-# Release v2.1.0 - Template Correction & Asset Standardization
+# Release v5.1.0 - Template Correction & Asset Standardization
 
 This update fixes the "How we hire" (karriere) page and standardizes the asset naming convention across the project.
 

@@ -1,6 +1,6 @@
 {
   "name": "flaconi-careers-page",
-  "version": "0.1.0",
+  "version": "5.1.0",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
