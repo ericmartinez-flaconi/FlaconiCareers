@@ -45,6 +45,67 @@ export default function RootLayout({
             });
           `}
         </Script>
+      <Script id="navigation-interceptor" strategy="afterInteractive">
+          {`
+            const localizeLinks = (containerSelector) => {
+              const navContainer = document.querySelector(containerSelector);
+              if (!navContainer) return;
+
+              const links = navContainer.querySelectorAll('a');
+              links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && href.includes('flaconi.de/karriere')) {
+                  try {
+                    const url = new URL(href);
+                    let newPath = url.pathname.replace('/karriere/en/', '/').replace('/karriere/de/', '/').replace('/karriere/', '/');
+                    
+                    // Specific mapping for known German slugs
+                    const slugMap = {
+                      'kultur': 'culture',
+                      'standorte': 'locations',
+                      'unsere-teams': 'our-teams',
+                      'karriere': 'karriere',
+                      'stellenangebote': 'jobs'
+                    };
+                    
+                    const pathParts = newPath.split('/').filter(p => p);
+                    const lastPart = pathParts[pathParts.length - 1];
+
+                    if (slugMap[lastPart]) {
+                      newPath = \`/FlaconiCareers/\${slugMap[lastPart]}/\`;
+                    } else if (pathParts.length > 0) {
+                      newPath = \`/FlaconiCareers/\${lastPart}/\`;
+                    } else {
+                      newPath = '/FlaconiCareers/';
+                    }
+
+                    // Clean up double slashes
+                    newPath = newPath.replace(/\\/\\/+/g, '/');
+                    
+                    link.setAttribute('href', newPath);
+                  } catch (e) {
+                    // Ignore invalid URLs
+                  }
+                }
+              });
+            };
+
+            // Run on initial load and after any client-side navigation that might re-render the header
+            const observer = new MutationObserver(() => {
+              localizeLinks('#site-navigation'); // Desktop Menu
+              localizeLinks('#mobile-site-navigation'); // Mobile Drawer
+            });
+            
+            observer.observe(document.body, {
+              childList: true,
+              subtree: true
+            });
+
+            // Initial run
+            localizeLinks('#site-navigation');
+            localizeLinks('#mobile-site-navigation');
+          `}
+        </Script>
       </body>
     </html>
   );

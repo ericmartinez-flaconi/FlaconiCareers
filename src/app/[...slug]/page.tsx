@@ -8,7 +8,8 @@ export async function generateStaticParams() {
     { slug: ['culture'] },
     { slug: ['locations'] },
     { slug: ['our-teams'] },
-    { slug: ['karriere'] }
+    { slug: ['karriere'] },
+    { slug: ['stellenangebote'] }
   ];
 }
 
@@ -16,9 +17,12 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   const { slug } = await params;
   let pageName = slug[slug.length - 1];
 
-  // If the user lands on /en/, show the home page content
+  // Alias logic
   if (pageName === 'en') {
     pageName = 'home';
+  }
+  if (pageName === 'stellenangebote') {
+    pageName = 'jobs';
   }
 
   const filePath = path.join(process.cwd(), 'captured_dom', `responsive_${pageName}.json`);
