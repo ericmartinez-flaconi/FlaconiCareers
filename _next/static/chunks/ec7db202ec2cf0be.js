@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,12914,e=>{"use strict";var t=e.i(73615);function c({bodyClass:e,htmlClass:c}){return(0,t.useEffect)(()=>(c&&(document.documentElement.className=c),e&&(document.body.className=`antialiased ${e}`),()=>{}),[e,c]),null}e.s(["default",()=>c])}]);
