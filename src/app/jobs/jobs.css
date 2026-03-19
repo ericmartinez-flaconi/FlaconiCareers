@@ -1,0 +1,72 @@
+/* Hide original Greenhouse app and any legacy static jobs */
+#grnhse_app, #grnhse_iframe { 
+  display: none !important; 
+  height: 0 !important; 
+  overflow: hidden !important; 
+}
+
+/* Ensure our dynamic jobs are visible by default */
+.job-table .job { 
+  display: flex; 
+} 
+
+/* Fix "Typography behind inputs" - ensure filters have a solid background and proper spacing */
+.job-filter {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+  background: #fff !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+  position: relative !important;
+  z-index: 10 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+  margin-bottom: 30px !important;
+}
+
+.job-filter .filter-kind {
+  flex: 1 1 300px !important;
+  min-width: 200px !important;
+}
+
+.job-filter select {
+  width: 100% !important;
+  height: 48px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px !important;
+  padding: 0 12px !important;
+  font-size: 16px !important;
+}
+
+@media (max-width: 1024px) {
+  .job-filter {
+    flex-direction: column !important;
+  }
+  .job-filter .filter-kind {
+    width: 100% !important;
+    flex: none !important;
+  }
+}
+
+/* Ensure the job list is visible and clean */
+.job-table {
+  min-height: 400px;
+  position: relative;
+  background: #fff;
+  z-index: 1;
+}
+
+/* Spinner Animation */
+@keyframes spin { 
+  0% { transform: rotate(0deg); } 
+  100% { transform: rotate(360deg); } 
+}
+
+.jobs-spinner {
+  width: 50px; 
+  height: 50px; 
+  border: 5px solid rgba(0,0,0,0.1); 
+  border-top: 5px solid #db2777; 
+  border-radius: 50%; 
+  animation: spin 1s linear infinite;
+}

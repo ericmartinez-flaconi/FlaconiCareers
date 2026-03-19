@@ -1,3 +1,21 @@
+# Release v5.2.0 - Coherent Naming & Navigation Standard
+
+This update unifies the project's naming conventions across templates, slugs, and menu items to ensure a seamless and predictable navigation experience.
+
+### Major Improvements
+- **Standardized Slugs**: All internal routes now use intuitive, human-readable slugs that match their content:
+    - `karriere` / `howwework` → `how-we-hire`
+    - `culture` → `life-at-flaconi`
+- **Coherent File Structure**: Template files and captured DOM JSONs have been renamed to match these new slugs, removing the "messy" relationship between filenames and routes.
+- **Global Link Cleanup**: Performed a project-wide replacement of legacy URLs in all HTML templates to ensure all internal navigation uses the new standard.
+- **Improved Localization**: Refined the `TemplateRenderer` logic to correctly handle root-relative links and ensure they are properly localized without being skipped.
+
+### Technical Changes
+- **Simplified Routing**: The `Page` component now uses a unified mapping logic that supports both new standards and legacy aliases for backwards compatibility.
+- **Enhanced Link Regex**: Updated the link rewriting engine to more accurately detect and localize internal paths while safely ignoring assets and already-localized routes.
+
+---
+
 # Release v5.1.0 - Template Correction & Asset Standardization
 
 This update fixes the "How we hire" (karriere) page and standardizes the asset naming convention across the project.

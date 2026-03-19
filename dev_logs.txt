@@ -1,0 +1,31 @@
+
+> flaconi-careers-page@5.1.0 dev
+> next dev
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/eric.martinez/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/eric.martinez/Desktop/UX_prototyping/FlaconiCareersPage/package-lock.json
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.25.33.27:3000
+
+✓ Starting...
+✓ Ready in 2.1s
+ GET /karriere 404 in 1306ms (compile: 1167ms, render: 139ms)
+ GET /home 404 in 1491ms (compile: 1410ms, render: 81ms)
+ GET /stellenangebote 404 in 1308ms (compile: 1210ms, render: 97ms)
+ GET /home 404 in 1317ms (compile: 1228ms, render: 89ms)
+ GET /home 404 in 84ms (compile: 24ms, render: 60ms)
+ GET /karriere/de 200 in 422ms (compile: 374ms, generate-params: 289ms, render: 48ms)
+ GET /karriere/de/howwework 200 in 30ms (compile: 7ms, generate-params: 1341µs, render: 23ms)
+ GET /home 404 in 61ms (compile: 22ms, render: 39ms)
+ GET / 200 in 111ms (compile: 82ms, render: 29ms)
+ GET /karriere/de 200 in 66ms (compile: 9ms, generate-params: 3ms, render: 58ms)
+ GET /karriere/de 200 in 40ms (compile: 10ms, generate-params: 36µs, render: 30ms)
+ GET /wp-content/uploads/2025/11/250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4 404 in 76ms (compile: 40ms, render: 36ms)
+ GET /wp-content/uploads/2024/06/Cultural-Pillars-Value-Day-30-sec.mp4 404 in 77ms (compile: 17ms, render: 59ms)
+ GET /assets/wp-content/plugins/sitepress-multilingual-cms/vendor/otgs/installer/res/img/icon-wpml-info-white.svg 404 in 45ms (compile: 14ms, render: 31ms)

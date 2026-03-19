@@ -1,10 +1,14 @@
 import type { NextConfig } from "next";
 import { CMS_CONFIG } from "./src/CMS_CONFIG";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
-  output: 'export',
+  // Only use export for production build, not local dev
+  // This avoids the strictness of generateStaticParams on every single request
+  output: isProd ? 'export' : undefined,
   basePath: CMS_CONFIG.BASE_PATH,
-  trailingSlash: true, // Ensures /culture becomes /culture/index.html
+  trailingSlash: false,
   images: {
     unoptimized: true,
   },

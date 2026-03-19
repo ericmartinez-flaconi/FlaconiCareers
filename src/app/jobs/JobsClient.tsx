@@ -2,10 +2,16 @@
 import { useEffect } from 'react';
 import Papa from 'papaparse';
 import { CMS_CONFIG } from '@/CMS_CONFIG';
-import ClientStyleManager from '@/components/ClientStyleManager';
+import TemplateRenderer from '@/components/TemplateRenderer';
+import './jobs.css';
 
 export default function JobsClient({ initialData }: { initialData: any }) {
   useEffect(() => {
+    // 0. Detect language
+    const isEn = typeof window !== 'undefined' && window.location.pathname.includes('/en/');
+    const moreDetailsLabel = isEn ? 'more details' : 'mehr Details';
+    const syncingLabel = isEn ? 'Syncing Live Jobs...' : 'Live Jobs werden synchronisiert...';
+
     // 1. Define the Global Filter Function
     (window as any).filterJobTabelle = () => {
       const locationVal = (document.getElementById('locations') as HTMLSelectElement)?.value || '';
@@ -38,59 +44,6 @@ export default function JobsClient({ initialData }: { initialData: any }) {
       });
     };
 
-    // 2. Inject CSS for Clean UI and Responsive Filters
-    const style = document.createElement('style');
-    style.innerHTML = `
-      /* Hide original Greenhouse app and any legacy static jobs */
-      #grnhse_app, #grnhse_iframe { display: none !important; height: 0 !important; overflow: hidden !important; }
-      .job-table .job { display: flex; } /* Ensure our dynamic jobs are visible by default */
-      
-      /* Fix "Typography behind inputs" - ensure filters have a solid background and proper spacing */
-      .job-filter {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 16px !important;
-        background: #fff !important;
-        padding: 20px !important;
-        border-radius: 8px !important;
-        position: relative !important;
-        z-index: 10 !important;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
-        margin-bottom: 30px !important;
-      }
-      .job-filter .filter-kind {
-        flex: 1 1 300px !important;
-        min-width: 200px !important;
-      }
-      .job-filter select {
-        width: 100% !important;
-        height: 48px !important;
-        border: 1px solid #ddd !important;
-        border-radius: 4px !important;
-        padding: 0 12px !important;
-        font-size: 16px !important;
-      }
-      
-      @media (max-width: 1024px) {
-        .job-filter {
-          flex-direction: column !important;
-        }
-        .job-filter .filter-kind {
-          width: 100% !important;
-          flex: none !important;
-        }
-      }
-      
-      /* Ensure the job list is visible and clean */
-      .job-table {
-        min-height: 400px;
-        position: relative;
-        background: #fff;
-        z-index: 1;
-      }
-    `;
-    document.head.appendChild(style);
-
     async function fetchLiveJobs() {
       const jobTable = document.querySelector('.job-table');
       if (!jobTable) {
@@ -98,20 +51,30 @@ export default function JobsClient({ initialData }: { initialData: any }) {
         return;
       }
 
-      // Clear existing jobs immediately and show a spinner
-      jobTable.innerHTML = `
-        <div id="jobs-loading-indicator" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 100px 0; width: 100%; grid-column: 1 / -1; background: #fff; position: relative; z-index: 20;">
-          <div class="spinner" style="width: 50px; height: 50px; border: 5px solid rgba(0,0,0,0.1); border-top: 5px solid #db2777; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-          <p style="margin-top: 24px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; font-size: 14px; color: #db2777;">Syncing Live Jobs...</p>
-          <style>
-            @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-          </style>
-        </div>
-      `;
+      // Instead of clearing the whole table, we identify the static jobs and the loading indicator
+      // We keep anything else that might be in the table (though usually there isn't)
+      
+      const loadingId = 'jobs-loading-indicator';
+      let loadingEl = document.getElementById(loadingId);
+      
+      if (!loadingEl) {
+        loadingEl = document.createElement('div');
+        loadingEl.id = loadingId;
+        loadingEl.style.cssText = "display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 100px 0; width: 100%; grid-column: 1 / -1; background: #fff; position: relative; z-index: 20;";
+        loadingEl.innerHTML = `
+          <div class="jobs-spinner"></div>
+          <p style="margin-top: 24px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; font-size: 14px; color: #db2777;">${syncingLabel}</p>
+        `;
+        
+        // Hide existing static jobs
+        const staticJobs = jobTable.querySelectorAll('.job');
+        staticJobs.forEach((j: any) => j.style.display = 'none');
+        
+        jobTable.appendChild(loadingEl);
+      }
 
       try {
         const cacheBuster = `&cb=${new Date().getTime()}`;
-        console.log('Fetching live jobs from:', CMS_CONFIG.GOOGLE_SHEET_CSV_URL);
         const response = await fetch(CMS_CONFIG.GOOGLE_SHEET_CSV_URL + cacheBuster);
         
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -119,11 +82,10 @@ export default function JobsClient({ initialData }: { initialData: any }) {
         const csvText = await response.text();
         const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
         const liveJobs = parsed.data;
-        
-        console.log('Parsed jobs count:', liveJobs.length);
 
         if (liveJobs.length > 0) {
-           jobTable.innerHTML = ''; // Clear spinner
+           // Remove loading and static jobs
+           jobTable.innerHTML = ''; 
            
            liveJobs.forEach((job: any) => {
              const sanitize = (val: string) => (val || '').replace(/^"|"$/g, '').trim();
@@ -161,12 +123,12 @@ export default function JobsClient({ initialData }: { initialData: any }) {
                 </div>
                 <div class="button-column" style="display: table; margin-left: auto;">
                     <div style="display: table-cell; vertical-align: middle;">
-                        <div class="apply-link">
-                            <a href="${url || '#'}" target="_blank">
-                                <span>more details</span>
-                                <span class="icon kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <polyline points="9 18 15 12 9 6"></polyline>
+                        <div class=\"apply-link\">
+                            <a href=\"${url || '#'}\" target=\"_blank\">
+                                <span>${moreDetailsLabel}</span>
+                                <span class=\"icon kb-svg-icon-wrap kb-svg-icon-fe_chevronRight kt-btn-icon-side-right\">
+                                <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">
+                                    <polyline points=\"9 18 15 12 9 6\"></polyline>
                                 </svg>
                             </span>
                             </a>
@@ -182,21 +144,12 @@ export default function JobsClient({ initialData }: { initialData: any }) {
         }
       } catch (e) {
         console.error('Failed to sync live jobs:', e);
-        jobTable.innerHTML = `<p style="padding: 40px; text-align: center; color: red;">Failed to load jobs. Please refresh the page.</p>`;
+        if (loadingEl) loadingEl.innerHTML = `<p style="padding: 40px; text-align: center; color: red;">Failed to load jobs. Please refresh the page.</p>`;
       }
     }
 
     fetchLiveJobs();
   }, []);
 
-  return (
-    <>
-      <ClientStyleManager bodyClass={initialData.bodyClass} htmlClass={initialData.htmlClass} />
-      <div dangerouslySetInnerHTML={{ __html: initialData.head }} />
-      <div 
-        style={{ margin: 0, padding: 0 }}
-        dangerouslySetInnerHTML={{ __html: initialData.body }} 
-      />
-    </>
-  );
+  return <TemplateRenderer data={initialData} />;
 }
