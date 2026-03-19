@@ -4,11 +4,11 @@ import TemplateRenderer from '@/components/TemplateRenderer';
 import JobsClient from '@/app/jobs/JobsClient';
 import { getTemplate } from '@/lib/templateLoader';
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const langs = ['en', 'de'];
-  const pages = ['jobs', 'life-at-flaconi', 'locations', 'our-teams', 'stellenangebote', 'how-we-hire'];
+  const pages = ['jobs', 'life-at-flaconi', 'locations', 'our-teams', 'stellenangebote', 'how-we-hire', 'culture', 'karriere', 'howwework'];
 
   const params = [];
   for (const lang of langs) {
