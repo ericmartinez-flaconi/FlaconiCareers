@@ -1,3 +1,17 @@
+# Release v5.3.0 - Hero Video Restoration & Layout Refinement
+
+This update restores the missing hero videos on the home page and refines the layout to ensure the content is properly aligned with the header.
+
+### Major Improvements
+- **Restored Hero Videos**: Reconnected the broken video source paths on the home page to the original production assets, ensuring the "Company" and "Cultural Pillars" videos are now visible and functional.
+- **Header Alignment**: Eliminated several layers of inherited WordPress padding and margins that were causing the hero video to be pushed down, resulting in a cleaner, flush alignment with the site header.
+
+### Technical Changes
+- **Optimized Video Sources**: Pointed video `src` attributes to direct production URLs to bypass missing local assets from the capture process.
+- **Injected Template-Specific CSS**: Added a targeted `<style>` block to the `home.html` template to zero out margins and padding across the header, content area, and primary row layout.
+
+---
+
 # Release v5.2.0 - Coherent Naming & Navigation Standard
 
 This update unifies the project's naming conventions across templates, slugs, and menu items to ensure a seamless and predictable navigation experience.
