@@ -138,7 +138,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 .wp-container-core-group-is-layout-81192b2e > .alignfull{margin-right:calc(var(--wp--preset--spacing--50) * -1);margin-left:calc(var(--wp--preset--spacing--50) * -1);}.wp-elements-010fa7ca0994737486962d18c3544892 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--theme-palette-9);}
 /*# sourceURL=core-block-supports-inline-css */
 </style>
-<link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/WebSdk.lib.91f0d3cd.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/GdprCmpController.12632d8a.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/UcGdprCmpView.286dcf12.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/sections.c79e0e02.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/secondLayer.65458740.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/getToastifyStyle.4f0a73d7.js" rel="preload" as="script">4:Td260,<div id="wrapper" class="site wp-site-blocks">
+<link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/WebSdk.lib.91f0d3cd.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/GdprCmpController.12632d8a.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/UcGdprCmpView.286dcf12.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/sections.c79e0e02.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/secondLayer.65458740.js" rel="preload" as="script"><link href="https://web.cmp.usercentrics.eu/ui/v/3.105.0/getToastifyStyle.4f0a73d7.js" rel="preload" as="script">4:Td284,<div id="wrapper" class="site wp-site-blocks">
 			<a class="skip-link screen-reader-text scroll-ignore" href="#main">Skip to content</a>
 		<link rel="stylesheet" id="kadence-header-css" href="{{BASE_PATH}}/assets/css/css_wp-content_themes_kadence_assets_css_header.min.css" type="text/css" media="all">
 <header id="masthead" class="site-header" role="banner" itemtype="https://schema.org/WPHeader" itemscope="">
@@ -254,7 +254,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 <div class="entry-content single-content">
 	<div class="kb-row-layout-wrap kb-row-layout-id3119_7a706a-e5 alignnone wp-block-kadence-rowlayout"><div class="kt-row-column-wrap kt-has-1-columns kt-row-layout-equal kt-tab-layout-inherit kt-mobile-layout-row kt-row-valign-top kb-theme-content-width">
 <div class="wp-block-kadence-column kadence-column3119_53d082-f1"><div class="kt-inside-inner-col">
-<figure class="wp-block-video"><video height="1080" style="aspect-ratio: 1920 / 1080;" width="1920" autoplay="" loop="" muted="" src="{{BASE_PATH}}/wp-content/uploads/2025/11/250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4"></video></figure>
+<figure class="wp-block-video"><video height="1080" style="aspect-ratio: 1920 / 1080;" width="1920" autoplay="" loop="" muted="" src="https://www.flaconi.de/karriere/wp-content/uploads/2025/11/250915_flaconi_CompanyVideo2526_V05_FINAL_HighRes.mp4"></video></figure>
 </div></div>
 </div></div>
 <div class="kb-row-layout-wrap kb-row-layout-id3119_966b75-4d alignnone wp-block-kadence-rowlayout"><div class="kt-row-column-wrap kt-has-3-columns kt-row-layout-row kt-tab-layout-inherit kt-mobile-layout-row kt-row-valign-top kb-theme-content-width">
@@ -351,7 +351,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 </div></div>
 <div class="wp-block-kadence-column kadence-column3119_e7ee60-ad"><div class="kt-inside-inner-col">
 <div class="wp-block-kadence-column kadence-column3119_9cf38f-62"><div class="kt-inside-inner-col">
-<figure class="wp-block-video"><video height="2160" style="aspect-ratio: 3840 / 2160;" width="3840" controls="" preload="auto" src="{{BASE_PATH}}/wp-content/uploads/2024/06/Cultural-Pillars-Value-Day-30-sec.mp4"></video></figure>
+<figure class="wp-block-video"><video height="2160" style="aspect-ratio: 3840 / 2160;" width="3840" controls="" preload="auto" src="https://www.flaconi.de/karriere/wp-content/uploads/2024/06/Cultural-Pillars-Value-Day-30-sec.mp4"></video></figure>
 <div class="wp-block-kadence-spacer aligncenter kt-block-spacer-3119_ab0117-a0"><div class="kt-block-spacer kt-block-spacer-halign-center"></div></div>
 </div></div>
 </div></div>
@@ -492,7 +492,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
                             }
 						</style>
 						<div class="otgs-development-site-front-end"><span class="icon"></span>This site is registered on <a href="https://wpml.org">wpml.org</a> as a development site. Switch to a production site key to <a href="https://wpml.org/faq/how-to-remove-the-this-site-is-registered-on-wpml-org-as-a-development-site-notice/?utm_source=plugin&amp;utm_medium=gui&amp;utm_campaign=wpml-core&amp;utm_term=footer-notice">remove this banner</a>.</div><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
-<aside id="usercentrics-cmp-ui" data-nosnippet="1" keyboard-events="true"></aside>0:{"buildId":"JvD1q6cgfYqEQYxz_EgyC","rsc":["$","$1","c",{"children":[["$","$L2",null,{"data":{"htmlClass":"","bodyClass":"home wp-singular page-template-default page page-id-3119 wp-custom-logo wp-embed-responsive wp-theme-kadence wp-child-theme-fl-karriere footer-on-bottom hide-focus-outline link-style-standard content-title-style-hide content-width-fullwidth content-style-unboxed content-vertical-padding-show non-transparent-header h-desktop header-desktop desktop-navigation","head":"$3","body":"$4"}}],["$L5","$L6"],"$L7"]}],"loading":null,"isPartial":false}
+<aside id="usercentrics-cmp-ui" data-nosnippet="1" keyboard-events="true"></aside>0:{"buildId":"rqwc69OYjXAh3apU_LhPU","rsc":["$","$1","c",{"children":[["$","$L2",null,{"data":{"htmlClass":"","bodyClass":"home wp-singular page-template-default page page-id-3119 wp-custom-logo wp-embed-responsive wp-theme-kadence wp-child-theme-fl-karriere footer-on-bottom hide-focus-outline link-style-standard content-title-style-hide content-width-fullwidth content-style-unboxed content-vertical-padding-show non-transparent-header h-desktop header-desktop desktop-navigation","head":"$3","body":"$4"}}],["$L5","$L6"],"$L7"]}],"loading":null,"isPartial":false}
 5:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/c9c2824a992b2d8c.css","precedence":"next"}]
 6:["$","script","script-0",{"src":"/_next/static/chunks/69f812ace36454e0.js","async":true}]
 7:["$","$L8",null,{"children":["$","$9",null,{"name":"Next.MetadataOutlet","children":"$@a"}]}]
